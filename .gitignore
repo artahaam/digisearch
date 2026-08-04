@@ -122,13 +122,22 @@ ipython_config.py
 # pixi.lock
 #   Pixi creates a virtual environment in the .pixi directory, just like venv module creates one
 #   in the .venv directory. It is recommended not to include this directory in version control.
+<<<<<<< HEAD
 .pixi
+=======
+.pixi/*
+!.pixi/config.toml
+>>>>>>> 9435102 (Initial commit)
 
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
 __pypackages__/
 
 # Celery stuff
+<<<<<<< HEAD
 celerybeat-schedule
+=======
+celerybeat-schedule*
+>>>>>>> 9435102 (Initial commit)
 celerybeat.pid
 
 # Redis
