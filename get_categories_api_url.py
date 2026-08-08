@@ -1,6 +1,4 @@
 import requests
-from bs4 import BeautifulSoup
-import requests
 import csv
 
 base_url = "https://api.digikala.com/v1/categories/"
