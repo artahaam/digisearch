@@ -1,0 +1,1460 @@
+{
+  "status": 200,
+  "data": {
+    "product": {
+      "id": 12511051,
+      "title_fa": "شلوارک مردانه مامی دوز مدل فرمال کتان",
+      "title_en": "",
+      "url": {
+        "base": null,
+        "uri": "/product/dkp-12511051/شلوارک-مردانه-مامی-دوز-مدل-فرمال-کتان"
+      },
+      "status": "marketable",
+      "has_quick_view": false,
+      "data_layer": {
+        "brand": "مامی دوز",
+        "category": "[AP,شلوارک مردانه]",
+        "metric6": 84,
+        "dimension2": 0,
+        "dimension6": 0,
+        "dimension7": "none",
+        "dimension9": 3.9,
+        "dimension11": 0,
+        "dimension20": "marketable",
+        "item_category2": "مد و پوشاک",
+        "item_category3": "مردانه",
+        "item_category4": "لباس مردانه",
+        "item_category5": "شلوارک مردانه"
+      },
+      "product_type": "product",
+      "test_title_fa": "شلوارک مردانه کتان پنبه مامی دوز مدل فرمال با قد زیر زانو، دارای کش راست و چپ برای راحتی بیشتر، دو جیب استاندارد و یک جیب پشت، طراحی اختصاصی آمستردام هلند، مناسب استفاده رسمی، اسپرت و مهمانی",
+      "test_title_en": "",
+      "digiplus": {
+        "services": [
+          "پشتیبانی اختصاصی"
+        ],
+        "service_list": [
+          {
+            "title": "پشتیبانی اختصاصی"
+          }
+        ],
+        "services_summary": [],
+        "is_jet_eligible": false,
+        "cash_back": 0,
+        "is_general_location_jet_eligible": false,
+        "fast_shipping_text": null
+      },
+      "images": {
+        "main": {
+          "storage_ids": [],
+          "url": [
+            "https://dkstatics-public.digikala.com/digikala-products/6bcd31701ff2c9490862ec92300492f501efbcd7_1784555662.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+          ],
+          "thumbnail_url": null,
+          "temporary_id": null,
+          "webp_url": [
+            "https://dkstatics-public.digikala.com/digikala-products/6bcd31701ff2c9490862ec92300492f501efbcd7_1784555662.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+          ]
+        },
+        "list": [
+          {
+            "storage_ids": [],
+            "url": [
+              "https://dkstatics-public.digikala.com/digikala-products/3bcf17ed992e1f85ab31ad7bd8d308a28eba8536_1693211387.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+            ],
+            "thumbnail_url": null,
+            "temporary_id": null,
+            "webp_url": [
+              "https://dkstatics-public.digikala.com/digikala-products/3bcf17ed992e1f85ab31ad7bd8d308a28eba8536_1693211387.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+            ]
+          },
+          {
+            "storage_ids": [],
+            "url": [
+              "https://dkstatics-public.digikala.com/digikala-products/c348d3486d4faff7f9a00464712e428ff70300fb_1693146087.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+            ],
+            "thumbnail_url": null,
+            "temporary_id": null,
+            "webp_url": [
+              "https://dkstatics-public.digikala.com/digikala-products/c348d3486d4faff7f9a00464712e428ff70300fb_1693146087.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+            ]
+          },
+          {
+            "storage_ids": [],
+            "url": [
+              "https://dkstatics-public.digikala.com/digikala-products/1c499931dfd571f33aa8ed56fe4e6a123ef61cfc_1693146087.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+            ],
+            "thumbnail_url": null,
+            "temporary_id": null,
+            "webp_url": [
+              "https://dkstatics-public.digikala.com/digikala-products/1c499931dfd571f33aa8ed56fe4e6a123ef61cfc_1693146087.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+            ]
+          },
+          {
+            "storage_ids": [],
+            "url": [
+              "https://dkstatics-public.digikala.com/digikala-products/9df547aa99f97ac53ce9446e99a911cec3cd95fa_1693146088.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+            ],
+            "thumbnail_url": null,
+            "temporary_id": null,
+            "webp_url": [
+              "https://dkstatics-public.digikala.com/digikala-products/9df547aa99f97ac53ce9446e99a911cec3cd95fa_1693146088.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+            ]
+          },
+          {
+            "storage_ids": [],
+            "url": [
+              "https://dkstatics-public.digikala.com/digikala-products/a908be02dd945f71396c0484e7b0b277eeeb60ee_1693146088.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+            ],
+            "thumbnail_url": null,
+            "temporary_id": null,
+            "webp_url": [
+              "https://dkstatics-public.digikala.com/digikala-products/a908be02dd945f71396c0484e7b0b277eeeb60ee_1693146088.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+            ]
+          },
+          {
+            "storage_ids": [],
+            "url": [
+              "https://dkstatics-public.digikala.com/digikala-products/2593c3216b33e0d263752a4d0dc2726475cb4fbe_1693146087.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+            ],
+            "thumbnail_url": null,
+            "temporary_id": null,
+            "webp_url": [
+              "https://dkstatics-public.digikala.com/digikala-products/2593c3216b33e0d263752a4d0dc2726475cb4fbe_1693146087.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+            ]
+          },
+          {
+            "storage_ids": [],
+            "url": [
+              "https://dkstatics-public.digikala.com/digikala-products/e55a706cf572e5eef263b97078cbc8127c94b291_1693146086.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+            ],
+            "thumbnail_url": null,
+            "temporary_id": null,
+            "webp_url": [
+              "https://dkstatics-public.digikala.com/digikala-products/e55a706cf572e5eef263b97078cbc8127c94b291_1693146086.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+            ]
+          },
+          {
+            "storage_ids": [],
+            "url": [
+              "https://dkstatics-public.digikala.com/digikala-products/a10cf4624df54c8242b12aa4e3866488db0d52ca_1693146087.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+            ],
+            "thumbnail_url": null,
+            "temporary_id": null,
+            "webp_url": [
+              "https://dkstatics-public.digikala.com/digikala-products/a10cf4624df54c8242b12aa4e3866488db0d52ca_1693146087.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+            ]
+          }
+        ]
+      },
+      "rating": {
+        "rate": 76.19,
+        "count": 84
+      },
+      "has_makeup_try_on": false,
+      "gallery_variant": "vertical",
+      "colors": [
+        {
+          "id": 2,
+          "title": "سفید",
+          "hex_code": "#FFFFFF",
+          "images": [
+            {
+              "image_url": "https://dkstatics-public.digikala.com/digikala-products/3bcf17ed992e1f85ab31ad7bd8d308a28eba8536_1693211387.jpg",
+              "thumb_url": "https://dkstatics-public.digikala.com/digikala-products/3bcf17ed992e1f85ab31ad7bd8d308a28eba8536_1693211387.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300",
+              "color_id": 2,
+              "is_main": true
+            },
+            {
+              "image_url": "https://dkstatics-public.digikala.com/digikala-products/c348d3486d4faff7f9a00464712e428ff70300fb_1693146087.jpg",
+              "thumb_url": "https://dkstatics-public.digikala.com/digikala-products/c348d3486d4faff7f9a00464712e428ff70300fb_1693146087.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300",
+              "color_id": 2,
+              "is_main": false
+            },
+            {
+              "image_url": "https://dkstatics-public.digikala.com/digikala-products/1c499931dfd571f33aa8ed56fe4e6a123ef61cfc_1693146087.jpg",
+              "thumb_url": "https://dkstatics-public.digikala.com/digikala-products/1c499931dfd571f33aa8ed56fe4e6a123ef61cfc_1693146087.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300",
+              "color_id": 2,
+              "is_main": false
+            },
+            {
+              "image_url": "https://dkstatics-public.digikala.com/digikala-products/9df547aa99f97ac53ce9446e99a911cec3cd95fa_1693146088.jpg",
+              "thumb_url": "https://dkstatics-public.digikala.com/digikala-products/9df547aa99f97ac53ce9446e99a911cec3cd95fa_1693146088.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300",
+              "color_id": 2,
+              "is_main": false
+            },
+            {
+              "image_url": "https://dkstatics-public.digikala.com/digikala-products/a908be02dd945f71396c0484e7b0b277eeeb60ee_1693146088.jpg",
+              "thumb_url": "https://dkstatics-public.digikala.com/digikala-products/a908be02dd945f71396c0484e7b0b277eeeb60ee_1693146088.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300",
+              "color_id": 2,
+              "is_main": false
+            },
+            {
+              "image_url": "https://dkstatics-public.digikala.com/digikala-products/2593c3216b33e0d263752a4d0dc2726475cb4fbe_1693146087.jpg",
+              "thumb_url": "https://dkstatics-public.digikala.com/digikala-products/2593c3216b33e0d263752a4d0dc2726475cb4fbe_1693146087.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300",
+              "color_id": 2,
+              "is_main": false
+            },
+            {
+              "image_url": "https://dkstatics-public.digikala.com/digikala-products/e55a706cf572e5eef263b97078cbc8127c94b291_1693146086.jpg",
+              "thumb_url": "https://dkstatics-public.digikala.com/digikala-products/e55a706cf572e5eef263b97078cbc8127c94b291_1693146086.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300",
+              "color_id": 2,
+              "is_main": false
+            },
+            {
+              "image_url": "https://dkstatics-public.digikala.com/digikala-products/a10cf4624df54c8242b12aa4e3866488db0d52ca_1693146087.jpg",
+              "thumb_url": "https://dkstatics-public.digikala.com/digikala-products/a10cf4624df54c8242b12aa4e3866488db0d52ca_1693146087.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300",
+              "color_id": 2,
+              "is_main": false
+            }
+          ]
+        }
+      ],
+      "has_price_chart": true,
+      "default_variant": {
+        "id": 43274981,
+        "lead_time": 1,
+        "rank": 99.7,
+        "rate": 70,
+        "statistics": {
+          "totally_satisfied": {
+            "rate_count": 5,
+            "rate": 35.71
+          },
+          "satisfied": {
+            "rate_count": 3,
+            "rate": 21.43
+          },
+          "neutral": {
+            "rate_count": 3,
+            "rate": 21.43
+          },
+          "dissatisfied": {
+            "rate_count": 0,
+            "rate": 0
+          },
+          "totally_dissatisfied": {
+            "rate_count": 3,
+            "rate": 21.43
+          },
+          "total_count": 14,
+          "total_rate": 70
+        },
+        "status": "marketable",
+        "properties": {
+          "is_fast_shipping": false,
+          "is_ship_by_seller": true,
+          "is_multi_warehouse": false,
+          "has_similar_variants": false,
+          "is_rural": false,
+          "in_digikala_warehouse": false,
+          "is_ship_from_user_state": false,
+          "nearby_seller_shipment": true,
+          "support_nearby_shipping_for_user": false,
+          "is_ship_by_seller_restricted": false
+        },
+        "warranty": {
+          "id": 272,
+          "title_fa": "گارانتی اصالت و سلامت فیزیکی کالا",
+          "title_en": "گارانتی اصالت و سلامت فیزیکی کالا"
+        },
+        "themes": [
+          {
+            "value": {
+              "variant_id": 43274981,
+              "id": 100702,
+              "title": "48-50",
+              "nature": "numeral_range",
+              "value": "48-50"
+            },
+            "label": "سایز",
+            "type": "sized",
+            "is_main": false
+          },
+          {
+            "value": {
+              "variant_id": 43274981,
+              "id": 2,
+              "title": "سفید",
+              "code": "#FFFFFF",
+              "hexCode": "#FFFFFF",
+              "hex_code": "#FFFFFF",
+              "nature": "color"
+            },
+            "label": "رنگ",
+            "type": "colored",
+            "is_main": true
+          }
+        ],
+        "size": {
+          "id": 2100702,
+          "title": "سفید - 48-50"
+        },
+        "seller": {
+          "id": 904223,
+          "title": "زیست فرآورده چیستا",
+          "code": "E4X9E",
+          "url": "https://www.digikala.com/seller/E4X9E/",
+          "rating": {
+            "total_rate": 82,
+            "total_count": 9464,
+            "commitment": 100,
+            "no_return": 99.5,
+            "on_time_shipping": 100
+          },
+          "properties": {
+            "is_trusted": true,
+            "is_official": false,
+            "is_roosta": false,
+            "is_new": false
+          },
+          "stars": 5,
+          "grade": {
+            "label": "عالی",
+            "color": "#00a049"
+          },
+          "logo": null,
+          "registration_date": "4 سال و 5 ماه"
+        },
+        "digiclub": {
+          "point": 150
+        },
+        "price": {
+          "selling_price": 15990000,
+          "rrp_price": 15990000,
+          "order_limit": 5,
+          "is_incredible": false,
+          "is_promotion": false,
+          "is_locked_for_digiplus": false,
+          "bnpl_active": false,
+          "discount_percent": 0,
+          "is_plus_early_access": false,
+          "min_order_limit": 1
+        },
+        "shipment_methods": {
+          "description": "موجود در انبار فروشنده و دیجی‌کالا",
+          "has_lead_time": true,
+          "icon": "cube-badge-available-product",
+          "icon_color": "#0fabc6",
+          "providers": [
+            {
+              "has_lead_time": true,
+              "type": "digikala",
+              "title": "ارسال دیجی‌کالا از 1 روز کاری دیگر",
+              "description": "این کالا پس از مدت زمان مشخص شده توسط فروشنده در انبار دیجی‌کالا تامین و آماده پردازش می‌گردد و توسط پیک دیجی‌کالا در بازه انتخابی ارسال خواهد شد.",
+              "label": {
+                "title": "توسط دیجی‌کالا",
+                "description": "تامین از 1 روز کاری دیگر"
+              },
+              "price": {
+                "text": "وابسته به سبد",
+                "value": null,
+                "is_free": false
+              },
+              "shipping_mode": "digikala",
+              "delivery_day": "tomorrow",
+              "image": "https://dkstatics-public.digikala.com/digikala-static/a850a0020b1f1d1241c35c8e9ef2b4a93e12a091_1667056289.png",
+              "svg_image": "https://dkstatics-public.digikala.com/digikala-static/562b91988f1beec9a5f13aee3cf31cfd7a1a25b1_1748679087.svg"
+            },
+            {
+              "has_lead_time": false,
+              "type": "seller",
+              "title": "ارسال فروشنده",
+              "description": "این کالا در انبار فروشنده موجود و آماده پردازش است و امکان ارسال مستقیم توسط فروشنده دارد.",
+              "label": {
+                "title": "توسط فروشنده",
+                "description": null
+              },
+              "price": null,
+              "shipping_mode": "seller",
+              "delivery_day": "other_days",
+              "image": "https://dkstatics-public.digikala.com/digikala-static/40532b1d3283a0f891eff32910970e492d328b96_1667056367.png",
+              "svg_image": "https://dkstatics-public.digikala.com/digikala-static/f0c88a9a9615db02db461c4748bce71c517a7377_1748679285.svg"
+            }
+          ]
+        },
+        "has_importer_price": false,
+        "manufacture_price_not_exist": false,
+        "has_best_price_in_last_month": false,
+        "buy_box_notices": [],
+        "digiplus": {
+          "services": [
+            "پشتیبانی اختصاصی"
+          ],
+          "service_list": [
+            {
+              "title": "پشتیبانی اختصاصی"
+            }
+          ],
+          "services_summary": [],
+          "is_jet_eligible": false,
+          "cash_back": 0,
+          "is_general_location_jet_eligible": false,
+          "fast_shipping_text": null
+        },
+        "variant_badges": []
+      },
+      "properties": {
+        "is_fast_shipping": false,
+        "is_ship_by_seller": true,
+        "free_shipping_badge": false,
+        "is_multi_warehouse": false,
+        "is_fake": false,
+        "has_gift": false,
+        "min_price_in_last_month": 0,
+        "is_non_inventory": false,
+        "is_jet_eligible": false,
+        "is_medical_supplement": false,
+        "is_ad": false,
+        "ad": [],
+        "has_printed_price": false
+      },
+      "badges": [],
+      "has_true_to_size": true,
+      "product_badges": [],
+      "variants_images": {
+        "main": {
+          "variant_id": null,
+          "variant_ids": [],
+          "storage_ids": [],
+          "url": [
+            "https://dkstatics-public.digikala.com/digikala-products/6bcd31701ff2c9490862ec92300492f501efbcd7_1784555662.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+          ],
+          "thumbnail_url": null,
+          "temporary_id": null,
+          "webp_url": [
+            "https://dkstatics-public.digikala.com/digikala-products/6bcd31701ff2c9490862ec92300492f501efbcd7_1784555662.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+          ]
+        },
+        "list": [
+          {
+            "variant_id": 43274981,
+            "variant_ids": [43274981],
+            "storage_ids": [],
+            "url": [
+              "https://dkstatics-public.digikala.com/digikala-products/3bcf17ed992e1f85ab31ad7bd8d308a28eba8536_1693211387.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+            ],
+            "thumbnail_url": null,
+            "temporary_id": null,
+            "webp_url": [
+              "https://dkstatics-public.digikala.com/digikala-products/3bcf17ed992e1f85ab31ad7bd8d308a28eba8536_1693211387.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+            ]
+          },
+          {
+            "variant_id": 43274981,
+            "variant_ids": [43274981],
+            "storage_ids": [],
+            "url": [
+              "https://dkstatics-public.digikala.com/digikala-products/c348d3486d4faff7f9a00464712e428ff70300fb_1693146087.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+            ],
+            "thumbnail_url": null,
+            "temporary_id": null,
+            "webp_url": [
+              "https://dkstatics-public.digikala.com/digikala-products/c348d3486d4faff7f9a00464712e428ff70300fb_1693146087.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+            ]
+          },
+          {
+            "variant_id": 43274981,
+            "variant_ids": [43274981],
+            "storage_ids": [],
+            "url": [
+              "https://dkstatics-public.digikala.com/digikala-products/1c499931dfd571f33aa8ed56fe4e6a123ef61cfc_1693146087.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+            ],
+            "thumbnail_url": null,
+            "temporary_id": null,
+            "webp_url": [
+              "https://dkstatics-public.digikala.com/digikala-products/1c499931dfd571f33aa8ed56fe4e6a123ef61cfc_1693146087.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+            ]
+          },
+          {
+            "variant_id": 43274981,
+            "variant_ids": [43274981],
+            "storage_ids": [],
+            "url": [
+              "https://dkstatics-public.digikala.com/digikala-products/9df547aa99f97ac53ce9446e99a911cec3cd95fa_1693146088.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+            ],
+            "thumbnail_url": null,
+            "temporary_id": null,
+            "webp_url": [
+              "https://dkstatics-public.digikala.com/digikala-products/9df547aa99f97ac53ce9446e99a911cec3cd95fa_1693146088.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+            ]
+          },
+          {
+            "variant_id": 43274981,
+            "variant_ids": [43274981],
+            "storage_ids": [],
+            "url": [
+              "https://dkstatics-public.digikala.com/digikala-products/a908be02dd945f71396c0484e7b0b277eeeb60ee_1693146088.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+            ],
+            "thumbnail_url": null,
+            "temporary_id": null,
+            "webp_url": [
+              "https://dkstatics-public.digikala.com/digikala-products/a908be02dd945f71396c0484e7b0b277eeeb60ee_1693146088.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+            ]
+          },
+          {
+            "variant_id": 43274981,
+            "variant_ids": [43274981],
+            "storage_ids": [],
+            "url": [
+              "https://dkstatics-public.digikala.com/digikala-products/2593c3216b33e0d263752a4d0dc2726475cb4fbe_1693146087.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+            ],
+            "thumbnail_url": null,
+            "temporary_id": null,
+            "webp_url": [
+              "https://dkstatics-public.digikala.com/digikala-products/2593c3216b33e0d263752a4d0dc2726475cb4fbe_1693146087.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+            ]
+          },
+          {
+            "variant_id": 43274981,
+            "variant_ids": [43274981],
+            "storage_ids": [],
+            "url": [
+              "https://dkstatics-public.digikala.com/digikala-products/e55a706cf572e5eef263b97078cbc8127c94b291_1693146086.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+            ],
+            "thumbnail_url": null,
+            "temporary_id": null,
+            "webp_url": [
+              "https://dkstatics-public.digikala.com/digikala-products/e55a706cf572e5eef263b97078cbc8127c94b291_1693146086.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+            ]
+          },
+          {
+            "variant_id": 43274981,
+            "variant_ids": [43274981],
+            "storage_ids": [],
+            "url": [
+              "https://dkstatics-public.digikala.com/digikala-products/a10cf4624df54c8242b12aa4e3866488db0d52ca_1693146087.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+            ],
+            "thumbnail_url": null,
+            "temporary_id": null,
+            "webp_url": [
+              "https://dkstatics-public.digikala.com/digikala-products/a10cf4624df54c8242b12aa4e3866488db0d52ca_1693146087.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+            ]
+          }
+        ]
+      },
+      "variants": [
+        {
+          "id": 43274981,
+          "lead_time": 1,
+          "rank": 209.4,
+          "rate": 70,
+          "statistics": {
+            "totally_satisfied": {
+              "rate_count": 5,
+              "rate": 35.71
+            },
+            "satisfied": {
+              "rate_count": 3,
+              "rate": 21.43
+            },
+            "neutral": {
+              "rate_count": 3,
+              "rate": 21.43
+            },
+            "dissatisfied": {
+              "rate_count": 0,
+              "rate": 0
+            },
+            "totally_dissatisfied": {
+              "rate_count": 3,
+              "rate": 21.43
+            },
+            "total_count": 14,
+            "total_rate": 70
+          },
+          "status": "marketable",
+          "properties": {
+            "is_fast_shipping": false,
+            "is_ship_by_seller": true,
+            "is_multi_warehouse": false,
+            "has_similar_variants": false,
+            "is_rural": false,
+            "in_digikala_warehouse": false,
+            "is_ship_from_user_state": false,
+            "nearby_seller_shipment": true,
+            "support_nearby_shipping_for_user": false,
+            "is_ship_by_seller_restricted": false
+          },
+          "warranty": {
+            "id": 272,
+            "title_fa": "گارانتی اصالت و سلامت فیزیکی کالا",
+            "title_en": "گارانتی اصالت و سلامت فیزیکی کالا"
+          },
+          "themes": [
+            {
+              "value": {
+                "variant_id": 43274981,
+                "id": 100702,
+                "title": "48-50",
+                "nature": "numeral_range",
+                "value": "48-50",
+                "sort_order": 0
+              },
+              "label": "سایز",
+              "type": "sized",
+              "is_main": false
+            },
+            {
+              "value": {
+                "variant_id": 43274981,
+                "id": 2,
+                "title": "سفید",
+                "code": "#FFFFFF",
+                "hexCode": "#FFFFFF",
+                "hex_code": "#FFFFFF",
+                "nature": "color"
+              },
+              "label": "رنگ",
+              "type": "colored",
+              "is_main": true
+            }
+          ],
+          "size": {
+            "id": 2100702,
+            "title": "سفید - 48-50"
+          },
+          "seller": {
+            "id": 904223,
+            "title": "زیست فرآورده چیستا",
+            "code": "E4X9E",
+            "url": "https://www.digikala.com/seller/E4X9E/",
+            "rating": {
+              "total_rate": 82,
+              "total_count": 9464,
+              "commitment": 100,
+              "no_return": 99.5,
+              "on_time_shipping": 100
+            },
+            "properties": {
+              "is_trusted": true,
+              "is_official": false,
+              "is_roosta": false,
+              "is_new": false
+            },
+            "stars": 5,
+            "grade": {
+              "label": "عالی",
+              "color": "#00a049"
+            },
+            "logo": null,
+            "registration_date": "4 سال و 5 ماه"
+          },
+          "digiclub": {
+            "point": 150
+          },
+          "price": {
+            "selling_price": 15990000,
+            "rrp_price": 15990000,
+            "order_limit": 5,
+            "is_incredible": false,
+            "is_promotion": false,
+            "is_locked_for_digiplus": false,
+            "bnpl_active": false,
+            "discount_percent": 0,
+            "is_plus_early_access": false,
+            "min_order_limit": 1
+          },
+          "shipment_methods": {
+            "description": "موجود در انبار فروشنده و دیجی‌کالا",
+            "has_lead_time": true,
+            "icon": "cube-badge-available-product",
+            "icon_color": "#0fabc6",
+            "providers": [
+              {
+                "has_lead_time": true,
+                "type": "digikala",
+                "title": "ارسال دیجی‌کالا از 1 روز کاری دیگر",
+                "description": "این کالا پس از مدت زمان مشخص شده توسط فروشنده در انبار دیجی‌کالا تامین و آماده پردازش می‌گردد و توسط پیک دیجی‌کالا در بازه انتخابی ارسال خواهد شد.",
+                "label": {
+                  "title": "توسط دیجی‌کالا",
+                  "description": "تامین از 1 روز کاری دیگر"
+                },
+                "price": {
+                  "text": "وابسته به سبد",
+                  "value": null,
+                  "is_free": false
+                },
+                "shipping_mode": "digikala",
+                "delivery_day": "tomorrow",
+                "image": "https://dkstatics-public.digikala.com/digikala-static/a850a0020b1f1d1241c35c8e9ef2b4a93e12a091_1667056289.png",
+                "svg_image": "https://dkstatics-public.digikala.com/digikala-static/562b91988f1beec9a5f13aee3cf31cfd7a1a25b1_1748679087.svg"
+              },
+              {
+                "has_lead_time": false,
+                "type": "seller",
+                "title": "ارسال فروشنده",
+                "description": "این کالا در انبار فروشنده موجود و آماده پردازش است و امکان ارسال مستقیم توسط فروشنده دارد.",
+                "label": {
+                  "title": "توسط فروشنده",
+                  "description": null
+                },
+                "price": null,
+                "shipping_mode": "seller",
+                "delivery_day": "other_days",
+                "image": "https://dkstatics-public.digikala.com/digikala-static/40532b1d3283a0f891eff32910970e492d328b96_1667056367.png",
+                "svg_image": "https://dkstatics-public.digikala.com/digikala-static/f0c88a9a9615db02db461c4748bce71c517a7377_1748679285.svg"
+              }
+            ]
+          },
+          "has_importer_price": false,
+          "manufacture_price_not_exist": false,
+          "has_best_price_in_last_month": false,
+          "buy_box_notices": [],
+          "digiplus": {
+            "services": [
+              "پشتیبانی اختصاصی"
+            ],
+            "service_list": [
+              {
+                "title": "پشتیبانی اختصاصی"
+              }
+            ],
+            "services_summary": [],
+            "is_jet_eligible": false,
+            "cash_back": 0,
+            "is_general_location_jet_eligible": false,
+            "fast_shipping_text": null
+          },
+          "variant_badges": []
+        }
+      ],
+      "videos": [],
+      "category": {
+        "id": 9455,
+        "title_fa": "شلوارک مردانه",
+        "title_en": "MEN SHORTS",
+        "code": "men-shorts",
+        "content_description": "",
+        "content_box": "",
+        "return_reason_alert": ""
+      },
+      "brand": {
+        "id": 38675,
+        "code": "mami-dooz",
+        "title_fa": "مامی دوز",
+        "title_en": "Mami Dooz",
+        "url": {
+          "base": null,
+          "uri": "/brand/mami-dooz/"
+        },
+        "visibility": true,
+        "logo": {
+          "storage_ids": [],
+          "url": [
+            "https://dkstatics-public.digikala.com/digikala-brands/e508029b13e819486fcabd62ad65e89228d89efc_1687615810.jpg?x-oss-process=image/resize,m_lfit,h_120,w_120/quality,q_80"
+          ],
+          "thumbnail_url": null,
+          "temporary_id": null,
+          "webp_url": null
+        },
+        "is_premium": false,
+        "is_miscellaneous": false,
+        "is_name_similar": false
+      },
+      "review": {
+        "description": "شلوارک های کتان پنبه کج راه مامی دوز، این شلوارک ها بصورت دست دوز با همکاری بهترین طراحان آمستردام هلند طراحی و دوخته شده است و هر کدام دارای یک سریال نامبر منحصر به فرد خود می باشد که نشان از تولید محدود آن می باشد. (بر روی لیبل بسته بندی سریال نامبر اختصاصی درج شده است) .\r\nدر سمت راست و چپ این شلوارک رسمی کش وجود دارد که راحتی بسیار فوق العاده ای را برای شما ارمغان میاورد.\r\nشلوارک کتان، قد آن تا زانو بوده، دارای دو جیب با ابعاد استاندارد تلفن همراه تا هفت اینچ طراحی شده است، همچنین یک عدد جیب در پشت شلوارک قرار دارد. \r\nاین شلوارک مناسب همه گروه های سنی بوده و بصورت رسمی و کتان کجراه می باشد، آن را میتوانید در یک میهمانی تا قهرمانی تنیس ویمبلدون بپوشید و لذت ببرید. شلوارک های مامی دوز در بسته بندی شکیل زیپ کیپ مات ارسال می شود.\r\n\r\n",
+        "attributes": [
+          {
+            "title": "جنس",
+            "values": [
+              "پنبه",
+              "کتان"
+            ]
+          },
+          {
+            "title": "قد",
+            "values": [
+              "زیر زانو"
+            ]
+          },
+          {
+            "title": "نحوه بسته شدن",
+            "values": [
+              "دکمه و زیپ"
+            ]
+          }
+        ]
+      },
+      "pros_and_cons": {
+        "advantages": [],
+        "disadvantages": []
+      },
+      "suggestion": {
+        "count": 10,
+        "percentage": 71
+      },
+      "second_default_variant": {
+        "id": 43274981,
+        "lead_time": 1,
+        "rank": 99.7,
+        "rate": 70,
+        "statistics": {
+          "totally_satisfied": {
+            "rate_count": 5,
+            "rate": 35.71
+          },
+          "satisfied": {
+            "rate_count": 3,
+            "rate": 21.43
+          },
+          "neutral": {
+            "rate_count": 3,
+            "rate": 21.43
+          },
+          "dissatisfied": {
+            "rate_count": 0,
+            "rate": 0
+          },
+          "totally_dissatisfied": {
+            "rate_count": 3,
+            "rate": 21.43
+          },
+          "total_count": 14,
+          "total_rate": 70
+        },
+        "status": "marketable",
+        "properties": {
+          "is_fast_shipping": false,
+          "is_ship_by_seller": true,
+          "is_multi_warehouse": false,
+          "has_similar_variants": false,
+          "is_rural": false,
+          "in_digikala_warehouse": false,
+          "is_ship_from_user_state": false,
+          "nearby_seller_shipment": true,
+          "support_nearby_shipping_for_user": false,
+          "is_ship_by_seller_restricted": false
+        },
+        "warranty": {
+          "id": 272,
+          "title_fa": "گارانتی اصالت و سلامت فیزیکی کالا",
+          "title_en": "گارانتی اصالت و سلامت فیزیکی کالا"
+        },
+        "themes": [
+          {
+            "value": {
+              "variant_id": 43274981,
+              "id": 100702,
+              "title": "48-50",
+              "nature": "numeral_range",
+              "value": "48-50"
+            },
+            "label": "سایز",
+            "type": "sized",
+            "is_main": false
+          },
+          {
+            "value": {
+              "variant_id": 43274981,
+              "id": 2,
+              "title": "سفید",
+              "code": "#FFFFFF",
+              "hexCode": "#FFFFFF",
+              "hex_code": "#FFFFFF",
+              "nature": "color"
+            },
+            "label": "رنگ",
+            "type": "colored",
+            "is_main": true
+          }
+        ],
+        "size": {
+          "id": 2100702,
+          "title": "سفید - 48-50"
+        },
+        "seller": {
+          "id": 904223,
+          "title": "زیست فرآورده چیستا",
+          "code": "E4X9E",
+          "url": "https://www.digikala.com/seller/E4X9E/",
+          "rating": {
+            "total_rate": 82,
+            "total_count": 9464,
+            "commitment": 100,
+            "no_return": 99.5,
+            "on_time_shipping": 100
+          },
+          "properties": {
+            "is_trusted": true,
+            "is_official": false,
+            "is_roosta": false,
+            "is_new": false
+          },
+          "stars": 5,
+          "grade": {
+            "label": "عالی",
+            "color": "#00a049"
+          },
+          "logo": null,
+          "registration_date": "4 سال و 5 ماه"
+        },
+        "digiclub": {
+          "point": 150
+        },
+        "price": {
+          "selling_price": 15990000,
+          "rrp_price": 15990000,
+          "order_limit": 5,
+          "is_incredible": false,
+          "is_promotion": false,
+          "is_locked_for_digiplus": false,
+          "bnpl_active": false,
+          "discount_percent": 0,
+          "is_plus_early_access": false,
+          "min_order_limit": 1
+        },
+        "shipment_methods": {
+          "description": "موجود در انبار فروشنده و دیجی‌کالا",
+          "has_lead_time": true,
+          "icon": "cube-badge-available-product",
+          "icon_color": "#0fabc6",
+          "providers": [
+            {
+              "has_lead_time": true,
+              "type": "digikala",
+              "title": "ارسال دیجی‌کالا از 1 روز کاری دیگر",
+              "description": "این کالا پس از مدت زمان مشخص شده توسط فروشنده در انبار دیجی‌کالا تامین و آماده پردازش می‌گردد و توسط پیک دیجی‌کالا در بازه انتخابی ارسال خواهد شد.",
+              "label": {
+                "title": "توسط دیجی‌کالا",
+                "description": "تامین از 1 روز کاری دیگر"
+              },
+              "price": {
+                "text": "وابسته به سبد",
+                "value": null,
+                "is_free": false
+              },
+              "shipping_mode": "digikala",
+              "delivery_day": "tomorrow",
+              "image": "https://dkstatics-public.digikala.com/digikala-static/a850a0020b1f1d1241c35c8e9ef2b4a93e12a091_1667056289.png",
+              "svg_image": "https://dkstatics-public.digikala.com/digikala-static/562b91988f1beec9a5f13aee3cf31cfd7a1a25b1_1748679087.svg"
+            },
+            {
+              "has_lead_time": false,
+              "type": "seller",
+              "title": "ارسال فروشنده",
+              "description": "این کالا در انبار فروشنده موجود و آماده پردازش است و امکان ارسال مستقیم توسط فروشنده دارد.",
+              "label": {
+                "title": "توسط فروشنده",
+                "description": null
+              },
+              "price": null,
+              "shipping_mode": "seller",
+              "delivery_day": "other_days",
+              "image": "https://dkstatics-public.digikala.com/digikala-static/40532b1d3283a0f891eff32910970e492d328b96_1667056367.png",
+              "svg_image": "https://dkstatics-public.digikala.com/digikala-static/f0c88a9a9615db02db461c4748bce71c517a7377_1748679285.svg"
+            }
+          ]
+        },
+        "has_importer_price": false,
+        "manufacture_price_not_exist": false,
+        "has_best_price_in_last_month": false,
+        "buy_box_notices": [],
+        "digiplus": {
+          "services": [
+            "پشتیبانی اختصاصی"
+          ],
+          "service_list": [
+            {
+              "title": "پشتیبانی اختصاصی"
+            }
+          ],
+          "services_summary": [],
+          "is_jet_eligible": false,
+          "cash_back": 0,
+          "is_general_location_jet_eligible": false,
+          "fast_shipping_text": null
+        },
+        "variant_badges": []
+      },
+      "questions_count": 15,
+      "comments_count": 54,
+      "comments_overview": {
+        "id": 100,
+        "overview": "این شلوارک مردانه جنس و کیفیت خوبی دارد و تنخور بسیار خوبی دارد که در فصول مختلف مثل پاییز قابل استفاده است. مشتریان از دوخت عالی و ست‌پذیری آسان آن با سایر لباس‌ها رضایت دارند، و برخی هم سایز مناسب و پارچه مقاوم را نکته مثبت برشمرده‌اند. همچنین، رنگ سفید این محصول جذاب و قابل ست کردن است و به نظر می‌رسد برای کسانی که به دنبال استایل شیک و راحت هستند، گزینه مناسبی باشد.\nبا این حال، سایزبندی این محصول گاهی غیر استاندارد است و ممکن است نیاز به خرید سایز کوچکتر باشد که باعث ناراحتی مشتریان شده است. کیفیت پارچه نازک و بدن نما بودن آن، همچنین مقاومت کم پس از چند بار شستشو، از دیگر معایب این محصول است. برخی کاربران از کمبود اطلاعات در مورد سایزبندی و تنوع دقیق آن هم گلایه دارند.\nدر کل، این محصول برای کسانی که به دنبال پارچه کتان، ظاهر شیک و قیمت مناسب هستند، گزینه خوبی است، اما به نظرات کاربران در مورد سایز و دوام پارچه باید توجه داشت تا رضایت کامل حاصل شود.",
+        "advantages": [
+          "کیفیت خوب و تنخور عالی",
+          "طراحی ست‌پذیر و رنگ‌بندی مناسب"
+        ],
+        "disadvantages": [
+          "سایزبندی غیر استاندارد",
+          "کیفیت پارچه نازک و بدن نما"
+        ]
+      },
+      "breadcrumb": [
+        {
+          "category_id": null,
+          "title": "دیجی‌کالا",
+          "url": {
+            "base": null,
+            "uri": "/"
+          }
+        },
+        {
+          "category_id": 8749,
+          "title": "مد و پوشاک",
+          "url": {
+            "base": null,
+            "uri": "/main/apparel/"
+          }
+        },
+        {
+          "category_id": 8752,
+          "title": "مردانه",
+          "url": {
+            "base": null,
+            "uri": "/search/category-mens-apparel/"
+          }
+        },
+        {
+          "category_id": 9435,
+          "title": "لباس مردانه",
+          "url": {
+            "base": null,
+            "uri": "/search/category-men-clothing/"
+          }
+        },
+        {
+          "category_id": 9455,
+          "title": "شلوارک مردانه",
+          "url": {
+            "base": null,
+            "uri": "/search/category-men-shorts/"
+          }
+        },
+        {
+          "category_id": null,
+          "title": "شلوارک مردانه مامی دوز مدل فرمال کتان",
+          "url": {
+            "base": null,
+            "uri": "/product/dkp-12511051/%D8%B4%D9%84%D9%88%D8%A7%D8%B1%DA%A9-%D9%85%D8%B1%D8%AF%D8%A7%D9%86%D9%87-%D9%85%D8%A7%D9%85%DB%8C-%D8%AF%D9%88%D8%B2-%D9%85%D8%AF%D9%84-%D9%81%D8%B1%D9%85%D8%A7%D9%84-%DA%A9%D8%AA%D8%A7%D9%86"
+          }
+        }
+      ],
+      "has_size_guide": false,
+      "specifications": [
+        {
+          "title": "مشخصات",
+          "attributes": [
+            {
+              "title": "جنس",
+              "values": [
+                "پنبه ",
+                "کتان "
+              ]
+            },
+            {
+              "title": "قد",
+              "values": [
+                "زیر زانو "
+              ]
+            },
+            {
+              "title": "نحوه بسته شدن",
+              "values": [
+                "دکمه و زیپ "
+              ]
+            },
+            {
+              "title": "مورد استفاده",
+              "values": [
+                "اسپرت ",
+                "روزمره ",
+                "اداری و رسمی ",
+                "مهمانی "
+              ]
+            },
+            {
+              "title": "جزئیات",
+              "values": [
+                "دارای کش در سمت راست و چپ، کتان پنبه درجه یک، طراحی در آمستردام هلند، بسیار با کیفیت و راحت. "
+              ]
+            },
+            {
+              "title": "نگهداری",
+              "values": [
+                "ترجیجا با آب ولرم شسته شود، به راحتی اتو می شود، از سفید کننده به هیچ وجه استفاده نشود. "
+              ]
+            },
+            {
+              "title": "کشور مبدا برند",
+              "values": [
+                "ایران "
+              ]
+            },
+            {
+              "title": "کشور تولید‌کننده",
+              "values": [
+                "ایران "
+              ]
+            }
+          ]
+        }
+      ],
+      "expert_reviews": {
+        "attributes": [],
+        "description": "شلوارک های کتان پنبه کج راه مامی دوز، این شلوارک ها بصورت دست دوز با همکاری بهترین طراحان آمستردام هلند طراحی و دوخته شده است و هر کدام دارای یک سریال نامبر منحصر به فرد خود می باشد که نشان از تولید محدود آن می باشد. (بر روی لیبل بسته بندی سریال نامبر اختصاصی درج شده است) .\r\nدر سمت راست و چپ این شلوارک رسمی کش وجود دارد که راحتی بسیار فوق العاده ای را برای شما ارمغان میاورد.\r\nشلوارک کتان، قد آن تا زانو بوده، دارای دو جیب با ابعاد استاندارد تلفن همراه تا هفت اینچ طراحی شده است، همچنین یک عدد جیب در پشت شلوارک قرار دارد. \r\nاین شلوارک مناسب همه گروه های سنی بوده و بصورت رسمی و کتان کجراه می باشد، آن را میتوانید در یک میهمانی تا قهرمانی تنیس ویمبلدون بپوشید و لذت ببرید. شلوارک های مامی دوز در بسته بندی شکیل زیپ کیپ مات ارسال می شود.\r\n\r\n",
+        "short_review": "",
+        "admin_rates": [],
+        "review_sections": [],
+        "technical_properties": {
+          "advantages": [],
+          "disadvantages": []
+        }
+      },
+      "meta": {
+        "brand_category_url": {
+          "base": null,
+          "uri": "/search/category-men-shorts/mami-dooz/"
+        }
+      },
+      "last_comments": [
+        {
+          "id": 88776704,
+          "title": null,
+          "body": "به عکس ها توجه نکنید!\nاونقدر تن خور بدی داره که اصلا آدم روش نمیشه جایی بپوشه. \nبرخلاف عکس ها اصلا فیت و راسته نیست. بیشتر شبیه پیژامه پدربزرگاست که از زانو برده شده. ",
+          "created_at": "5 مرداد 1405",
+          "rate": 1,
+          "reactions": {
+            "likes": 0,
+            "dislikes": 0
+          },
+          "files": [],
+          "is_buyer": true,
+          "user_name": "بهنام شاهمحمدی",
+          "is_anonymous": false,
+          "purchased_item": [],
+          "advantages": [],
+          "disadvantages": [],
+          "true_to_size_rate": "tooBig",
+          "relative_date": "5 مرداد 1405"
+        },
+        {
+          "id": 87679493,
+          "title": null,
+          "body": "بسیار خوش استایل و استاندارد",
+          "created_at": "16 خرداد 1405",
+          "rate": 4,
+          "reactions": {
+            "likes": 0,
+            "dislikes": 0
+          },
+          "files": [],
+          "is_buyer": true,
+          "user_name": "ابوذر قربانی",
+          "is_anonymous": false,
+          "purchased_item": [],
+          "advantages": [],
+          "disadvantages": [],
+          "relative_date": "16 خرداد 1405"
+        },
+        {
+          "id": 87357256,
+          "title": null,
+          "body": "اصلا سایزش مناسب نبود و جنسش هم نسبت به قیمت خوب نیود",
+          "created_at": "3 خرداد 1405",
+          "rate": 3,
+          "reactions": {
+            "likes": 0,
+            "dislikes": 0
+          },
+          "files": [],
+          "is_buyer": true,
+          "user_name": "مهران فدائیان",
+          "is_anonymous": false,
+          "purchased_item": [],
+          "advantages": [],
+          "disadvantages": [],
+          "true_to_size_rate": "tooBig",
+          "relative_date": "3 خرداد 1405"
+        },
+        {
+          "id": 87305463,
+          "title": null,
+          "body": "جنس و رنگ و کیفیت خوب . فقط یه سایز کوچکتر بگیرید",
+          "created_at": "1 خرداد 1405",
+          "rate": 4,
+          "reactions": {
+            "likes": 0,
+            "dislikes": 0
+          },
+          "files": [],
+          "is_buyer": true,
+          "user_name": "مصطفی بانشی",
+          "is_anonymous": false,
+          "purchased_item": [],
+          "advantages": [],
+          "disadvantages": [],
+          "true_to_size_rate": "big",
+          "relative_date": "1 خرداد 1405"
+        }
+      ],
+      "last_questions": [
+        {
+          "id": 9137562,
+          "status": "accepted",
+          "text": "سایز ۴۰-۴۲ موجود نمی‌فرماید ؟",
+          "answer_count": 1,
+          "sender": "مصطفی لطفی",
+          "created_at": "3 اسفند 1404"
+        },
+        {
+          "id": 8959920,
+          "status": "accepted",
+          "text": "دور کمر و دور باسن و دور ران سایز یک چند سانت هست؟",
+          "answer_count": 1,
+          "sender": "محیاسادات میری طامهء",
+          "created_at": "2 بهمن 1404"
+        },
+        {
+          "id": 8913652,
+          "status": "accepted",
+          "text": "واقعا قد این شلوارک تا زیر زانو هستش آخه تو توضیحات اینطور نوشته اما تو عکس کوتاه به نظر میاد",
+          "answer_count": 1,
+          "sender": "علی رضا قلی زاده",
+          "created_at": "28 دی 1404"
+        }
+      ],
+      "tags": [],
+      "digify_touchpoint": "",
+      "show_type": "large",
+      "cars_reservable": false,
+      "has_offline_shop_stock": false,
+      "has_style_try_on": true,
+      "st_cmp_tacker": {
+        "neo": "OZmoA4RovDJK1GyHLF7Xx3FQM7h0Akl2ClvRn2Qd9x9Bjz9PU8ROkOQ9K5TH4PuOXgGuQEV8MiU6WLagFK4BsmbaQkuUZJKhL8AxxmVHpqDIspltZup3cYGQbPemZgmsMQ49K6kd2FHiL78sHjUf3h9RJuD223s6sY4kh8Q6a6sFUNwomln4NPpLdzasMPOZxBYPZQ2XUxrek0gFOX1CPy",
+        "cx": "eyJjaXBoZXJ0ZXh0IjoidTB5d3BJRDhYMEZKN05BZXZ1Wkk1REpIK1Z1cUdsQTJjb3lSTjdLOXZ2d244WHowOTNjSWNpXC9VRlRncnFGM3RWWmorUWhUd014KzlWaktrZ2xlQ1pDMUtWS3dvZlhqU1ZxT0dlMGs3WWxGamlVSjB2NGVDY",
+        "dx": "0kxZ0FmdHpmcmlZZVI5Y1VMcFJOOWtBV2xjVjBIUXp6b2R4Y28rTGZjcWxLd24xdWk2czQrYm5rYTVqOThVVnlRVDdGTTdLYTVvaHE0WWFrRjBnenZBdHFcL0JVcU5DTFwveTVZMXIxNnFVR0REOTUybGlJQnRRTFo3NFlkbXYwdG9Ld3",
+        "data-fx": "d3dmo2clwvMjIwbzdFWlNjS0w3Q2VqRHcxeXI0bVkwU0RndDd3T0V5MkIrQzRNNGJvSzBGN3k3Q2xWUHZNdm9FZ1k3YldoYVJxNDEyakxycGJwNVwvMzJmNDVEb1RhWjZvTDE2aTRWK1pXZ09WUXRzSldjdVl2Z2ZESG52WTZaREIwMmR",
+        "zero": "FRHhoU3RtczZhXC9BM0ZNVHJYaVBRR3h1RHdoVTJDak8ybmZaTkxmUjk0ZFU2ZUpRcUFpXC9QTlUzUklSa3RCYmtyb0p1amkiLCJpdiI6IjhhODg1YTk0MDY5N2VjNGEwNzY1MDUwYzYzOTY3MDEzIiwiaXRlcmF0aW9ucyI6OTk5fQ=="
+      }
+    },
+    "data_layer": {
+      "event": "eec.productDetail",
+      "ecommerce": {
+        "detail": {
+          "actionField": {
+            "list": "category-شلوارک مردانه"
+          },
+          "products": [
+            {
+              "brand": "مامی دوز",
+              "category": "[AP,شلوارک مردانه]",
+              "metric6": 84,
+              "dimension2": 0,
+              "dimension6": 0,
+              "dimension7": "none",
+              "dimension9": 3.9,
+              "dimension11": 0,
+              "dimension20": "marketable",
+              "item_category2": "مد و پوشاک",
+              "item_category3": "مردانه",
+              "item_category4": "لباس مردانه",
+              "item_category5": "شلوارک مردانه",
+              "name": "شلوارک مردانه مامی دوز مدل فرمال کتان",
+              "id": 12511051,
+              "price": 15990000,
+              "variant_id": 43274981,
+              "metric8": 1,
+              "dimension3": "marketplace",
+              "dimension10": 1,
+              "dimension15": 0,
+              "metric15": 1,
+              "metric11": 54,
+              "metric12": 10
+            }
+          ]
+        }
+      }
+    },
+    "seo": {
+      "title": "قیمت و خرید شلوارک مردانه مامی دوز مدل فرمال کتان",
+      "description": "خرید اینترنتی شلوارک مردانه مامی دوز مدل فرمال کتان با رنگبندی سفید به همراه مقایسه، بررسی مشخصات و لیست قیمت امروز در فروشگاه اینترنتی دیجی‌کالا",
+      "twitter_card": {
+        "title": "شلوارک مردانه مامی دوز مدل فرمال کتان",
+        "image": "https://dkstatics-public.digikala.com/digikala-products/6bcd31701ff2c9490862ec92300492f501efbcd7_1784555662.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60",
+        "price": 0,
+        "description": "خرید اینترنتی شلوارک مردانه مامی دوز مدل فرمال کتان با رنگبندی سفید به همراه مقایسه، بررسی مشخصات و لیست قیمت امروز در فروشگاه اینترنتی دیجی‌کالا"
+      },
+      "open_graph": {
+        "title": "شلوارک مردانه مامی دوز مدل فرمال کتان",
+        "url": "https://www.digikala.com/product/dkp-12511051/شلوارک-مردانه-مامی-دوز-مدل-فرمال-کتان",
+        "image": "https://dkstatics-public.digikala.com/digikala-products/6bcd31701ff2c9490862ec92300492f501efbcd7_1784555662.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60",
+        "availability": "in stock",
+        "type": "product",
+        "site": "دیجی‌کالا",
+        "price": 0,
+        "description": null
+      },
+      "header": {
+        "title": "شلوارک مردانه مامی دوز مدل فرمال کتان",
+        "description": "خرید اینترنتی شلوارک مردانه مامی دوز مدل فرمال کتان با رنگبندی سفید به همراه مقایسه، بررسی مشخصات و لیست قیمت امروز در فروشگاه اینترنتی دیجی‌کالا",
+        "canonical_url": "https://www.digikala.com/product/dkp-12511051/%D8%B4%D9%84%D9%88%D8%A7%D8%B1%DA%A9-%D9%85%D8%B1%D8%AF%D8%A7%D9%86%D9%87-%D9%85%D8%A7%D9%85%DB%8C-%D8%AF%D9%88%D8%B2-%D9%85%D8%AF%D9%84-%D9%81%D8%B1%D9%85%D8%A7%D9%84-%DA%A9%D8%AA%D8%A7%D9%86"
+      },
+      "markup_schema": [
+        {
+          "@type": "Product",
+          "@context": "https://www.schema.org",
+          "name": "شلوارک مردانه مامی دوز مدل فرمال کتان",
+          "alternateName": "",
+          "image": [
+            "https://dkstatics-public.digikala.com/digikala-products/3bcf17ed992e1f85ab31ad7bd8d308a28eba8536_1693211387.jpg?x-oss-process=image/resize,h_1600/quality,q_80",
+            "https://dkstatics-public.digikala.com/digikala-products/c348d3486d4faff7f9a00464712e428ff70300fb_1693146087.jpg?x-oss-process=image/resize,h_1600/quality,q_80",
+            "https://dkstatics-public.digikala.com/digikala-products/1c499931dfd571f33aa8ed56fe4e6a123ef61cfc_1693146087.jpg?x-oss-process=image/resize,h_1600/quality,q_80",
+            "https://dkstatics-public.digikala.com/digikala-products/9df547aa99f97ac53ce9446e99a911cec3cd95fa_1693146088.jpg?x-oss-process=image/resize,h_1600/quality,q_80",
+            "https://dkstatics-public.digikala.com/digikala-products/a908be02dd945f71396c0484e7b0b277eeeb60ee_1693146088.jpg?x-oss-process=image/resize,h_1600/quality,q_80",
+            "https://dkstatics-public.digikala.com/digikala-products/2593c3216b33e0d263752a4d0dc2726475cb4fbe_1693146087.jpg?x-oss-process=image/resize,h_1600/quality,q_80",
+            "https://dkstatics-public.digikala.com/digikala-products/e55a706cf572e5eef263b97078cbc8127c94b291_1693146086.jpg?x-oss-process=image/resize,h_1600/quality,q_80",
+            "https://dkstatics-public.digikala.com/digikala-products/a10cf4624df54c8242b12aa4e3866488db0d52ca_1693146087.jpg?x-oss-process=image/resize,h_1600/quality,q_80"
+          ],
+          "description": "خرید اینترنتی شلوارک مردانه مامی دوز مدل فرمال کتان با رنگبندی سفید به همراه مقایسه، بررسی مشخصات و لیست قیمت امروز در فروشگاه اینترنتی دیجی‌کالا",
+          "mpn": 12511051,
+          "sku": 12511051,
+          "category": "https://www.digikala.com/search/category-men-shorts/",
+          "brand": {
+            "@type": "Brand",
+            "name": "مامی دوز",
+            "url": "https://www.digikala.com/brand/mami-dooz/",
+            "@id": "https://www.digikala.com/brand/mami-dooz/#brand"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": 3.81,
+            "reviewCount": 84
+          },
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "IRR",
+            "price": 15990000,
+            "itemCondition": "https://schema.org/NewCondition",
+            "availability": "https://schema.org/InStock"
+          },
+          "review": {
+            "@type": "Review",
+            "reviewRating": {
+              "@type": "Rating",
+              "bestRating": 5,
+              "ratingValue": 1
+            },
+            "author": {
+              "@type": "Person",
+              "name": "بهنام شاهمحمدی"
+            },
+            "datePublished": "2026-07-27",
+            "reviewBody": "به عکس ها توجه نکنید!\nاونقدر تن خور بدی داره که اصلا آدم روش نمیشه جایی بپوشه. \nبرخلاف عکس ها اصلا فیت و راسته نیست. بیشتر شبیه پیژامه پدربزرگاست که از زانو برده شده. ",
+            "name": ""
+          }
+        },
+        [
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "فروشگاه اینترنتی دیجی‌کالا",
+                "item": {
+                  "@type": "Corporation",
+                  "@id": "https://www.digikala.com/#corporation"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "مد و پوشاک",
+                "item": "https://www.digikala.com/main/apparel/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "مردانه",
+                "item": "https://www.digikala.com/search/category-mens-apparel/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "لباس مردانه",
+                "item": "https://www.digikala.com/search/category-men-clothing/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 5,
+                "name": "شلوارک مردانه",
+                "item": "https://www.digikala.com/search/category-men-shorts/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 6,
+                "name": "شلوارک مردانه مامی دوز مدل فرمال کتان"
+              }
+            ]
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "مامی دوز",
+                "item": {
+                  "@type": "Brand",
+                  "@id": "https://www.digikala.com/brand/mami-dooz/#brand"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "شلوارک مردانه مامی دوز",
+                "item": "https://www.digikala.com/search/category-men-shorts/mami-dooz/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "شلوارک مردانه مامی دوز مدل فرمال کتان"
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    "intrack": {
+      "eventName": "product_detail_pageview",
+      "eventData": {
+        "currency": "IRR",
+        "deviceType": "desktop",
+        "name": "شلوارک مردانه مامی دوز مدل فرمال کتان",
+        "productId": 12511051,
+        "productImageUrl": [
+          "https://dkstatics-public.digikala.com/digikala-products/6bcd31701ff2c9490862ec92300492f501efbcd7_1784555662.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+        ],
+        "quantity": null,
+        "leafCategory": "شلوارک مردانه",
+        "unitPrice": 15990000,
+        "url": "/product/dkp-12511051/شلوارک-مردانه-مامی-دوز-مدل-فرمال-کتان",
+        "supplyCategory": "AP",
+        "categoryLevel1": "مد و پوشاک",
+        "categoryLevel2": "مردانه",
+        "categoryLevel3": "لباس مردانه",
+        "categoryLevel4": "شلوارک مردانه",
+        "categoryLevel5": ""
+      },
+      "userId": null
+    },
+    "landing_touchpoint": [],
+    "dynamic_touch_points": [],
+    "promotion_banner": {
+      "product_promotion": null,
+      "dkjet_promotion": null
+    },
+    "bigdata_tracker_data": {
+      "page_name": "product",
+      "page_info": {
+        "product_id": 12511051
+      }
+    },
+    "dynamic_pdp_carousel": [],
+    "dk_service": []
+  }
+}
