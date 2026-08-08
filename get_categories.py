@@ -1,5 +1,4 @@
 import requests
-import requests
 import csv
 
 url = "https://api.digikala.com/v1/widget-factory/touchpoint-group/7/"
