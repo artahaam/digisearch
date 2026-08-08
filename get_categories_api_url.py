@@ -31,3 +31,4 @@ with open("categories.csv", "r", encoding="utf-8") as file:
             writer.writerow([slug, api_url])
 
     api.close()
+file.close()
