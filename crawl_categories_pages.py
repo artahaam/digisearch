@@ -2,6 +2,8 @@ import requests
 import json
 import csv
 import os
+from datetime import datetime
+
 
 def find_all_keys(obj, target_key):
     results = []
@@ -47,13 +49,18 @@ with open("clothes_category.csv", "r", encoding="utf-8") as csv_file:
 
             if total_slots != 0:
                 data = requests.get(f"https://api.digikala.com/discovery/api/v2/categories/{cat_id}/products?page={pn}").json()
+
+                category = cat_id
+                timestamp = datetime.now().strftime("%Y-%m-%d")
+                directory = os.path.join("category_page_json", category, timestamp)
+                os.makedirs(directory, exist_ok=True)
                 
-                with open(f"category_page_json/{cat_id}_{pn}.json", "w", encoding="utf-8") as json_file:
+                with open(f"{directory}/page_{pn}.json", "w", encoding="utf-8") as json_file:
                     json.dump(data, json_file, indent=4, ensure_ascii=False)
-
-                print('Saved at ' + f"category_page_json/{cat_id}_{pn}.json")
-
                 json_file.close()
+
+                print('Saved at ' + f"{directory}/page_{pn}.json")
+
             else:
                 break
 
