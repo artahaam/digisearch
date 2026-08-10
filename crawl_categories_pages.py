@@ -3,6 +3,7 @@ import json
 import csv
 import os
 from datetime import datetime
+from pathlib import Path
 
 
 def find_all_keys(obj, target_key):
@@ -20,6 +21,18 @@ def find_all_keys(obj, target_key):
             results.extend(find_all_keys(item, target_key))
 
     return results
+
+
+BASE_DIR = Path(__file__).resolve().parent
+DATA_DIR = BASE_DIR / "data"
+RAW_DIR = DATA_DIR / "raw"
+CATEGORY_DIR = RAW_DIR / "category"
+CHECKPOINT_DIR = DATA_DIR / "checkpoints"
+LOG_DIR = BASE_DIR / "logs"
+
+for directory in (RAW_DIR, CATEGORY_DIR, CHECKPOINT_DIR, LOG_DIR):
+    directory.mkdir(parents=True, exist_ok=True)
+
 
 
 
@@ -50,13 +63,13 @@ with open("clothes_category.csv", "r", encoding="utf-8") as csv_file:
 
         except:
 
-            print("Invalid response")
+            print("Invalid response or no pager found!")
             print(f"URL: {base_page}")
             print("Skipping to the next category")
 
             continue
 
-
+        
         current_page = pager["current_page"]
         total_items = pager["total_items"]
         total_pages = pager["total_pages"]
@@ -71,26 +84,35 @@ with open("clothes_category.csv", "r", encoding="utf-8") as csv_file:
         for pn in range(1, approximate_page_numbers + 1):
 
             print(f"Current page: {pn}")
-            
+
+
+            print(f"slots:{total_slots}")
             if total_slots != 0:
 
                 try:
                     data = requests.get(f"https://api.digikala.com/discovery/api/v2/categories/{cat_id}/products?page={pn}").json()
 
+                    category_dir = CATEGORY_DIR / f"{cat_id}" 
+                    category_dir.mkdir(parents=True, exist_ok=True)
 
-                    category = cat_id
-                    timestamp = datetime.now().strftime("%Y-%m-%d")
-                    directory = os.path.join("category_page_json", category, timestamp)
-                    os.makedirs(directory, exist_ok=True)
-                    
-                    with open(f"{directory}/page_{pn}.json", "w", encoding="utf-8") as json_file:
+                    page_dir = CATEGORY_DIR / f"{cat_id}" / "page"
+                    page_dir.mkdir(parents=True, exist_ok=True)
+
+                    product_dir = (CATEGORY_DIR / f"{cat_id}" / "product")
+                    product_dir.mkdir(parents=True, exist_ok=True)
+
+
+                    with open(f"{CATEGORY_DIR}/{cat_id}/page/page_{pn}.json", "w", encoding="utf-8") as json_file:
                         json.dump(data, json_file, indent=4, ensure_ascii=False)
                     json_file.close()
 
-
-                    widget = find_all_keys(data, "widgets")[1]
-                    
-                    items = find_all_keys(widget, "data")
+                    try:
+                        widget = find_all_keys(data, "widgets")[1]
+                        
+                        items = find_all_keys(widget, "data")
+                    except:
+                        print("Invalid response or data unavailable, skipping this page")
+                        continue
 
                     print("*** Started to store each product page ***")
                                         
@@ -114,19 +136,21 @@ with open("clothes_category.csv", "r", encoding="utf-8") as csv_file:
                             print("Aborted due to connection")
                             continue
 
-                        directory = os.path.join("products", category)
-                        os.makedirs(directory, exist_ok=True)
+                        current_product_dir = f"{CATEGORY_DIR}/{cat_id}/product/{product_id}.json" 
 
-                        with open(f"{directory}/{product_id}.json", "w", encoding="utf-8") as json_file:
+                        with open(current_product_dir, "w", encoding="utf-8") as json_file:
+
                             json.dump(product, json_file, indent=4, ensure_ascii=False)
+
                         json_file.close()
 
-                        print("Product saved at " +f"{directory}/{product_id}.json", "---", datetime.now().strftime("%H:%M:%S"))
+                        print(f"Product {product_id} saved at " +f"{current_product_dir}", "---", datetime.now().strftime("%H:%M:%S"))
                         print("*"*20 + "\n\n")
 
-                    print('Saved at ' + f"{directory}/page_{pn}.json", "---", datetime.now().strftime("%Y-%m-%d"))
+                    print(f'Category page_{pn} saved at ' + f"{page_dir}/page_{pn}.json", "---", datetime.now().strftime("%Y-%m-%d"))
 
-                except:
+                except requests.exceptions.RequestException as e:
+                    print(e)
                     continue
 
             else:
