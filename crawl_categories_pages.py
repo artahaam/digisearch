@@ -40,10 +40,22 @@ with open("clothes_category.csv", "r", encoding="utf-8") as csv_file:
         except (requests.exceptions.ProxyError, requests.exceptions.SSLError) as e:
 
             print(e)
-            print("Aborted")
-            break
+            print("Aborted due to connectino error.")
 
-        pager = find_all_keys(base_page, "pager")[0]
+            continue
+
+        try:
+
+            pager = find_all_keys(base_page, "pager")[0]
+
+        except:
+
+            print("Invalid response")
+            print(f"URL: {base_page}")
+            print("Skipping to the next category")
+
+            continue
+
 
         current_page = pager["current_page"]
         total_items = pager["total_items"]
@@ -88,7 +100,7 @@ with open("clothes_category.csv", "r", encoding="utf-8") as csv_file:
                         try:
                             id = item["id"]
                         except KeyError:
-                            pass
+                            continue
 
                         url = f"https://api.digikala.com/v2/product/{id}/"
 
@@ -99,7 +111,7 @@ with open("clothes_category.csv", "r", encoding="utf-8") as csv_file:
                         except requests.exceptions.ProxyError as e:
                             print(e)
                             print("Aborted due to connection")
-                            break
+                            continue
 
                         directory = os.path.join("products", category)
                         os.makedirs(directory, exist_ok=True)
@@ -121,4 +133,3 @@ with open("clothes_category.csv", "r", encoding="utf-8") as csv_file:
 
 
 csv_file.close()
-    
