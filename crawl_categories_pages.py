@@ -1,4 +1,5 @@
 import requests
+
 import json
 import csv
 import os
@@ -6,7 +7,7 @@ from datetime import datetime
 from pathlib import Path
 
 
-def find_all_keys(obj, target_key):
+def find_all_keys(obj, target_key) -> list:
     results = []
 
     if isinstance(obj, dict):
@@ -90,70 +91,74 @@ with open("clothes_category.csv", "r", encoding="utf-8") as csv_file:
             if total_slots != 0:
 
                 try:
+
                     data = requests.get(f"https://api.digikala.com/discovery/api/v2/categories/{cat_id}/products?page={pn}").json()
-
-                    category_dir = CATEGORY_DIR / f"{cat_id}" 
-                    category_dir.mkdir(parents=True, exist_ok=True)
-
-                    page_dir = CATEGORY_DIR / f"{cat_id}" / "page"
-                    page_dir.mkdir(parents=True, exist_ok=True)
-
-                    product_dir = (CATEGORY_DIR / f"{cat_id}" / "product")
-                    product_dir.mkdir(parents=True, exist_ok=True)
-
-
-                    with open(f"{CATEGORY_DIR}/{cat_id}/page/page_{pn}.json", "w", encoding="utf-8") as json_file:
-                        json.dump(data, json_file, indent=4, ensure_ascii=False)
-                    json_file.close()
-
-                    try:
-                        widget = find_all_keys(data, "widgets")[1]
-                        
-                        items = find_all_keys(widget, "data")
-                    except:
-                        print("Invalid response or data unavailable, skipping this page")
-                        continue
-
-                    print("*** Started to store each product page ***")
-                                        
-                    for item in items:
-
-                        print("*"*20)
-                        try:
-                            product_id = item["id"]
-                        except KeyError:
-                            print(f"Skipping item without id: {item}")
-                            continue
-
-                        url = f"https://api.digikala.com/v2/product/{product_id}/"
-
-                        print(f"Trying to save {product_id}" + f" From {url}")
-
-                        try:
-                            product = requests.get(url).json()
-                        except requests.exceptions.ProxyError as e:
-                            print(e)
-                            print("Aborted due to connection")
-                            continue
-
-                        current_product_dir = f"{CATEGORY_DIR}/{cat_id}/product/{product_id}.json" 
-
-                        with open(current_product_dir, "w", encoding="utf-8") as json_file:
-
-                            json.dump(product, json_file, indent=4, ensure_ascii=False)
-
-                        json_file.close()
-
-                        print(f"Product {product_id} saved at " +f"{current_product_dir}", "---", datetime.now().strftime("%H:%M:%S"))
-                        print("*"*20 + "\n\n")
-
-                    print(f'Category page_{pn} saved at ' + f"{page_dir}/page_{pn}.json", "---", datetime.now().strftime("%Y-%m-%d"))
 
                 except requests.exceptions.RequestException as e:
                     print(e)
+                    print("Skipping the current page")
                     continue
 
+                category_dir = CATEGORY_DIR / f"{cat_id}" 
+                category_dir.mkdir(parents=True, exist_ok=True)
+
+                page_dir = CATEGORY_DIR / f"{cat_id}" / "page"
+                page_dir.mkdir(parents=True, exist_ok=True)
+
+                product_dir = (CATEGORY_DIR / f"{cat_id}" / "product")
+                product_dir.mkdir(parents=True, exist_ok=True)
+
+
+                with open(f"{CATEGORY_DIR}/{cat_id}/page/page_{pn}.json", "w", encoding="utf-8") as json_file:
+                    json.dump(data, json_file, indent=4, ensure_ascii=False)
+                json_file.close()
+
+                try:
+                    widget = find_all_keys(data, "widgets")[1]
+                    
+                    items = find_all_keys(widget, "data")
+                except:
+                    print("Invalid response or data unavailable, skipping this page")
+                    continue
+
+                print("*** Started to store each product page ***")
+                                    
+                for item in items:
+
+                    print("*"*20)
+                    try:
+                        product_id = item["id"]
+                    except KeyError:
+                        print(f"Skipping item without id: {item}")
+                        continue
+
+                    url = f"https://api.digikala.com/v2/product/{product_id}/"
+
+                    print(f"Trying to save {product_id}" + f" From {url}")
+
+                    try:
+                        product = requests.get(url).json()
+                    except requests.exceptions.ProxyError as e:
+                        print(e)
+                        print("Aborted due to connection")
+                        continue
+
+                    current_product_dir = f"{CATEGORY_DIR}/{cat_id}/product/{product_id}.json" 
+
+                    with open(current_product_dir, "w", encoding="utf-8") as json_file:
+
+                        json.dump(product, json_file, indent=4, ensure_ascii=False)
+
+                    json_file.close()
+
+                    print(f"Product {product_id} saved at " +f"{current_product_dir}", "---", datetime.now().strftime("%H:%M:%S"))
+                    print("*"*20 + "\n\n")
+
+                print(f'Category page_{pn} saved at ' + f"{page_dir}/page_{pn}.json", "---", datetime.now().strftime("%H:%M:%S"))
+
+
             else:
+                print("No more products to fetch")
                 break
 
 
