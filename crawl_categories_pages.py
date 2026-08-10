@@ -37,7 +37,7 @@ with open("clothes_category.csv", "r", encoding="utf-8") as csv_file:
             
             base_page = requests.get(f"https://api.digikala.com/discovery/api/v2/categories/{cat_id}/products/").json()
 
-        except requests.exceptions.ProxyError or requests.exceptions.SSLError as e:
+        except (requests.exceptions.ProxyError, requests.exceptions.SSLError) as e:
 
             print(e)
             print("Aborted")
