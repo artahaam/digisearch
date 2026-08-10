@@ -307,7 +307,7 @@ def main() -> None:
 
                         # questions storage 
                         question_page_url = f"https://api.digikala.com/v1/product/{product_id}/carousel-questions/"
-                        question_page_json = requests.get(comments_page_url).json()
+                        question_page_json = requests.get(question_page_url).json()
                         try:
                             pager = find_all_keys(question_page_json, "pager")[0]
                         except (IndexError, KeyError, TypeError):
