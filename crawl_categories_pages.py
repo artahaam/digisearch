@@ -1,10 +1,26 @@
 import requests
-
 import json
 import csv
 import os
-from datetime import datetime
 from pathlib import Path
+import logging
+
+
+logger = logging.getLogger('crawler')
+logger.setLevel(logging.DEBUG)  
+
+console_handler = logging.StreamHandler()
+console_handler.setLevel(logging.INFO)
+
+file_handler = logging.FileHandler('crawler.log')
+file_handler.setLevel(logging.DEBUG)
+
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+console_handler.setFormatter(formatter)
+file_handler.setFormatter(formatter)
+
+logger.addHandler(console_handler)
+logger.addHandler(file_handler)
 
 
 def find_all_keys(obj, target_key) -> list:
@@ -34,39 +50,42 @@ LOG_DIR = BASE_DIR / "logs"
 for directory in (RAW_DIR, CATEGORY_DIR, CHECKPOINT_DIR, LOG_DIR):
     directory.mkdir(parents=True, exist_ok=True)
 
-
+logger.debug("Directories set up finished.")
 
 
 with open("clothes_category.csv", "r", encoding="utf-8") as csv_file:
 
+    logger.debug("clothes_category.csv opened.")
     reader = csv.DictReader(csv_file)
-    print("Started", datetime.now().strftime("%H:%M:%S"))
-    print("Reading " + csv_file.name)
+
+    logger.info("reading file started")
+
 
     for row in reader:
 
         cat_id = row["id"]
 
         try:
-            
-            base_page = requests.get(f"https://api.digikala.com/discovery/api/v2/categories/{cat_id}/products/").json()
+            base_page_url = f"https://api.digikala.com/discovery/api/v2/categories/{cat_id}/products/"
+            base_page_json = requests.get(base_page_url).json()
+            logger.info(f"categoy {cat_id} fetched from {base_page_url}")
 
         except (requests.exceptions.ProxyError, requests.exceptions.SSLError) as e:
 
-            print(e)
-            print("Aborted due to connectino error.")
+            logger.error(e)
+            logger.info("skipped due to connectino error")
 
             continue
 
         try:
 
-            pager = find_all_keys(base_page, "pager")[0]
+            pager = find_all_keys(base_page_json, "pager")[0]
 
         except:
 
-            print("Invalid response or no pager found!")
-            print(f"URL: {base_page}")
-            print("Skipping to the next category")
+            logger.error("invalid response or no pager found")
+            logger.info(f"URL: {base_page_json}")
+            logger.info("skipping to the next category")
 
             continue
 
@@ -78,16 +97,12 @@ with open("clothes_category.csv", "r", encoding="utf-8") as csv_file:
 
         approximate_page_numbers = total_items // 20 + 1
 
-        print("="*20)
-        print("Category id: " + cat_id)
-        print("Approximate page numbers: " + str(approximate_page_numbers))
+        logger.info("category id: " + cat_id + " fetched")
+        logger.info("approximate page numbers: " + str(approximate_page_numbers))
 
         for pn in range(1, approximate_page_numbers + 1):
 
-            print(f"Current page: {pn}")
 
-
-            print(f"slots:{total_slots}")
             if total_slots != 0:
 
                 try:
@@ -95,8 +110,8 @@ with open("clothes_category.csv", "r", encoding="utf-8") as csv_file:
                     data = requests.get(f"https://api.digikala.com/discovery/api/v2/categories/{cat_id}/products?page={pn}").json()
 
                 except requests.exceptions.RequestException as e:
-                    print(e)
-                    print("Skipping the current page")
+                    logger.error(e)
+                    logger.info("skipping the current page")
                     continue
 
                 category_dir = CATEGORY_DIR / f"{cat_id}" 
@@ -114,33 +129,36 @@ with open("clothes_category.csv", "r", encoding="utf-8") as csv_file:
                 json_file.close()
 
                 try:
-                    widget = find_all_keys(data, "widgets")[1]
-                    
+                    widget = find_all_keys(data, "widgets")[1]    
                     items = find_all_keys(widget, "data")
                 except:
-                    print("Invalid response or data unavailable, skipping this page")
+
+                    logger.error("invalid response or data unavailable")
+                    logger.info("could not find 'widget' in response")
+                    logger.info("skipping this page")
                     continue
 
-                print("*** Started to store each product page ***")
+
+                logger.info(f"fetching products from page {pn} with {total_slots} slots started")
+
                                     
                 for item in items:
 
-                    print("*"*20)
                     try:
                         product_id = item["id"]
                     except KeyError:
-                        print(f"Skipping item without id: {item}")
+                        logger.info(f"skipping item without id: {item}")
                         continue
 
                     url = f"https://api.digikala.com/v2/product/{product_id}/"
 
-                    print(f"Trying to save {product_id}" + f" From {url}")
 
                     try:
                         product = requests.get(url).json()
+                        logger.debug(f"product {product_id} fetched" + f" from {url}")
                     except requests.exceptions.ProxyError as e:
-                        print(e)
-                        print("Aborted due to connection")
+                        logger.error(e)
+                        logger.info("aborted due to connection error")
                         continue
 
                     current_product_dir = f"{CATEGORY_DIR}/{cat_id}/product/{product_id}.json" 
@@ -148,17 +166,19 @@ with open("clothes_category.csv", "r", encoding="utf-8") as csv_file:
                     with open(current_product_dir, "w", encoding="utf-8") as json_file:
 
                         json.dump(product, json_file, indent=4, ensure_ascii=False)
+                        logger.debug(f"json data dumped to {json_file.name}")
 
                     json_file.close()
+                    logger.debug(f"{json_file.name} closed")
 
-                    print(f"Product {product_id} saved at " +f"{current_product_dir}", "---", datetime.now().strftime("%H:%M:%S"))
-                    print("*"*20 + "\n\n")
+                    
+                    logger.info(f"product {product_id} saved at " + f"{current_product_dir}")
 
-                print(f'Category page_{pn} saved at ' + f"{page_dir}/page_{pn}.json", "---", datetime.now().strftime("%H:%M:%S"))
+                logger.info(f'category page_{pn} saved at ' + f"{page_dir}/page_{pn}.json")
 
 
             else:
-                print("No more products to fetch")
+                logger.info("no more products to fetch")
                 break
 
 
