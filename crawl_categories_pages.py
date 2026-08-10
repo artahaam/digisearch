@@ -160,9 +160,9 @@ def main() -> None:
                 live.update(render_dashboard(state, progress))
 
                 try:
-                    base_page_url = f"https://api.digikala.com/discovery/api/v2/categories/{cat_id}/products/"
-                    base_page_json = requests.get(base_page_url).json()
-                    logger.info(f"category {cat_id} fetched from {base_page_url}")
+                    category_page_url = f"https://api.digikala.com/discovery/api/v2/categories/{cat_id}/products/"
+                    category_page_json = requests.get(category_page_url).json()
+                    logger.info(f"category {cat_id} fetched from {category_page_url}")
 
                 except (requests.exceptions.ProxyError, requests.exceptions.SSLError) as e:
                     logger.error(e)
@@ -172,11 +172,11 @@ def main() -> None:
                     continue
 
                 try:
-                    pager = find_all_keys(base_page_json, "pager")[0]
+                    pager = find_all_keys(category_page_json, "pager")[0]
 
                 except (IndexError, KeyError, TypeError):
                     logger.error("invalid response or no pager found")
-                    logger.info(f"URL: {base_page_json}")
+                    logger.info(f"URL: {category_page_json}")
                     state.errors += 1
                     state.log(f"skipped category {cat_id} (no pager in response)")
                     live.update(render_dashboard(state, progress))
@@ -207,7 +207,7 @@ def main() -> None:
                     total=1,
                 )
 
-                for pn in range(1, approximate_page_numbers + 1):
+                for category_pn in range(1, approximate_page_numbers + 1):
 
                     if total_slots == 0:
                         state.log("no more products to fetch")
@@ -215,23 +215,23 @@ def main() -> None:
 
                     try:
                         data = requests.get(
-                            f"https://api.digikala.com/discovery/api/v2/categories/{cat_id}/products?page={pn}"
+                            f"https://api.digikala.com/discovery/api/v2/categories/{cat_id}/products?page={category_pn}"
                         ).json()
 
                     except requests.exceptions.RequestException as e:
                         logger.error(e)
                         state.errors += 1
-                        state.log(f"error fetching page {pn}, skipping")
+                        state.log(f"error fetching page {category_pn}, skipping")
                         live.update(render_dashboard(state, progress))
                         continue
 
-                    with open(page_dir / f"page_{pn}.json", "w", encoding="utf-8") as json_file:
-                        json.dump(data, json_file, indent=4, ensure_ascii=False)
+                    with open(page_dir / f"page_{category_pn}.json", "w", encoding="utf-8") as comments_json_file:
+                        json.dump(data, comments_json_file, indent=4, ensure_ascii=False)
 
                     state.pages_saved += 1
                     state.pages_done += 1
                     progress.update(pages_task, advance=1)
-                    state.log(f"category {cat_id} page_{pn} saved")
+                    state.log(f"category {cat_id} page_{category_pn} saved")
 
                     try:
                         widget = find_all_keys(data, "widgets")[1]
@@ -240,7 +240,7 @@ def main() -> None:
                         logger.error("invalid response or data unavailable")
                         logger.info("could not find 'widget' in response")
                         state.errors += 1
-                        state.log(f"page {pn}: no widget data found, skipping")
+                        state.log(f"page {category_pn}: no widget data found, skipping")
                         live.update(render_dashboard(state, progress))
                         continue
 
@@ -249,6 +249,8 @@ def main() -> None:
                     progress.reset(products_task, total=len(items))
                     live.update(render_dashboard(state, progress))
 
+
+                    # product storage 
                     for item in items:
 
                         try:
@@ -258,22 +260,53 @@ def main() -> None:
                             logger.info(f"skipping item without id: {item}")
                             continue
 
-                        url = f"https://api.digikala.com/v2/product/{product_id}/"
+                        product_url = f"https://api.digikala.com/v2/product/{product_id}/"
 
                         try:
-                            product = requests.get(url).json()
-                            logger.debug(f"product {product_id} fetched from {url}")
+                            product = requests.get(product_url).json()
+                            logger.debug(f"product {product_id} fetched from {product_url}")
                         except requests.exceptions.RequestException as e:
                             logger.error(e)
                             state.errors += 1
                             state.log(f"product {product_id} failed, skipping")
                             continue
 
-                        current_product_path = product_dir / f"{product_id}.json"
+                        current_product_dir = product_dir / f"{product_id}"
+                        current_product_dir.mkdir(parents=True, exist_ok=True)
+                        current_product_path =  current_product_dir / "details.json"
+                        current_comment_path =  current_product_dir / "comments.json"
+                        curent_questions_path = current_product_dir / "questions.json"
 
-                        with open(current_product_path, "w", encoding="utf-8") as json_file:
-                            json.dump(product, json_file, indent=4, ensure_ascii=False)
+                        with open(current_product_path, "w", encoding="utf-8") as details_json_file:
+                            json.dump(product, details_json_file, indent=4, ensure_ascii=False)
 
+
+
+                        # comment storage 
+                        comments_page_url = f"https://api.digikala.com/v1/rate-review/products/{product_id}/"
+                        comments_page_json = requests.get(comments_page_url).json()
+                        try:
+                            pager = find_all_keys(comments_page_json, "pager")[0]
+                        except (IndexError, KeyError, TypeError):
+                            continue
+                        total_comments = pager["total_items"]
+                        total_pages = pager["total_pages"]
+                        all_comments = []
+                        for comments_pn in range(1, total_pages + 1):
+                            try:
+                                data = requests.get(
+                                    f"https://api.digikala.com/v1/rate-review/products/{product_id}/?page={comments_pn}"
+                                ).json()
+                            except requests.exceptions.RequestException as e:
+                                continue
+                            current_page_comments = find_all_keys(data, "data")
+                            all_comments.extend(current_page_comments)
+                        with open(current_comment_path, "w", encoding="utf-8") as f:
+                            json.dump(all_comments, f, indent=4, ensure_ascii=False)
+
+
+
+                        
                         state.products_saved += 1
                         state.products_done += 1
                         progress.update(products_task, advance=1)
