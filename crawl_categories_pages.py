@@ -327,7 +327,8 @@ def main() -> None:
                         with open(curent_questions_path, "w", encoding="utf-8") as f:
                             json.dump(all_questions, f, indent=4, ensure_ascii=False)
 
-                        
+                        state.log(f"product {product_id}: details, comments, questions saved")
+
                         state.products_saved += 1
                         state.products_done += 1
                         progress.update(products_task, advance=1)
