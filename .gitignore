@@ -4,6 +4,7 @@ procuts_json
 products
 data
 logs
+crawler.log
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
