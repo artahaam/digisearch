@@ -2,7 +2,8 @@ notes.md
 category_page_json
 procuts_json
 products
-
+data
+logs
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
