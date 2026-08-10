@@ -98,13 +98,14 @@ with open("clothes_category.csv", "r", encoding="utf-8") as csv_file:
 
                         print("*"*20)
                         try:
-                            id = item["id"]
+                            product_id = item["id"]
                         except KeyError:
+                            print(f"Skipping item without id: {item}")
                             continue
 
-                        url = f"https://api.digikala.com/v2/product/{id}/"
+                        url = f"https://api.digikala.com/v2/product/{product_id}/"
 
-                        print(f"Trying to save {id}" + f" From {url}")
+                        print(f"Trying to save {product_id}" + f" From {url}")
 
                         try:
                             product = requests.get(url).json()
@@ -116,11 +117,11 @@ with open("clothes_category.csv", "r", encoding="utf-8") as csv_file:
                         directory = os.path.join("products", category)
                         os.makedirs(directory, exist_ok=True)
 
-                        with open(f"{directory}/{id}.json", "w", encoding="utf-8") as json_file:
+                        with open(f"{directory}/{product_id}.json", "w", encoding="utf-8") as json_file:
                             json.dump(product, json_file, indent=4, ensure_ascii=False)
                         json_file.close()
 
-                        print("Product saved at " +f"{directory}/{id}.json", "---", datetime.now().strftime("%H:%M:%S"))
+                        print("Product saved at " +f"{directory}/{product_id}.json", "---", datetime.now().strftime("%H:%M:%S"))
                         print("*"*20 + "\n\n")
 
                     print('Saved at ' + f"{directory}/page_{pn}.json", "---", datetime.now().strftime("%Y-%m-%d"))
