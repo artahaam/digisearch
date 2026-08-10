@@ -250,7 +250,7 @@ def main() -> None:
                     live.update(render_dashboard(state, progress))
 
 
-                    # product storage 
+                    # products storage 
                     for item in items:
 
                         try:
@@ -282,7 +282,7 @@ def main() -> None:
 
 
 
-                        # comment storage 
+                        # comments storage 
                         comments_page_url = f"https://api.digikala.com/v1/rate-review/products/{product_id}/"
                         comments_page_json = requests.get(comments_page_url).json()
                         try:
@@ -305,6 +305,27 @@ def main() -> None:
                             json.dump(all_comments, f, indent=4, ensure_ascii=False)
 
 
+                        # questions storage 
+                        question_page_url = f"https://api.digikala.com/v1/product/{product_id}/carousel-questions/"
+                        question_page_json = requests.get(comments_page_url).json()
+                        try:
+                            pager = find_all_keys(question_page_json, "pager")[0]
+                        except (IndexError, KeyError, TypeError):
+                            continue
+                        total_questions = pager["total_items"]
+                        total_pages = pager["total_pages"]
+                        all_questions = []
+                        for question_pn in range(1, total_pages + 1):
+                            try:
+                                data = requests.get(
+                                    f"https://api.digikala.com/v1/product/{product_id}/carousel-questions/?page={question_pn}"
+                                ).json()
+                            except requests.exceptions.RequestException as e:
+                                continue
+                            current_page_questinos = find_all_keys(data, "data")
+                            all_questions.extend(current_page_questinos)
+                        with open(curent_questions_path, "w", encoding="utf-8") as f:
+                            json.dump(all_questions, f, indent=4, ensure_ascii=False)
 
                         
                         state.products_saved += 1
