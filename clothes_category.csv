@@ -4,10 +4,8 @@ id,title_fa,title_en,code,parent_id
 9435,لباس مردانه,Men Clothing,men-clothing,8752
 9436,کت، جلیقه و ست رسمی مردانه,MEN BLAZERS & SUITS,men-blazers-suits,9435
 9438,کت تک رسمی مردانه,MEN Formal Jacket,men-formal-jacket,9436
-9439,ست کت و شلوار مردانه,MEN Suits & Sets,men-suits-and-sets,9436
 9441,جلیقه رسمی مردانه,MEN Formal Vest,men-formal-vest,9436
 9442,لباس راحتی مردانه,MEN HOMEWEAR,men-homewear,9435
-9443,ست لباس راحتی مردانه,MEN Homewear Sets,men-homewear-sets,9442
 9444,تاپ و تی شرت راحتی مردانه,MEN Homewear Tops & T-shirts,men-homewear-tops-t-shirts,9442
 9445,شلوار راحتی مردانه,MEN Homewear Bottom,men-homewear-bottom,9442
 9447,شلوار جین مردانه,MEN Jean Pants,men-jeans,9435
@@ -27,7 +25,6 @@ id,title_fa,title_en,code,parent_id
 9461,کاپشن و جلیقه ورزشی مردانه,MEN Sport Outwear,men-sport-outwear,9457
 9462,شلوارک ورزشی مردانه,MEN Sport Shorts,men-sport-shorts,9457
 9463,سویشرت و هودی ورزشی مردانه,MEN Sport Sweatshirts & Hoodies,men-sport-sweatshirts-hoodies,9457
-9464,گرمکن و ست ورزشی مردانه,MEN Tracksuits & Sets,men-tracksuits-sets,9457
 9465,مجموعه هودی مردانه,Men hoodie collection,men-hoodies-collection,11383
 9466,لباس شنا مردانه,MEN SWIMWEAR,men-swimwear,9457
 9467,مایو و لباس شنای مردانه,MEN Swimsuit,men-swim-bottom,9466
@@ -51,24 +48,18 @@ id,title_fa,title_en,code,parent_id
 9488,کوله پشتی مردانه,MEN BACKPACKS,men-backpacks,9487
 9489,کیف مردانه,MEN BAGS,men-bags,9487
 9490,کمربند و ساسبند مردانه,MEN BELTS,men-belts,9487
-9491,عینک آفتابی مردانه,MEN EYEWEAR,men-eyewear,11117
-9492,ست هدیه مردانه,MEN GIFTS & SETS,men-gifts-sets,9487
 9493,دستکش مردانه,MEN GLOVES & MITTENS,men-gloves-mittens,9487
 9504,سرپوش مردانه,MEN HEADWEAR,men-headwear,9487
 9507,زنجیر مردانه,MEN Chain,men-chain,9505
-9509,گردنبند مردانه,MEN Necklace,men-necklace,9505
-9510,آویز مردانه,MEN Pendants,men-pendants,9505
 9512,دکمه سردست مردانه,MEN Cufflinks,men-cufflinks,9505
 9514,کیف سفری و چمدان مردانه,men-luggage,men-luggage,9487
 9525,کراوات و پاپیون مردانه,MEN TIES,men-ties,9487
 9527,کیف پول مردانه,MEN WALLETS BAGS,men-wallets-bags,9487
-9898,گردنبند زنانه و مردانه,Women And Men Necklace,women-and-men-necklace,9540
 9906,کفش روزمره مردانه,Casual Shoes for Men,casual-shoes-for-men,9476
 10168,ورزشی مردانه,Men Sports,men-sports,8752
 10288,پولوشرت مردانه,Men Polo Shirt,men-polo-shirt,9435
 10291,سرهمی مردانه,MEN JUMPSUITS,men-jumpsuits,9435
 10305,مجموعه سویشرت مردانه,Men-sweatshirt-collection,men-sweatshirts-collection,11390
-10380,گردنبند دست‌ساز مردانه,Men Traditional Necklace,men-traditional-necklace,10375
 10384,لباس محلی مردانه,Men Traditional Garment,men-traditional-garment,10182
 10395,کراوات سنتی مردانه,Men Traditional Ties,men-traditional-ties,10372
 10398,پاپیون سنتی مردانه,Traditional Men Bow Tie,traditional-men-bow-tie,10372
@@ -101,12 +92,10 @@ id,title_fa,title_en,code,parent_id
 9282,لباس زنانه,Women Clothing,women-clothing,8753
 9283,پوشش اسلامی,WOMEN ISLAMICWEAR,women-islamicwear,9282
 9285,کت، جلیقه و ست رسمی زنانه,WOMEN BLAZERS & SUITS,women-blazers-and-suits,9282
-9286,ست رسمی زنانه,WOMEN Suits and Sets,women-suits-and-sets,9285
 9289,جلیقه رسمی زنانه,Women formal Vest,women-vest--,9285
 9291,کت رسمی زنانه,Women formal jackets,women-jacket-,9285
 9294,پیراهن و لباس مجلسی زنانه,WOMEN DRESSES,women-dresses,9282
 9295,لباس خواب و راحتی زنانه,Women Homewear,women-homewear,9282
-9297,ست لباس راحتی زنانه,WOMEN Homewear Sets,women-homewear-sets,9295
 9298,تاپ و تی‌شرت راحتی زنانه,WOMEN Homewear Tops & T-shirts,women-homewear-tops-and-t-shirts,9295
 9299,شلوار راحتی زنانه,WOMEN Homewear Bottom,women-homewear-bottom,9295
 9301,چادر,WOMEN Chador,women-chador,9283
@@ -154,7 +143,6 @@ id,title_fa,title_en,code,parent_id
 9360,شلوارک ورزشی زنانه,Women Sport Shorts,women-sport-shorts,9334
 9361,دامن و پیراهن ورزشی زنانه,Women Sport Skirt,women-sport-skirt,9334
 9362,سویشرت و هودی ورزشی زنانه,WOMEN Sport Sweatshirts & Hoodies,women-sport-sweatshirts-and-hoodies,9334
-9363,گرمکن و ست ورزشی زنانه,WOMEN Tracksuits & Sets,women-tracksuits-and-sets,9334
 9365,کفش زنانه,Women Shoes,women-shoes,8753
 9366,نیم بوت زنانه,WOMEN ANKLE BOOTS,women-ankle-boots,9365
 9367,بوت زنانه,Women Boots,women-boots,9365
@@ -172,16 +160,12 @@ id,title_fa,title_en,code,parent_id
 9381,کیف زنانه,Women Bags,women-bags,9380
 9382,کمربند زنانه,Women Belts,women-belts,9380
 9383,عینک آفتابی زنانه,Women Eyewear,women-eyewear,11120
-9384,ست هدیه زنانه,Women Gifts and Sets,women-gifts-and-sets,9380
 9385,دستکش زنانه,Women Gloves and Mittens,women-gloves-and-mittens,9380
 9399,سرپوش زنانه,WOMEN HEADWEAR,women-headwear,9380
 9401,پابند زنانه,WOMEN Anklet,women-anklet,9400
 9403,گل سینه زنانه,WOMEN Brooch,women-brooch,9400
 9404,زنجیر زنانه,WOMEN Chain,women-chain,9400
 9405,گوشواره زنانه,WOMEN Earrings,women-earrings,9400
-9409,گردنبند زنانه,WOMEN Necklace,women-necklace,9400
-9410,آویز زنانه,WOMEN Pendants,women-pendants,9400
-9411,پیرسینگ زنانه,WOMEN Piercing,women-piercing,9400
 9415,شال و روسری زنانه,WOMEN SCARVES,women-scarves,9380
 9429,کراوات و پاپیون زنانه,WOMEN TIES,women-ties,9380
 9431,کیف پول و کیف لوازم آرایش زنانه,WOMEN WALLETS & COSMETIC BAGS,women-wallets-and-cosmetic-bags,9380
@@ -191,7 +175,6 @@ id,title_fa,title_en,code,parent_id
 9843,ساق زنانه,WOMEN Tights,women-tights,9333
 9890,پوشش اسلامی,WOMEN ISLAMICWEAR,girl-islamicwear,9626
 9892,مقنعه و پوشیه دخترانه,Women Scarf And Burka,girl-scarf-and-burka,9890
-9898,گردنبند زنانه و مردانه,Women And Men Necklace,women-and-men-necklace,9540
 9908,کفش روزمره زنانه,Casual Shoes for Women,casual-shoes-for-women,9365
 10097,لگینگ زنانه,Women Legging,women-legging,9282
 10155,بارانی زنانه,Women Raincoat,women-raincoat,9315
@@ -209,7 +192,6 @@ id,title_fa,title_en,code,parent_id
 10393,گوشواره دست‌ساز زنانه,Women Traditional Earrings,women-traditional-earrings,10374
 10394,کیف سنتی زنانه,Women Traditional Bags,women-traditional-bags,10373
 10397,تل مو دست ساز زنانه,Traditional Women Hair Band,traditional-women-hair-band,10373
-10399,گردنبند دست‌ساز زنانه,Women Traditional Necklace,women-traditional-necklace,10374
 10411,کراوات دست‌دوز زنانه,Women Traditional Ties,women-traditional-ties,10373
 10412,پاپیون دست‌دوز زنانه,Traditional Women Bow Tie,traditional-women-bow-tie,10373
 10449,مانتو سنتی زنانه,Women Traditional Manteau,women-traditional-manteau,10385
@@ -234,16 +216,11 @@ id,title_fa,title_en,code,parent_id
 11152,پولوشرت ورزشی زنانه,Women Sport Polo Shirt,women-sport-polo-shirt,9334
 11222,پافر زنانه,Women Puffer Vest,women-puffer-vest,9315
 11236,ست لباس روزمره زنانه,Women casual clothing set,women-casual-clothing-set,9282
-11244,گردنبند طلای دست اول کم اجرت زنانه,WOMEN Economic Gold Necklace,women-economic-gold-necklace,11242
-11245,النگو طلای دست اول کم اجرت زنانه,women Econiomic gold bangle,women-economic-gold-bangle,11242
-11246,گوشواره طلای دست اول کم اجرت زنانه,WOMEN Economic Gold Earrings,women-economic-gold-earrings,11242
 11373,سرهمی زنانه,WOMEN JUMPSUITS,women-jumpsuits,9282
-11380,سرویس طلای دست اول کم اجرت زنانه,Women Economic Gold Sets,women-economic-gold-sets,11242
 11391,هودی زنانه,Women Hoodies,women-hoodie,9282
 11392,هودی چاپی زنانه,Women print hoodies,women-print-hoodies,11391
 11394,سویشرت زنانه,women sweatshirts,womens-sweatshirts,9282
 11395,سویشرت چاپی زنانه,Women print sweatshirt,women-print-sweatshirt,11394
-11517,آویز طلای دست اول کم اجرت زنانه,Women Economic Gold Pendants,women-economic-gold-pendants,11242
 8753,زنانه,Women Clothing,womens-apparel,8749
 9282,لباس زنانه,Women Clothing,women-clothing,8753
 9435,لباس مردانه,Men Clothing,men-clothing,8752
@@ -259,22 +236,14 @@ id,title_fa,title_en,code,parent_id
 9352,شال زنانه و مردانه,Uni Shawl,uni-shawl,9534
 9531,زنانه و مردانه,Uni Clothing,uni-clothing,8749
 9532,کفش زنانه و مردانه,Uni Shoes,uni-shoes,9531
-9533,مراقبت کفش و لوازم جانبی,UNI SHOE CARE & ACCESSORIES,uni-shoe-care-accessories,9532
 9535,کوله پشتی زنانه و مردانه,UNI BACKPACKS,uni-backpacks,9534
 9536,کیف زنانه و مردانه,UNI BAGS,uni-bags,9534
-9537,عینک آفتابی زنانه و مردانه,UNI EYEWEAR,uni-eyewear,11122
-9538,ست هدیه زنانه و مردانه,UNI GIFTS and SETS,uni-gifts-and-sets,9534
 9539,سرپوش زنانه و مردانه,UNI HEADWEAR,uni-headwear,9534
-9542,جعبه جواهرات,UNI Jewelry Box,uni-jewelry-box,9540
-9544,آویز زنانه و مردانه,UNI Pendants,uni-pendants,9540
-9545,ست زنانه و مردانه,UNI Sets,uni-sets,9540
-9552,لوازم جانبی الکترونیکی زنانه و مردانه,UNI TECH ACCESSORIES,uni-tech-accessories,9534
 9556,کیف پول زنانه و مردانه,UNI WALLETS BAGS,uni-wallets-bags,9534
 9925,جوراب زنانه و مردانه,Uni Socks,uni-socks,9534
 9927,دستکش زنانه و مردانه,Uni Gloves,uni-gloves,934
 9954,کفش ورزشی زنانه و مردانه,Uni Sport Shoes,uni-sport-shoes,9532
 10012,دخترانه و پسرانه,Uni Kids Fashion,uni-kids,8754
-10021,پیرسینگ زنانه و مردانه,Uni Piercing,uni-piercing,9540
 10012,دخترانه و پسرانه,Uni Kids Fashion,uni-kids,8754
 10364,ماسک پارچه‌ای بچگانه,Kids Cloth Face Mask,kids-face-masks,11023
 10479,پوشاک بچگانه,Kids Traditional Clothing,kids-traditional-clothing,10182
