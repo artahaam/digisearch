@@ -1,10 +1,13 @@
+# Local files
 notes.md
 category_page_json
 procuts_json
 products
 data
 logs
+pipeline_logs
 crawler.log
+dir.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
