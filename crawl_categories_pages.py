@@ -4,6 +4,7 @@ import csv
 from pathlib import Path
 import logging
 import time
+from datetime import datetime
 from collections import deque
 from dataclasses import dataclass, field
 
@@ -133,11 +134,51 @@ def main() -> None:
 
     state = CrawlerState()
 
+    # checkpoints
+    checkpoint_file = CHECKPOINT_DIR / "checkpoint.csv"
+    file_exists = checkpoint_file.exists()
+
+    if not file_exists:
+        with open(checkpoint_file, "w", encoding="utf-8") as file:
+            writer = csv.writer(file)
+            writer.writerow(["cat_id", "page", "product_id", "date"])
+
+    try:
+        with open(checkpoint_file, "r", encoding="utf-8") as csv_file:
+            logger.debug("checkpoint.csv opened.")
+            reader = csv.DictReader(csv_file)
+            checkpoint = list(reader)[-1]
+            category_checkpoint = checkpoint.get("cat_id", None)
+            category_page_checkpoint = checkpoint.get("page", 1) 
+            logger.debug(f"category_checkpoint : {category_checkpoint}, page_checkpoint: {category_page_checkpoint}")
+
+    except:
+        logger.debug("could not open checkpoint.csv, setting the checkpoints to default")
+        category_checkpoint = None
+        category_page_checkpoint = 1
+
+
     with open("clothes_category.csv", "r", encoding="utf-8") as csv_file:
         logger.debug("clothes_category.csv opened.")
         reader = csv.DictReader(csv_file)
 
         rows = list(reader)
+        logger.info(rows)
+
+        categories = []
+
+        for r in rows:
+            categories.append(r["id"])
+
+
+        if category_checkpoint is not None:
+            category_start_range = categories.index(category_checkpoint)
+        else:
+            category_start_range = 0
+
+        # continue from category checkpoint
+        rows = rows[category_start_range::]
+
         state.total_categories = len(rows)
 
         state.log(f"reading {state.total_categories} categories from clothes_category.csv")
@@ -209,8 +250,17 @@ def main() -> None:
                     f"Products · {cat_id}",
                     total=1,
                 )
-                
-                for category_pn in range(1, approximate_page_numbers + 1):
+
+                # continue from page checkpoint
+                if category_page_checkpoint is not None:
+                    page_start_index = int(category_page_checkpoint)
+
+                else:
+                    page_start_index = 1
+
+                category_page_checkpoint = 1
+
+                for category_pn in range(page_start_index, approximate_page_numbers + 1):
 
                     if total_slots == 0:
                         state.log("no more products to fetch")
@@ -221,6 +271,8 @@ def main() -> None:
                             f"https://api.digikala.com/discovery/api/v2/categories/{cat_id}/products?page={category_pn}"
                         ).json()
 
+                        logger.info(f"page {category_pn} fetched from https://api.digikala.com/discovery/api/v2/categories/{cat_id}/products?page={category_pn}")
+                        
                     except requests.exceptions.RequestException as e:
                         logger.error(e)
                         state.errors += 1
@@ -232,7 +284,7 @@ def main() -> None:
                         json.dump(data, comments_json_file, indent=4, ensure_ascii=False)
 
                     state.pages_saved += 1
-                    state.pages_done += 1
+                    state.pages_done += category_pn
                     progress.update(pages_task, advance=1)
                     state.log(f"category {cat_id} page_{category_pn} saved")
 
@@ -318,6 +370,7 @@ def main() -> None:
                         total_questions = pager["total_items"]
                         total_pages = pager["total_pages"]
                         all_questions = []
+
                         for question_pn in range(1, total_pages + 1):
                             try:
                                 data = requests.get(
@@ -331,6 +384,13 @@ def main() -> None:
                             json.dump(all_questions, f, indent=4, ensure_ascii=False)
 
                         state.log(f"product {product_id}: details, comments, questions saved")
+                        logger.info(f"product {product_id}: details, comments, questions saved")
+
+
+                        with open(checkpoint_file, "a", newline="") as f:
+
+                            writer = csv.writer(f)
+                            writer.writerow([cat_id, category_pn, product_id, datetime.now().strftime("%Y/%m/%d, %H:%M:%S")])
 
                         state.products_saved += 1
                         state.products_done += 1
