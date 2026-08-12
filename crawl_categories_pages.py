@@ -187,6 +187,9 @@ def main() -> None:
 
                 approximate_page_numbers = total_items // 20 + 1
 
+                if approximate_page_numbers > 500:
+                    approximate_page_numbers = 500
+
                 state.pages_total = approximate_page_numbers
                 state.log(f"category {cat_id}: ~{approximate_page_numbers} pages, {total_slots} slots")
                 live.update(render_dashboard(state, progress))
@@ -206,7 +209,7 @@ def main() -> None:
                     f"Products · {cat_id}",
                     total=1,
                 )
-
+                
                 for category_pn in range(1, approximate_page_numbers + 1):
 
                     if total_slots == 0:
