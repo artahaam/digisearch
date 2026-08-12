@@ -141,7 +141,7 @@ def main() -> None:
     if not file_exists:
         with open(checkpoint_file, "w", encoding="utf-8") as file:
             writer = csv.writer(file)
-            writer.writerow(["cat_id", "page", "product_id", "date"])
+            writer.writerow(["cat_id", "page", "date"])
 
     try:
         with open(checkpoint_file, "r", encoding="utf-8") as csv_file:
@@ -387,15 +387,15 @@ def main() -> None:
                         logger.info(f"product {product_id}: details, comments, questions saved")
 
 
-                        with open(checkpoint_file, "a", newline="") as f:
-
-                            writer = csv.writer(f)
-                            writer.writerow([cat_id, category_pn, product_id, datetime.now().strftime("%Y/%m/%d, %H:%M:%S")])
-
                         state.products_saved += 1
                         state.products_done += 1
                         progress.update(products_task, advance=1)
                         live.update(render_dashboard(state, progress))
+
+                    with open(checkpoint_file, "a", newline="") as f:
+
+                        writer = csv.writer(f)
+                        writer.writerow([cat_id, category_pn, datetime.now().strftime("%Y/%m/%d, %H:%M:%S")])
 
                 progress.remove_task(pages_task)
                 progress.remove_task(products_task)
