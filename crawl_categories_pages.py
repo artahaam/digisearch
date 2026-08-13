@@ -7,7 +7,7 @@ import time
 from datetime import datetime
 from collections import deque
 from dataclasses import dataclass, field
-
+import argparse
 from rich.console import Console, Group
 from rich.live import Live
 from rich.panel import Panel
@@ -121,6 +121,20 @@ def render_dashboard(state: CrawlerState, progress: Progress) -> Panel:
 
 
 def main() -> None:
+
+
+    parser = argparse.ArgumentParser(description="crawling categories")
+    parser.add_argument(
+        '--output',
+        type=str,
+        required=False,
+        default="categories.csv",
+        help='Output CSV file name, e.g. "clothes_categories.csv"'
+    )
+    args = parser.parse_args()
+
+    file_name = args.output
+
     console = Console()
 
     progress = Progress(
@@ -157,9 +171,10 @@ def main() -> None:
         category_checkpoint = None
         category_page_checkpoint = 1
 
+    category_file_input = file_name
 
-    with open("clothes_category.csv", "r", encoding="utf-8") as csv_file:
-        logger.debug("clothes_category.csv opened.")
+    with open(category_file_input, "r", encoding="utf-8") as csv_file:
+        logger.debug(f"{category_file_input} opened.")
         reader = csv.DictReader(csv_file)
 
         rows = list(reader)
@@ -170,9 +185,12 @@ def main() -> None:
         for r in rows:
             categories.append(r["id"])
 
-
         if category_checkpoint is not None:
-            category_start_range = categories.index(category_checkpoint)
+            try:
+                category_start_range = categories.index(category_checkpoint)
+            except:
+                logger.warning("could not find checkpoints, getting all categories.")
+                category_start_range = 0
         else:
             category_start_range = 0
 
@@ -181,7 +199,7 @@ def main() -> None:
 
         state.total_categories = len(rows)
 
-        state.log(f"reading {state.total_categories} categories from clothes_category.csv")
+        state.log(f"reading {state.total_categories} categories from {category_file_input}")
 
         with Live(render_dashboard(state, progress), refresh_per_second=10) as live:
             categories_task = progress.add_task("Categories", total=state.total_categories)
