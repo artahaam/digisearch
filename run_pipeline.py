@@ -59,8 +59,15 @@ def main():
         '--filters',
         type=str,
         required=False,
-        default=[],
+        default="",
         help='Comma-separated list of filter keywords, e.g. "clothes,men,jeans"'
+    )
+    parser.add_argument(
+    '--ignores',
+    type=str,
+    required=False,
+    default="",
+    help='Comma-separated list of filter keywords, e.g. "clothes,men,jeans"'
     )
     parser.add_argument(
         '--output',
@@ -72,16 +79,16 @@ def main():
     args = parser.parse_args()
 
 
-    # Prepare arguments for the child script
     get_category_args = [
         f'--filters={args.filters}',
+        f'--ignores={args.ignores}',
         f'--output={args.output}'
     ]
 
     crawler_args = [
         f'--output={args.output}'
     ]
-    # Step 1: Category Discovery
+
     success = run_step(GET_CATEGORIES_SCRIPT, "Category Discovery", args=get_category_args)
     if not success:
         logger.critical("Pipeline aborted: Category discovery stage failed. Leaving crawler untouched.")
