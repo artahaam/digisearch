@@ -42,7 +42,7 @@ Dependencies are listed in `pyproject.toml` and `requirements.txt` – they will
 
 
 ```bash
-git clone https://github.com/yourusername/digisearch.git
+git clone https://github.com/artahaam/digisearch.git
 cd digisearch
 pip install .
 ```
@@ -53,7 +53,7 @@ digisearch --filters "men,clothes" --ignores "gold,silver" --output "men.csv"
 ### Option 2 – Manual (without installation)
 
 ```bash
-git clone https://github.com/yourusername/digisearch.git
+git clone https://github.com/artahaam/digisearch.git
 cd digisearch
 pip install -r requirements.txt
 ```
