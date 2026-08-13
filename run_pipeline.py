@@ -13,7 +13,7 @@ GET_CATEGORIES_SCRIPT = BASE_DIR / "get_all_categories.py"
 CRAWLER_SCRIPT = BASE_DIR / "crawl_categories_pages.py" 
 
 
-LOG_DIR = BASE_DIR / "pipeline_logs"
+LOG_DIR = BASE_DIR / "logs"
 LOG_DIR.mkdir(parents=True, exist_ok=True)
 
 file_handler = logging.FileHandler(LOG_DIR / 'pipeline.log')
