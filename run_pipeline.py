@@ -10,7 +10,7 @@ logger.setLevel(logging.DEBUG)
 
 BASE_DIR = Path(__file__).resolve().parent
 GET_CATEGORIES_SCRIPT = BASE_DIR / "get_categories.py"
-CRAWLER_SCRIPT = BASE_DIR / "crawl_categories_pages.py" 
+CRAWLER_SCRIPT = BASE_DIR / "crawl.py" 
 
 
 LOG_DIR = BASE_DIR / "logs"
