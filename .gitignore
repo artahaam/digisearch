@@ -1,3 +1,15 @@
+# Local files
+notes.md
+category_page_json
+procuts_json
+products
+data
+logs
+pipeline_logs
+crawler.log
+dir.txt
+*.csv
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -216,3 +228,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+
