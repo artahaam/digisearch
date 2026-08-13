@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "digisearch"
+version = "0.1.0"
+description = "Digikala search and scraping pipeline"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "artaham", email = "alireza.thm03@gmail.com"}]
+dependencies = [
+    "certifi==2026.7.22",
+    "charset-normalizer==3.5.0",
+    "idna==3.18",
+    "markdown-it-py==4.2.0",
+    "mdurl==0.1.2",
+    "Pygments==2.20.0",
+    "requests==2.34.2",
+    "rich==15.0.0",
+    "urllib3==2.7.0",
+
+]
+
+[project.scripts]
+digisearch = "run_pipeline:main"
