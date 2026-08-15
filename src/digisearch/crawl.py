@@ -21,6 +21,7 @@ from rich.progress import (
     TaskID,
 )
 
+from digisearch.paths import PROJECT_ROOT
 
 def find_all_keys(obj, target_key) -> list:
     results = []
@@ -39,7 +40,8 @@ def find_all_keys(obj, target_key) -> list:
     return results
 
 
-BASE_DIR = Path(__file__).resolve().parent
+# BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = PROJECT_ROOT 
 DATA_DIR = BASE_DIR / "data"
 RAW_DIR = DATA_DIR / "raw"
 CATEGORY_DIR = RAW_DIR / "category"
