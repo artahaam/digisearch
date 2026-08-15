@@ -48,7 +48,7 @@ pip install .
 ```
 then run:
 ```bash
-digisearch --filters "men,clothes" --ignores "gold,silver" --output "men.csv"
+digisearch --filters "men,clothes" --ignore "gold,silver" --output "men.csv"
 ```
 ### Option 2 – Manual (without installation)
 
@@ -59,7 +59,7 @@ pip install -r requirements.txt
 ```
 then run
 ```bash
-python run_pipeline.py --filters "men,clothes" --ignores "gold,silver" --output "men.csv""
+python run_pipeline.py --filters "men,clothes" --ignore "gold,silver" --output "men.csv""
 ```
 ---
 
@@ -72,18 +72,18 @@ The pipeline consists of two stages:
 
 You control the whole process with a single command:
 ```bash
-digisearch [--filters FILTERS] [--ignores IGNORES] [--output OUTPUT]
+digisearch [--filters FILTERS] [--ignore IGNORES] [--output OUTPUT]
 ```
 ### Command‑line arguments
 
 | Argument    | Type   | Default        | Description                                                                 |
 |-------------|--------|----------------|-----------------------------------------------------------------------------|
 | `--filters` | string | (empty)        | Comma‑separated keywords to **include**. Only categories whose `code` contains any keyword are kept. Example: `--filters "men,jeans"` |
-| `--ignores` | string | (empty)        | Comma‑separated keywords to **exclude**. If a category’s `code` contains any ignored keyword, it is skipped`--filters`). |
+| `--ignore` | string | (empty)        | Comma‑separated keywords to **exclude**. If a category’s `code` contains any ignored keyword, it is skipped`--filters`). |
 | `--output`  | string | `categories.csv` | Name of the CSV file that stores the filtered categories. This file is later used as input for the crawler. |
 
 > **Note**: All filters are case‑insensitive and match against the `code` field (e.g., `clothing-men`).  
-> If neither `--filters` nor `--ignores` is given, **all** categories are crawled.
+> If neither `--filters` nor `--ignore` is given, **all** categories are crawled.
 
 ---
 
@@ -147,7 +147,7 @@ No data is duplicated; checkpoints are written after every page.
 Fetch all categories containing `"clothes"` or `"men"`, but ignore those with `"gold"` or `"accessories"`, and name the output `my_categories.csv`:
 
 ```
-digisearch --filters "clothes,men" --ignores "gold,accessories" --output "my_categories.csv"
+digisearch --filters "clothes,men" --ignore "gold,accessories" --output "my_categories.csv"
 ```
 To crawl **all** categories (no filtering):
 
