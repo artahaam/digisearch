@@ -9,5 +9,9 @@ def find_project_root() -> Path:
     raise RuntimeError(f"Could not find {marker}")
 
 PROJECT_ROOT = find_project_root()
+print(PROJECT_ROOT)
 DATA_DIR = PROJECT_ROOT / "data"
 LOG_DIR = DATA_DIR / "logs"
+
+for directory in (DATA_DIR, LOG_DIR):
+    directory.mkdir(parents=True, exist_ok=True)

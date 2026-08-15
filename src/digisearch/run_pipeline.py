@@ -4,14 +4,14 @@ import logging
 from pathlib import Path
 import argparse
 
-from digisearch.paths import DATA_DIR, LOG_DIR
+from digisearch.paths import DATA_DIR, LOG_DIR, PROJECT_ROOT
 
 logger = logging.getLogger("pipeline")
 logger.setLevel(logging.DEBUG)
 
 
-GET_CATEGORIES_SCRIPT = DATA_DIR / "get_categories.py"
-CRAWLER_SCRIPT = DATA_DIR / "crawl.py" 
+GET_CATEGORIES_SCRIPT = PROJECT_ROOT / "src" / "digisearch" / "get_categories.py"
+CRAWLER_SCRIPT = PROJECT_ROOT/ "src" / "digisearch" / "crawl.py" 
 
 
 
