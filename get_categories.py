@@ -14,7 +14,7 @@ def main():
         help='Comma-separated list of filter keywords, e.g. "clothes,men,jeans"'
     )
     parser.add_argument(
-        '--ignores',
+        '--ignore',
         type=str,
         required=False,
         default="",
@@ -30,7 +30,7 @@ def main():
     args = parser.parse_args()
 
     filters = [f.strip().lower() for f in args.filters.split(',') if args.filters]
-    ignores = [i.strip().lower() for i in args.ignores.split(',') if args.ignores]
+    ignores = [i.strip().lower() for i in args.ignore.split(',') if args.ignore]
 
     
     output_file_name = args.output

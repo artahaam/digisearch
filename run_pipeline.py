@@ -63,7 +63,7 @@ def main():
         help='Comma-separated list of filter keywords, e.g. "clothes,men,jeans"'
     )
     parser.add_argument(
-    '--ignores',
+    '--ignore',
     type=str,
     required=False,
     default="",
@@ -81,7 +81,7 @@ def main():
 
     get_category_args = [
         f'--filters={args.filters}',
-        f'--ignores={args.ignores}',
+        f'--ignore={args.ignore}',
         f'--output={args.output}'
     ]
 
