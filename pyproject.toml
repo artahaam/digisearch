@@ -7,20 +7,27 @@ name = "digisearch"
 version = "0.1.0"
 description = "Digikala search and scraping pipeline"
 readme = "README.md"
-license = {text = "MIT"}
-authors = [{name = "artaham", email = "alireza.thm03@gmail.com"}]
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "artahaam", email = "alireza.thm03@gmail.com" }]
+keywords = ["digikala", "scraping", "crawler", "search"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
 dependencies = [
-    "certifi==2026.7.22",
-    "charset-normalizer==3.5.0",
-    "idna==3.18",
-    "markdown-it-py==4.2.0",
-    "mdurl==0.1.2",
-    "Pygments==2.20.0",
-    "requests==2.34.2",
-    "rich==15.0.0",
-    "urllib3==2.7.0",
-
+    "requests>=2.34,<3",
+    "rich>=15,<16",
 ]
 
 [project.scripts]
-digisearch = "run_pipeline:main"
+digisearch = "digisearch.run_pipeline:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
