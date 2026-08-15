@@ -72,7 +72,7 @@ The pipeline consists of two stages:
 
 You control the whole process with a single command:
 ```bash
-digisearch [--filters FILTERS] [--ignore IGNORES] [--output OUTPUT]
+digisearch [--filters FILTERS] [--ignore IGNORE] [--output OUTPUT]
 ```
 ### Command‑line arguments
 
