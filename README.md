@@ -45,6 +45,8 @@ Dependencies are listed in `pyproject.toml` and `requirements.txt` – they will
 ```bash
 git clone https://github.com/artahaam/digisearch.git
 cd digisearch
+python -m venv .venv
+source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install .
 ```
 or
@@ -53,6 +55,8 @@ or
 ```bash
 git clone git@github.com:artahaam/digisearch.git
 cd digisearch
+python -m venv .venv
+source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install .
 ```
 
@@ -66,6 +70,8 @@ digisearch --filters "men,clothes" --ignore "gold,silver" --output "men.csv"
 ```bash
 git clone https://github.com/artahaam/digisearch.git
 cd digisearch
+python -m venv .venv
+source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 or 
@@ -74,14 +80,34 @@ or
 ```bash
 git clone git@github.com:artahaam/digisearch.git
 cd digisearch
+python -m venv .venv
+source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 then run
 ```bash
 python run_pipeline.py --filters "men,clothes" --ignore "gold,silver" --output "men.csv""
 ```
----
 
+> **⚠️ Important:** Do **not** run the scripts directly from a terminal outside
+> the project root, and do **not** create the virtual environment elsewhere.
+> The `paths.py` module locates the project root by walking up from its own
+> location until it finds `pyproject.toml`. If you run scripts from the wrong
+> directory, this lookup fails and **raises a `RuntimeError`**.
+
+#### ❗Why this matters
+
+`find_project_root()` searches **parent directories** starting from `__file__` until it finds `pyproject.toml`. If the venv or the working directory is placed outside the project, that search fails and the script crashes before doing anything.
+
+#### Quick checklist
+
+| Requirement | Must be? |
+|-------------|----------|
+| venv location | Inside project directory (`.venv`) |
+| Install method | `pip install .` |
+| Run from | Project root directory |
+
+---
 ## 🛠 Usage
 
 The pipeline consists of two stages:
