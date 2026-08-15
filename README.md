@@ -40,20 +40,39 @@ Dependencies are listed in `pyproject.toml` and `requirements.txt` – they will
 
 ### Option 1 – Install from source (recommended)
 
+#### clone over HTTPS
 
 ```bash
 git clone https://github.com/artahaam/digisearch.git
 cd digisearch
 pip install .
 ```
+or
+
+#### clone over SSH
+```bash
+git clone git@github.com:artahaam/digisearch.git
+cd digisearch
+pip install .
+```
+
 then run:
 ```bash
 digisearch --filters "men,clothes" --ignore "gold,silver" --output "men.csv"
 ```
 ### Option 2 – Manual (without installation)
 
+#### clone over HTTPS
 ```bash
 git clone https://github.com/artahaam/digisearch.git
+cd digisearch
+pip install -r requirements.txt
+```
+or 
+#### clone over SSH
+
+```bash
+git clone git@github.com:artahaam/digisearch.git
 cd digisearch
 pip install -r requirements.txt
 ```
