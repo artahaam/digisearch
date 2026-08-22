@@ -221,7 +221,7 @@ def main() -> None:
                 live.update(render_dashboard(state, progress))
 
                 try:
-                    category_page_url = f"https://api.digikala.com/discovery/api/v2/categories/{cat_id}/products/"
+                    category_page_url = f"https://api.digikala.com/discovery/api/v2/categories/{cat_id}/products"
                     category_page_json = requests.get(category_page_url).json()
                     logger.info(f"category {cat_id} fetched from {category_page_url}")
 
