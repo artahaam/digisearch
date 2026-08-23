@@ -230,7 +230,7 @@ python crawl.py --output "men.csv"
 - [x] 1.2 Product Details, Reviews and Q&As extraction.
 - [x] 1.3 Resumable checkpoints.
 
-### Phase 2: Data Cleaning and Dataset Preparation
+### Phase 2: Data Cleaning and Document Preparation
 - [ ]  2.1 Data inspection
 - [ ]  2.2 Data cleaning and normalization
 - [ ]  2.4 Canonical dataset
