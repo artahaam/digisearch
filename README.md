@@ -226,12 +226,17 @@ python crawl.py --output "men.csv"
 ## Roadmap
 
 ### Phase 1: Data Pipeline (Complete ✅)
-- [x] Category discovery and filtering.
-- [x] Product Details, Reviews and Q&As extraction.
-- [x] Resumable checkpoints.
+- [x] 1.1 Category discovery and filtering.
+- [x] 1.2 Product Details, Reviews and Q&As extraction.
+- [x] 1.3 Resumable checkpoints.
 
 ### Phase 2: Data Cleaning and Dataset Preparation
-- [ ] To be planned
+- [ ]  2.1 Data inspection
+- [ ]  2.2 Data cleaning and normalization
+- [ ]  2.4 Canonical dataset
+- [ ]  2.5 Search document construction
+- [ ]  2.6 Embedding generation
+- [ ]  2.7 Vector retrieval
 ---
 
 ## 📄 License
