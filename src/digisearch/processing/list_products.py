@@ -28,13 +28,15 @@ for cw in catwalk:
                         details_path = SUB_PRO_DIR / f'{pw[2][1]}'
                         comments_path = SUB_PRO_DIR / f'{pw[2][2]}'
 
-                        products.append({
-                            product_id: {
+                        products.append(
+                            {
+                            'product': {
+                            'id': product_id,
                             'questions_path' : str(questions_path),
                             'details_path': str(details_path),
                             'comments_path': str(comments_path),
-                        },
-                        'category': cat,
+                            'category': cat,
+                            },
                         })
                     except:
                         continue
