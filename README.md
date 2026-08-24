@@ -231,12 +231,12 @@ python crawl.py --output "men.csv"
 - [x] 1.3 Resumable checkpoints.
 
 ### Phase 2: Data Cleaning and Dataset Preparation
-- [ ]  2.1 Data inspection
-- [ ]  2.2 Data cleaning and normalization
-- [ ]  2.4 Canonical dataset
-- [ ]  2.5 Search document construction
-- [ ]  2.6 Embedding generation
-- [ ]  2.7 Vector retrieval
+- [x]  2.1 Data inspection
+- [x]  2.2 Data cleaning and normalization
+- [x]  2.3 Canonical dataset
+- [ ]  2.4 Search document construction
+- [ ]  2.5 Embedding generation
+- [ ]  2.6 Vector retrieval
 ---
 
 ## 📄 License
