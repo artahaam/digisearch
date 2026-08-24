@@ -60,11 +60,12 @@ def extract_details_data(file_path: str):
         product_rating_rate, product_rating_count = 0, 0
 
 
-    prduct_price = 0
     try:
-        product_price = product.get("price").get("selling_price")
-    except:
+        product_price = product.get("default_variant", {}).get("price", {}).get("selling_price")
+    except Exception as e:
+        product_price = 0
         pass
+    
 
     product_variants = []
     try:
@@ -166,7 +167,7 @@ def extract_details_data(file_path: str):
     details = {
         'product_id' : product_id,
         'product_url': product_url,
-        'prduct_price': prduct_price,
+        'product_price': product_price,
         'product_category': product_category,
         'product_categories': product_categories,
         'product_rating_rate': product_rating_rate,
