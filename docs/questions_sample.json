@@ -1,0 +1,2706 @@
+[
+    {
+        "questions": [
+            {
+                "id": 7112132,
+                "status": "accepted",
+                "text": "سلام فری سایز برای پسر ۱۲ ساله خوبه اندازش ؟",
+                "answer_count": 10,
+                "sender": "معصومه شریعتی",
+                "created_at": "13 آذر 1403",
+                "answers": [
+                    {
+                        "id": 13218138,
+                        "user_id": 16311389,
+                        "text": "فکر کنم یکم بزرگ باشه",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "1 فروردین 1405",
+                        "files": [],
+                        "sender": "ایمان دهقانیان",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Energetic_Riga_99746",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "ایمان دهقانیان",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Energetic_Riga_99746/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 12503425,
+                        "user_id": 88634231,
+                        "text": "اطلاعی ندارم",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 3
+                        },
+                        "created_at": "13 بهمن 1404",
+                        "files": [],
+                        "sender": "عباس فروغی سعیدآبادی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Courteous_Prague_72486",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "عباس فروغی",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Courteous_Prague_72486/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 11618595,
+                        "user_id": 6806262,
+                        "text": "خیر خوب نیست\n",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "29 آذر 1404",
+                        "files": [],
+                        "sender": "سیدابراهیم احمدی شیخ شبانی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "prj9i2ejc6",
+                            "bio": "ابراهیم هستم 56سالمه دارای همسر و دو فرزند هستم کارمند قسمت لجستیک شرکت بزرگ دی جی کالا هستم",
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/58bba00f9bcd9612e7811c7e7809142546f1d1b7_1662657440.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "ابراهیم احمدی شیخ شبانی",
+                            "followings_count": 35,
+                            "followers_count": 12,
+                            "share_url": "https://www.digikala.com/magnet/users/prj9i2ejc6/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": {
+                            "text": "صاحب‌نظر پوشاک مردانه",
+                            "text_color": "#424242",
+                            "bg_color": "#FFF",
+                            "tooltip_text": "یکی از ۵٪ کاربران فعال در پوشاک مردانه در ماه‌های اخیر"
+                        }
+                    },
+                    {
+                        "id": 11568335,
+                        "user_id": 8113108,
+                        "text": "پیشنهاد میکنم نخرید. جنسش اصلا جالب نیست با اولین پوشیدن، داخلش همه گلوله گلوله میشه.",
+                        "reactions": {
+                            "likes": 1,
+                            "dislikes": 0
+                        },
+                        "created_at": "26 آذر 1404",
+                        "files": [],
+                        "sender": "راحله مزیدی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Cooperative_Prague_59222",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "راحله مزیدی",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Cooperative_Prague_59222/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 11009813,
+                        "user_id": 59083337,
+                        "text": "درود دو ایکس لارج اگ قدش تا ۱۷۰ هم میشه",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "19 آبان 1404",
+                        "files": [],
+                        "sender": "سعید محمودی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Adaptable_Riga_66570",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "سعید محمودی",
+                            "followings_count": 1,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Adaptable_Riga_66570/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 10924334,
+                        "user_id": 59083337,
+                        "text": "درود قدش اگ بلند تا ۱۷۰ ۱۸۰ دو ایکس لارج بگیرین چون کوتاه درمیاد جنسش خوب آب هم نمیره من خریدم راضیم",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "12 آبان 1404",
+                        "files": [],
+                        "sender": "سعید محمودی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Adaptable_Riga_66570",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "سعید محمودی",
+                            "followings_count": 1,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Adaptable_Riga_66570/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 6659143,
+                        "user_id": 64451302,
+                        "text": "اگه بچه قد بلندی باشه خوبه",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "7 دی 1403",
+                        "files": [],
+                        "sender": "یاسر سلمان زاده",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Trustworthy_Amsterdam_24904",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "یاسر سلمان زاده",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Trustworthy_Amsterdam_24904/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 6369598,
+                        "user_id": 65161572,
+                        "text": "بله .من خودم سایزش ۵۰ هست اندازه شده",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "17 آذر 1403",
+                        "files": [],
+                        "sender": "نیر حیدرزاده",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Creative_Copenhagen_13618",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "نیر حیدرزاده",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Creative_Copenhagen_13618/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 6311553,
+                        "user_id": 46089322,
+                        "text": "اره خوبه 👍",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "14 آذر 1403",
+                        "files": [],
+                        "sender": "سیداحمد رجائی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Eimprator",
+                            "bio": "꧁꧂امپراطور ꧁꧂",
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/2eccd0970ded5ee2c239e690f40299df843ff9e1_1736777101.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "امپراطورeror",
+                            "followings_count": 3,
+                            "followers_count": 1,
+                            "share_url": "https://www.digikala.com/magnet/users/Eimprator/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 6309760,
+                        "user_id": 32032395,
+                        "text": "بله خوبه",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "13 آذر 1403",
+                        "files": [],
+                        "sender": "مهدی رضائی یونکی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Sympathetic_Cabbage_90405",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "مهدی رضائی یونکی",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Sympathetic_Cabbage_90405/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": {
+                            "text": "صاحب‌نظر پوشاک مردانه",
+                            "text_color": "#424242",
+                            "bg_color": "#FFF",
+                            "tooltip_text": "یکی از ۵٪ کاربران فعال در پوشاک مردانه در ماه‌های اخیر"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": 9033291,
+                "status": "accepted",
+                "text": "فاقش کوتاه نیست؟!",
+                "answer_count": 7,
+                "sender": "امیر قولنجی زیمدشتی",
+                "created_at": "13 بهمن 1404",
+                "answers": [
+                    {
+                        "id": 12699402,
+                        "user_id": null,
+                        "text": "خیر فاق ش کوتاه نیست",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "26 بهمن 1404",
+                        "files": [],
+                        "sender": " پخش پارتاک",
+                        "type": "seller",
+                        "marketplace_seller_id": 338838,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": []
+                    },
+                    {
+                        "id": 13218131,
+                        "user_id": 16311389,
+                        "text": "نه ، خوبه",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "1 فروردین 1405",
+                        "files": [],
+                        "sender": "ایمان دهقانیان",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Energetic_Riga_99746",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "ایمان دهقانیان",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Energetic_Riga_99746/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 12512187,
+                        "user_id": 52022346,
+                        "text": "خیلی بلند و خوبه",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "14 بهمن 1404",
+                        "files": [],
+                        "sender": "پگاه رسولی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Pegiow",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "پگاه رسولی",
+                            "followings_count": 4,
+                            "followers_count": 5,
+                            "share_url": "https://www.digikala.com/magnet/users/Pegiow/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": {
+                            "text": "صاحب‌نظر پوشاک مردانه",
+                            "text_color": "#424242",
+                            "bg_color": "#FFF",
+                            "tooltip_text": "یکی از ۵٪ کاربران فعال در پوشاک مردانه در ماه‌های اخیر"
+                        }
+                    },
+                    {
+                        "id": 12507179,
+                        "user_id": 6065080,
+                        "text": "نه زیاد معمولیه",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "14 بهمن 1404",
+                        "files": [],
+                        "sender": "میلاد ابراهیمی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "msixx",
+                            "bio": "تعمیرکار پکیج دیواری و کولرگازی و برد\nالکترونیک و مکانیک\nنوازنده و پیانیست\nتعمیرکار لوازم خانگی",
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/18823b2ff0e885a016c326f51b768b5b0fe4b0b6_1779363512.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "میلاد ابراهیمی",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/msixx/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 12505810,
+                        "user_id": 65446944,
+                        "text": "فاق بلنده",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "14 بهمن 1404",
+                        "files": [],
+                        "sender": "اسماعیل نژادی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Sympathetic_Melbourne_23805",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "اسماعیل نژادی",
+                            "followings_count": 1,
+                            "followers_count": 1,
+                            "share_url": "https://www.digikala.com/magnet/users/Sympathetic_Melbourne_23805/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 12503258,
+                        "user_id": 88634231,
+                        "text": "خیر کوتاه نیست",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "13 بهمن 1404",
+                        "files": [],
+                        "sender": "عباس فروغی سعیدآبادی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Courteous_Prague_72486",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "عباس فروغی",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Courteous_Prague_72486/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 12502997,
+                        "user_id": 66536724,
+                        "text": "خیررررررر",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "13 بهمن 1404",
+                        "files": [],
+                        "sender": "منصوره مهتابی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Fair_Helsinki_46529",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "منصوره مهتابی",
+                            "followings_count": 1,
+                            "followers_count": 3,
+                            "share_url": "https://www.digikala.com/magnet/users/Fair_Helsinki_46529/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": {
+                            "text": "صاحب‌نظر پوشاک مردانه",
+                            "text_color": "#424242",
+                            "bg_color": "#FFF",
+                            "tooltip_text": "یکی از ۵٪ کاربران فعال در پوشاک مردانه در ماه‌های اخیر"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": 8723430,
+                "status": "accepted",
+                "text": "سلام وقت بخیر برای قد ۱۸۵ و وزن ۹۰ چه سایزی مناسبه؟",
+                "answer_count": 7,
+                "sender": "حسین علی پور",
+                "created_at": "26 آذر 1404",
+                "answers": [
+                    {
+                        "id": 12503416,
+                        "user_id": 88634231,
+                        "text": "اطلاعی ندارم",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 5
+                        },
+                        "created_at": "13 بهمن 1404",
+                        "files": [],
+                        "sender": "عباس فروغی سعیدآبادی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Courteous_Prague_72486",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "عباس فروغی",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Courteous_Prague_72486/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 12280984,
+                        "user_id": 13079988,
+                        "text": "سلام 2x بگیرید",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "3 بهمن 1404",
+                        "files": [],
+                        "sender": "مهدی گنجعلی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "bvam7mbrhe",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "مهدی گنجعلی",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/bvam7mbrhe/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 11618570,
+                        "user_id": 6806262,
+                        "text": "فیری سایز",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "29 آذر 1404",
+                        "files": [],
+                        "sender": "سیدابراهیم احمدی شیخ شبانی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "prj9i2ejc6",
+                            "bio": "ابراهیم هستم 56سالمه دارای همسر و دو فرزند هستم کارمند قسمت لجستیک شرکت بزرگ دی جی کالا هستم",
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/58bba00f9bcd9612e7811c7e7809142546f1d1b7_1662657440.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "ابراهیم احمدی شیخ شبانی",
+                            "followings_count": 35,
+                            "followers_count": 12,
+                            "share_url": "https://www.digikala.com/magnet/users/prj9i2ejc6/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": {
+                            "text": "صاحب‌نظر پوشاک مردانه",
+                            "text_color": "#424242",
+                            "bg_color": "#FFF",
+                            "tooltip_text": "یکی از ۵٪ کاربران فعال در پوشاک مردانه در ماه‌های اخیر"
+                        }
+                    },
+                    {
+                        "id": 11582384,
+                        "user_id": 3728076,
+                        "text": "سلام xxlمن گرفتم برای همین حدود وزن مناسب بود ",
+                        "reactions": {
+                            "likes": 1,
+                            "dislikes": 0
+                        },
+                        "created_at": "27 آذر 1404",
+                        "files": [],
+                        "sender": "مریم دوست محمدی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Encouraging_Lemon_78437",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "مریم دوست محمدی",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Encouraging_Lemon_78437/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 11572389,
+                        "user_id": 6061584,
+                        "text": "۲x مناسبه",
+                        "reactions": {
+                            "likes": 1,
+                            "dislikes": 0
+                        },
+                        "created_at": "26 آذر 1404",
+                        "files": [],
+                        "sender": "مسعود شاددل",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "or1hs64vbk",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "مسعود شاددل",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/or1hs64vbk/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 11568323,
+                        "user_id": 8113108,
+                        "text": "پیشنهاد میکنم نخرید. جنسش اصلا جالب نیست با اولین پوشیدن، داخلش همه گلوله گلوله میشه.",
+                        "reactions": {
+                            "likes": 1,
+                            "dislikes": 0
+                        },
+                        "created_at": "26 آذر 1404",
+                        "files": [],
+                        "sender": "راحله مزیدی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Cooperative_Prague_59222",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "راحله مزیدی",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Cooperative_Prague_59222/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 11568322,
+                        "user_id": 10771269,
+                        "text": " 110 سانتی مناسبه",
+                        "reactions": {
+                            "likes": 1,
+                            "dislikes": 0
+                        },
+                        "created_at": "26 آذر 1404",
+                        "files": [],
+                        "sender": "محمدامین پوربحرانی نژاد",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "jgxlajbvcg",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "محمدامین پوربحرانی نژاد",
+                            "followings_count": 8,
+                            "followers_count": 4,
+                            "share_url": "https://www.digikala.com/magnet/users/jgxlajbvcg/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    }
+                ]
+            },
+            {
+                "id": 8918432,
+                "status": "accepted",
+                "text": "فیری سایز بزرگتره یا XXL? برای قد ۱۷۸ و وزن ۸۰ چطوره؟ ۱۸ ساله هستم",
+                "answer_count": 6,
+                "sender": "یوسف نوریان",
+                "created_at": "28 دی 1404",
+                "answers": [
+                    {
+                        "id": 12508412,
+                        "user_id": 3629996,
+                        "text": "سلام، 2XL مناسب شماست",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "14 بهمن 1404",
+                        "files": [],
+                        "sender": "علیرضا منصورسمائی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "alireza_samaa",
+                            "bio": "سلام",
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "علیرضا منصورسمائی",
+                            "followings_count": 11,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/alireza_samaa/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 12503314,
+                        "user_id": 88634231,
+                        "text": "XXL خوبه",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "13 بهمن 1404",
+                        "files": [],
+                        "sender": "عباس فروغی سعیدآبادی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Courteous_Prague_72486",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "عباس فروغی",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Courteous_Prague_72486/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 12280992,
+                        "user_id": 13079988,
+                        "text": "سلام 2x خوبه انداز است",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "3 بهمن 1404",
+                        "files": [],
+                        "sender": "مهدی گنجعلی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "bvam7mbrhe",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "مهدی گنجعلی",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/bvam7mbrhe/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 12238470,
+                        "user_id": 7393150,
+                        "text": "بله دو ایکس لارج خیلی خوب بود برای این قدو وزن",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "2 بهمن 1404",
+                        "files": [],
+                        "sender": "انیس میرمصطفائی نژاد",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Altruistic_Vienna_13541",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "انیس میر",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Altruistic_Vienna_13541/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 12259210,
+                        "user_id": 13229169,
+                        "text": "فری سایزها هم بستگی دارن یسری ها فری مثلا تا سایز ۴۴ یسریا مثلا فری سایز تا ۴۸ بستگی داره من برای همسرم خریدم قد ۱۸۶ وزن ۹۵",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "1 بهمن 1404",
+                        "files": [],
+                        "sender": "مریم عسگری",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Cheerful_Onion_85048",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "مریم عسگری",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Cheerful_Onion_85048/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 12179980,
+                        "user_id": 15098481,
+                        "text": "دو ایکس لارج بگیر اوکیه",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "29 دی 1404",
+                        "files": [],
+                        "sender": "مجید صالحی اسکندری",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Salehi031",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "مجید صالحی اسکندری",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Salehi031/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": {
+                            "text": "صاحب‌نظر پوشاک مردانه",
+                            "text_color": "#424242",
+                            "bg_color": "#FFF",
+                            "tooltip_text": "یکی از ۵٪ کاربران فعال در پوشاک مردانه در ماه‌های اخیر"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": 8503557,
+                "status": "accepted",
+                "text": "سلام سایز 2xl قد شلوار چقدره ؟",
+                "answer_count": 6,
+                "sender": "علیرضا کرماجانی",
+                "created_at": "12 آبان 1404",
+                "answers": [
+                    {
+                        "id": 12503363,
+                        "user_id": 88634231,
+                        "text": "۱۲۰ سانتی متری خوبه",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "13 بهمن 1404",
+                        "files": [],
+                        "sender": "عباس فروغی سعیدآبادی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Courteous_Prague_72486",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "عباس فروغی",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Courteous_Prague_72486/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 12503045,
+                        "user_id": 66536724,
+                        "text": "۹۰ ۹۰  نوده",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "13 بهمن 1404",
+                        "files": [],
+                        "sender": "منصوره مهتابی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Fair_Helsinki_46529",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "منصوره مهتابی",
+                            "followings_count": 1,
+                            "followers_count": 3,
+                            "share_url": "https://www.digikala.com/magnet/users/Fair_Helsinki_46529/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": {
+                            "text": "صاحب‌نظر پوشاک مردانه",
+                            "text_color": "#424242",
+                            "bg_color": "#FFF",
+                            "tooltip_text": "یکی از ۵٪ کاربران فعال در پوشاک مردانه در ماه‌های اخیر"
+                        }
+                    },
+                    {
+                        "id": 12348856,
+                        "user_id": 83624099,
+                        "text": "برای ۸۵ کیلو وزن قد ۱۸۰ الا ۱۹۰",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "5 بهمن 1404",
+                        "files": [],
+                        "sender": "محمد رضا موسوی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Honest_Marshmallow_18329",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "بدون نام",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Honest_Marshmallow_18329/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 11009773,
+                        "user_id": 59083337,
+                        "text": "درود ۱۸۰ ",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "19 آبان 1404",
+                        "files": [],
+                        "sender": "سعید محمودی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Adaptable_Riga_66570",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "سعید محمودی",
+                            "followings_count": 1,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Adaptable_Riga_66570/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 10929059,
+                        "user_id": 58713386,
+                        "text": "قد شلوار ۹ع",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "13 آبان 1404",
+                        "files": [],
+                        "sender": "شبنم باقری",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Compassionate_Bangkok_19373",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "شبنم باقری",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Compassionate_Bangkok_19373/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 10924266,
+                        "user_id": 59083337,
+                        "text": "همون بخر اندازته",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "12 آبان 1404",
+                        "files": [],
+                        "sender": "سعید محمودی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Adaptable_Riga_66570",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "سعید محمودی",
+                            "followings_count": 1,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Adaptable_Riga_66570/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    }
+                ]
+            }
+        ],
+        "pager": {
+            "current_page": 1,
+            "total_pages": 4,
+            "total_items": 18
+        }
+    },
+    {
+        "questions": [
+            {
+                "id": 4388493,
+                "status": "accepted",
+                "text": "دور کمر تا ۱۴۰ نمیشه کوچیکه یا کش میاد چون زدین تا ۱۱۵ ؟؟",
+                "answer_count": 6,
+                "sender": "ندا مصلح پور",
+                "created_at": "25 آذر 1401",
+                "answers": [
+                    {
+                        "id": 12503398,
+                        "user_id": 88634231,
+                        "text": "اطلاعی ندارم",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 1
+                        },
+                        "created_at": "13 بهمن 1404",
+                        "files": [],
+                        "sender": "عباس فروغی سعیدآبادی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Courteous_Prague_72486",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "عباس فروغی",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Courteous_Prague_72486/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 12503059,
+                        "user_id": 66536724,
+                        "text": "کشی کمر",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "13 بهمن 1404",
+                        "files": [],
+                        "sender": "منصوره مهتابی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Fair_Helsinki_46529",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "منصوره مهتابی",
+                            "followings_count": 1,
+                            "followers_count": 3,
+                            "share_url": "https://www.digikala.com/magnet/users/Fair_Helsinki_46529/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": {
+                            "text": "صاحب‌نظر پوشاک مردانه",
+                            "text_color": "#424242",
+                            "bg_color": "#FFF",
+                            "tooltip_text": "یکی از ۵٪ کاربران فعال در پوشاک مردانه در ماه‌های اخیر"
+                        }
+                    },
+                    {
+                        "id": 11009794,
+                        "user_id": 59083337,
+                        "text": "درود کلا کش میاد دور کمر",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "19 آبان 1404",
+                        "files": [],
+                        "sender": "سعید محمودی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Adaptable_Riga_66570",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "سعید محمودی",
+                            "followings_count": 1,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Adaptable_Riga_66570/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 10924315,
+                        "user_id": 59083337,
+                        "text": "درود کش میاد نگران‌نباشین ت قد ۱۸۰ دو ایکس لارج مناسب جنسش خوب آب نمیره",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "12 آبان 1404",
+                        "files": [],
+                        "sender": "سعید محمودی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Adaptable_Riga_66570",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "سعید محمودی",
+                            "followings_count": 1,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Adaptable_Riga_66570/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 7203768,
+                        "user_id": 48629148,
+                        "text": "اصلا جنسش خوب نبود",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "15 بهمن 1403",
+                        "files": [],
+                        "sender": "مصطفی محمدی یزنی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Appreciative_Strawberry_82691",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "مصطفی محمدی یزنی",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Appreciative_Strawberry_82691/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 6369603,
+                        "user_id": 65161572,
+                        "text": "تا سایز ۵۰ اندازه میشه",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "17 آذر 1403",
+                        "files": [],
+                        "sender": "نیر حیدرزاده",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Creative_Copenhagen_13618",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "نیر حیدرزاده",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Creative_Copenhagen_13618/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    }
+                ]
+            },
+            {
+                "id": 8958184,
+                "status": "accepted",
+                "text": "سلام برای سایز ۵۴ چه سایزی خوبه",
+                "answer_count": 5,
+                "sender": "حسین شعبانی",
+                "created_at": "2 بهمن 1404",
+                "answers": [
+                    {
+                        "id": 12512193,
+                        "user_id": 52022346,
+                        "text": "دو ایکس خوب بود ",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "14 بهمن 1404",
+                        "files": [],
+                        "sender": "پگاه رسولی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Pegiow",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "پگاه رسولی",
+                            "followings_count": 4,
+                            "followers_count": 5,
+                            "share_url": "https://www.digikala.com/magnet/users/Pegiow/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": {
+                            "text": "صاحب‌نظر پوشاک مردانه",
+                            "text_color": "#424242",
+                            "bg_color": "#FFF",
+                            "tooltip_text": "یکی از ۵٪ کاربران فعال در پوشاک مردانه در ماه‌های اخیر"
+                        }
+                    },
+                    {
+                        "id": 12503275,
+                        "user_id": 88634231,
+                        "text": "متوجه نشدم",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "13 بهمن 1404",
+                        "files": [],
+                        "sender": "عباس فروغی سعیدآبادی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Courteous_Prague_72486",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "عباس فروغی",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Courteous_Prague_72486/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 12503003,
+                        "user_id": 66536724,
+                        "text": "سایزدوایکس لارج",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "13 بهمن 1404",
+                        "files": [],
+                        "sender": "منصوره مهتابی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Fair_Helsinki_46529",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "منصوره مهتابی",
+                            "followings_count": 1,
+                            "followers_count": 3,
+                            "share_url": "https://www.digikala.com/magnet/users/Fair_Helsinki_46529/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": {
+                            "text": "صاحب‌نظر پوشاک مردانه",
+                            "text_color": "#424242",
+                            "bg_color": "#FFF",
+                            "tooltip_text": "یکی از ۵٪ کاربران فعال در پوشاک مردانه در ماه‌های اخیر"
+                        }
+                    },
+                    {
+                        "id": 12493710,
+                        "user_id": 35386918,
+                        "text": "سلام فری سایز",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "13 بهمن 1404",
+                        "files": [],
+                        "sender": "مهدی رضائی کاشانتوئی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Mmrr80",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "مهدی رضائی کاشانتوئی",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Mmrr80/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": {
+                            "text": "صاحب‌نظر پوشاک مردانه",
+                            "text_color": "#424242",
+                            "bg_color": "#FFF",
+                            "tooltip_text": "یکی از ۵٪ کاربران فعال در پوشاک مردانه در ماه‌های اخیر"
+                        }
+                    },
+                    {
+                        "id": 12348832,
+                        "user_id": 83624099,
+                        "text": "2xx لارج",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "5 بهمن 1404",
+                        "files": [],
+                        "sender": "محمد رضا موسوی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Honest_Marshmallow_18329",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "بدون نام",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Honest_Marshmallow_18329/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    }
+                ]
+            },
+            {
+                "id": 8728150,
+                "status": "accepted",
+                "text": "برا سایز۵۵،کدوم خوبه",
+                "answer_count": 5,
+                "sender": "زینب قطرانی",
+                "created_at": "27 آذر 1404",
+                "answers": [
+                    {
+                        "id": 12512196,
+                        "user_id": 52022346,
+                        "text": "دو ایکس خوبخ",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "14 بهمن 1404",
+                        "files": [],
+                        "sender": "پگاه رسولی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Pegiow",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "پگاه رسولی",
+                            "followings_count": 4,
+                            "followers_count": 5,
+                            "share_url": "https://www.digikala.com/magnet/users/Pegiow/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": {
+                            "text": "صاحب‌نظر پوشاک مردانه",
+                            "text_color": "#424242",
+                            "bg_color": "#FFF",
+                            "tooltip_text": "یکی از ۵٪ کاربران فعال در پوشاک مردانه در ماه‌های اخیر"
+                        }
+                    },
+                    {
+                        "id": 12503282,
+                        "user_id": 88634231,
+                        "text": "متوجه سوالتون نشدم",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "13 بهمن 1404",
+                        "files": [],
+                        "sender": "عباس فروغی سعیدآبادی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Courteous_Prague_72486",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "عباس فروغی",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Courteous_Prague_72486/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 12503008,
+                        "user_id": 66536724,
+                        "text": "سایزدوایکس لارج",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "13 بهمن 1404",
+                        "files": [],
+                        "sender": "منصوره مهتابی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Fair_Helsinki_46529",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "منصوره مهتابی",
+                            "followings_count": 1,
+                            "followers_count": 3,
+                            "share_url": "https://www.digikala.com/magnet/users/Fair_Helsinki_46529/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": {
+                            "text": "صاحب‌نظر پوشاک مردانه",
+                            "text_color": "#424242",
+                            "bg_color": "#FFF",
+                            "tooltip_text": "یکی از ۵٪ کاربران فعال در پوشاک مردانه در ماه‌های اخیر"
+                        }
+                    },
+                    {
+                        "id": 12493713,
+                        "user_id": 35386918,
+                        "text": "فری سایز",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "13 بهمن 1404",
+                        "files": [],
+                        "sender": "مهدی رضائی کاشانتوئی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Mmrr80",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "مهدی رضائی کاشانتوئی",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Mmrr80/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": {
+                            "text": "صاحب‌نظر پوشاک مردانه",
+                            "text_color": "#424242",
+                            "bg_color": "#FFF",
+                            "tooltip_text": "یکی از ۵٪ کاربران فعال در پوشاک مردانه در ماه‌های اخیر"
+                        }
+                    },
+                    {
+                        "id": 11618548,
+                        "user_id": 6806262,
+                        "text": "فری سایز\n",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "29 آذر 1404",
+                        "files": [],
+                        "sender": "سیدابراهیم احمدی شیخ شبانی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "prj9i2ejc6",
+                            "bio": "ابراهیم هستم 56سالمه دارای همسر و دو فرزند هستم کارمند قسمت لجستیک شرکت بزرگ دی جی کالا هستم",
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/58bba00f9bcd9612e7811c7e7809142546f1d1b7_1662657440.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "ابراهیم احمدی شیخ شبانی",
+                            "followings_count": 35,
+                            "followers_count": 12,
+                            "share_url": "https://www.digikala.com/magnet/users/prj9i2ejc6/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": {
+                            "text": "صاحب‌نظر پوشاک مردانه",
+                            "text_color": "#424242",
+                            "bg_color": "#FFF",
+                            "tooltip_text": "یکی از ۵٪ کاربران فعال در پوشاک مردانه در ماه‌های اخیر"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": 8268656,
+                "status": "accepted",
+                "text": "سلام قد سایز 2 ایکس چنده؟",
+                "answer_count": 5,
+                "sender": "علیرضا کرماجانی",
+                "created_at": "19 شهریور 1404",
+                "answers": [
+                    {
+                        "id": 12503322,
+                        "user_id": 88634231,
+                        "text": "بالای۱۷۵",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "13 بهمن 1404",
+                        "files": [],
+                        "sender": "عباس فروغی سعیدآبادی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Courteous_Prague_72486",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "عباس فروغی",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Courteous_Prague_72486/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 11572393,
+                        "user_id": 6061584,
+                        "text": "برای قد ۱۸۰ تا ۱۸۵ مناسبه",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "26 آذر 1404",
+                        "files": [],
+                        "sender": "مسعود شاددل",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "or1hs64vbk",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "مسعود شاددل",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/or1hs64vbk/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 11009776,
+                        "user_id": 59083337,
+                        "text": "درود ۱۸۰",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "19 آبان 1404",
+                        "files": [],
+                        "sender": "سعید محمودی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Adaptable_Riga_66570",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "سعید محمودی",
+                            "followings_count": 1,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Adaptable_Riga_66570/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 10929062,
+                        "user_id": 58713386,
+                        "text": "قد۹۵ میشه",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "13 آبان 1404",
+                        "files": [],
+                        "sender": "شبنم باقری",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Compassionate_Bangkok_19373",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "شبنم باقری",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Compassionate_Bangkok_19373/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 10924274,
+                        "user_id": 59083337,
+                        "text": "تا ۱۸۰ خوب قدت باش باقیش کوتاه در میاد",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "12 آبان 1404",
+                        "files": [],
+                        "sender": "سعید محمودی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Adaptable_Riga_66570",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "سعید محمودی",
+                            "followings_count": 1,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Adaptable_Riga_66570/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    }
+                ]
+            },
+            {
+                "id": 5261521,
+                "status": "accepted",
+                "text": "  چجوری  اندازه بگیریم نحوه اندازه گیدی رو توضیح بدین لطفا",
+                "answer_count": 5,
+                "sender": "فاطمه مولائی",
+                "created_at": "27 تیر 1402",
+                "answers": [
+                    {
+                        "id": 3384146,
+                        "user_id": null,
+                        "text": "سلام و عرض ادب ، به تصویر سایزبندی مراجعه بفرمایید.",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "15 مرداد 1402",
+                        "files": [],
+                        "sender": "پوشاک یاس آبی",
+                        "type": "seller",
+                        "marketplace_seller_id": 589407,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": []
+                    },
+                    {
+                        "id": 12259249,
+                        "user_id": 13229169,
+                        "text": "از کمر تا مچ پا",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "1 بهمن 1404",
+                        "files": [],
+                        "sender": "مریم عسگری",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Cheerful_Onion_85048",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "مریم عسگری",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Cheerful_Onion_85048/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 11009790,
+                        "user_id": 59083337,
+                        "text": "درود قدتون چند",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "19 آبان 1404",
+                        "files": [],
+                        "sender": "سعید محمودی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Adaptable_Riga_66570",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "سعید محمودی",
+                            "followings_count": 1,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Adaptable_Riga_66570/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 10924297,
+                        "user_id": 59083337,
+                        "text": "درود تا قد ۱۸۰ دو ایکس لارج خوب باقیش کوتاه در نباد جنسش خوب آب نمیره",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "12 آبان 1404",
+                        "files": [],
+                        "sender": "سعید محمودی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Adaptable_Riga_66570",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "سعید محمودی",
+                            "followings_count": 1,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Adaptable_Riga_66570/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 7203759,
+                        "user_id": 48629148,
+                        "text": "اصلا جنسش خوب نبود",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "15 بهمن 1403",
+                        "files": [],
+                        "sender": "مصطفی محمدی یزنی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Appreciative_Strawberry_82691",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "مصطفی محمدی یزنی",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Appreciative_Strawberry_82691/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    }
+                ]
+            }
+        ],
+        "pager": {
+            "current_page": 2,
+            "total_pages": 4,
+            "total_items": 18
+        }
+    },
+    {
+        "questions": [
+            {
+                "id": 4569773,
+                "status": "accepted",
+                "text": "میشه قبل جواب دادن ؛ به سوال و مورد سوال یه نگاه بندازین!\nبزرگترین سایز را زدین ۵۲،۵۴ که وجود نداره@",
+                "answer_count": 5,
+                "sender": "امیرحسین رستمی",
+                "created_at": "4 بهمن 1401",
+                "answers": [
+                    {
+                        "id": 11618578,
+                        "user_id": 6806262,
+                        "text": "منظورش فیری سایزه",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "29 آذر 1404",
+                        "files": [],
+                        "sender": "سیدابراهیم احمدی شیخ شبانی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "prj9i2ejc6",
+                            "bio": "ابراهیم هستم 56سالمه دارای همسر و دو فرزند هستم کارمند قسمت لجستیک شرکت بزرگ دی جی کالا هستم",
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/58bba00f9bcd9612e7811c7e7809142546f1d1b7_1662657440.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "ابراهیم احمدی شیخ شبانی",
+                            "followings_count": 35,
+                            "followers_count": 12,
+                            "share_url": "https://www.digikala.com/magnet/users/prj9i2ejc6/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": {
+                            "text": "صاحب‌نظر پوشاک مردانه",
+                            "text_color": "#424242",
+                            "bg_color": "#FFF",
+                            "tooltip_text": "یکی از ۵٪ کاربران فعال در پوشاک مردانه در ماه‌های اخیر"
+                        }
+                    },
+                    {
+                        "id": 11009792,
+                        "user_id": 59083337,
+                        "text": "درود دو ایکس لارج تا قد ۱۸۰ خوب",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "19 آبان 1404",
+                        "files": [],
+                        "sender": "سعید محمودی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Adaptable_Riga_66570",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "سعید محمودی",
+                            "followings_count": 1,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Adaptable_Riga_66570/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 10924306,
+                        "user_id": 59083337,
+                        "text": "درود دو ایکس لارج خریدیم قدم ۱۸۲ چون باقیش کوتاه در میاد آب نمیره جنسش خوب من راضیم",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "12 آبان 1404",
+                        "files": [],
+                        "sender": "سعید محمودی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Adaptable_Riga_66570",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "سعید محمودی",
+                            "followings_count": 1,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Adaptable_Riga_66570/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 7203764,
+                        "user_id": 48629148,
+                        "text": "اصلا جنسش خوب نیست",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "15 بهمن 1403",
+                        "files": [],
+                        "sender": "مصطفی محمدی یزنی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Appreciative_Strawberry_82691",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "مصطفی محمدی یزنی",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Appreciative_Strawberry_82691/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 6311551,
+                        "user_id": 46089322,
+                        "text": "موجودهست",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "14 آذر 1403",
+                        "files": [],
+                        "sender": "سیداحمد رجائی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Eimprator",
+                            "bio": "꧁꧂امپراطور ꧁꧂",
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/2eccd0970ded5ee2c239e690f40299df843ff9e1_1736777101.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "امپراطورeror",
+                            "followings_count": 3,
+                            "followers_count": 1,
+                            "share_url": "https://www.digikala.com/magnet/users/Eimprator/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    }
+                ]
+            },
+            {
+                "id": 4274160,
+                "status": "accepted",
+                "text": "اندازه سایز لارج رو میگین؟ دوستانی که خرید کردین هم لطفا عکس بذارین تشکر",
+                "answer_count": 5,
+                "sender": "سمیرا بسطامی",
+                "created_at": "1 آذر 1401",
+                "answers": [
+                    {
+                        "id": 12503333,
+                        "user_id": 88634231,
+                        "text": "عکس موجود ندارم",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "13 بهمن 1404",
+                        "files": [],
+                        "sender": "عباس فروغی سعیدآبادی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Courteous_Prague_72486",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "عباس فروغی",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Courteous_Prague_72486/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 11568555,
+                        "user_id": 77723547,
+                        "text": "واقعا جنسش واندازه هاش و قد فاقد و کمرش خوبه در کل با این قیمت وافعا شلوار خوبیه ارزشش رو داره \nاز فروشنده ها راجبه اندازه هاشون سوال کنید راهنمایی میکنن",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "26 آذر 1404",
+                        "files": [],
+                        "sender": "Sh Kh",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Creative_Zurich_27750",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "بدون نام",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Creative_Zurich_27750/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 11568325,
+                        "user_id": 8113108,
+                        "text": "پیشنهاد میکنم نخرید. جنسش اصلا جالب نیست با اولین پوشیدن، داخلش همه گلوله گلوله میشه.",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "26 آذر 1404",
+                        "files": [],
+                        "sender": "راحله مزیدی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Cooperative_Prague_59222",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "راحله مزیدی",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Cooperative_Prague_59222/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 11009770,
+                        "user_id": 59083337,
+                        "text": "درود تا قد ۱ /۸۰دو ایکس لارج خوب",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "19 آبان 1404",
+                        "files": [],
+                        "sender": "سعید محمودی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Adaptable_Riga_66570",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "سعید محمودی",
+                            "followings_count": 1,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Adaptable_Riga_66570/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 10924282,
+                        "user_id": 59083337,
+                        "text": "دو ایکس لارج بگیر تا قد ۱۸۰ خوب چون کوتاه در میاد",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "12 آبان 1404",
+                        "files": [],
+                        "sender": "سعید محمودی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Adaptable_Riga_66570",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "سعید محمودی",
+                            "followings_count": 1,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Adaptable_Riga_66570/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    }
+                ]
+            },
+            {
+                "id": 3159698,
+                "status": "accepted",
+                "text": "برای قد ۱۸۰ چ سایزی مناسب است؟؟",
+                "answer_count": 5,
+                "sender": "فرشته پوریزدان پناه",
+                "created_at": "18 اسفند 1400",
+                "answers": [
+                    {
+                        "id": 12503344,
+                        "user_id": 88634231,
+                        "text": "XXL خوبه",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "13 بهمن 1404",
+                        "files": [],
+                        "sender": "عباس فروغی سعیدآبادی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Courteous_Prague_72486",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "عباس فروغی",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Courteous_Prague_72486/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 11618568,
+                        "user_id": 6806262,
+                        "text": "فری سایز",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "29 آذر 1404",
+                        "files": [],
+                        "sender": "سیدابراهیم احمدی شیخ شبانی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "prj9i2ejc6",
+                            "bio": "ابراهیم هستم 56سالمه دارای همسر و دو فرزند هستم کارمند قسمت لجستیک شرکت بزرگ دی جی کالا هستم",
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/58bba00f9bcd9612e7811c7e7809142546f1d1b7_1662657440.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "ابراهیم احمدی شیخ شبانی",
+                            "followings_count": 35,
+                            "followers_count": 12,
+                            "share_url": "https://www.digikala.com/magnet/users/prj9i2ejc6/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": {
+                            "text": "صاحب‌نظر پوشاک مردانه",
+                            "text_color": "#424242",
+                            "bg_color": "#FFF",
+                            "tooltip_text": "یکی از ۵٪ کاربران فعال در پوشاک مردانه در ماه‌های اخیر"
+                        }
+                    },
+                    {
+                        "id": 10954043,
+                        "user_id": 497917,
+                        "text": "سلام \nبله من قدم 178 هست که یکمی قدش بلند بود ولی ماسب هست",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "15 آبان 1404",
+                        "files": [],
+                        "sender": "مهدی دادفر",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Reliable_Paris_52662",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "مهدی دادفر",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Reliable_Paris_52662/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 10924291,
+                        "user_id": 59083337,
+                        "text": "درود دو ایکس لارج",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "12 آبان 1404",
+                        "files": [],
+                        "sender": "سعید محمودی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Adaptable_Riga_66570",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "سعید محمودی",
+                            "followings_count": 1,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Adaptable_Riga_66570/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 7203753,
+                        "user_id": 48629148,
+                        "text": "اصلا جنسش خوب نبود",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "15 بهمن 1403",
+                        "files": [],
+                        "sender": "مصطفی محمدی یزنی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Appreciative_Strawberry_82691",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "مصطفی محمدی یزنی",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Appreciative_Strawberry_82691/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    }
+                ]
+            },
+            {
+                "id": 2775801,
+                "status": "accepted",
+                "text": "بزرگترین سایز کدومه؟ ",
+                "answer_count": 5,
+                "sender": "عباس چهره سنبل",
+                "created_at": "28 آذر 1400",
+                "answers": [
+                    {
+                        "id": 1583395,
+                        "user_id": null,
+                        "text": "سلام\r\nدر حال حاضر سایز XL",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "5 دی 1400",
+                        "files": [],
+                        "sender": "لوکس شو",
+                        "type": "seller",
+                        "marketplace_seller_id": 309162,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": []
+                    },
+                    {
+                        "id": 12503350,
+                        "user_id": 88634231,
+                        "text": "Xxxl خوبه",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "13 بهمن 1404",
+                        "files": [],
+                        "sender": "عباس فروغی سعیدآبادی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Courteous_Prague_72486",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "عباس فروغی",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Courteous_Prague_72486/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 12503039,
+                        "user_id": 66536724,
+                        "text": "دوایکس لارج",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "13 بهمن 1404",
+                        "files": [],
+                        "sender": "منصوره مهتابی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Fair_Helsinki_46529",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "منصوره مهتابی",
+                            "followings_count": 1,
+                            "followers_count": 3,
+                            "share_url": "https://www.digikala.com/magnet/users/Fair_Helsinki_46529/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": {
+                            "text": "صاحب‌نظر پوشاک مردانه",
+                            "text_color": "#424242",
+                            "bg_color": "#FFF",
+                            "tooltip_text": "یکی از ۵٪ کاربران فعال در پوشاک مردانه در ماه‌های اخیر"
+                        }
+                    },
+                    {
+                        "id": 11009787,
+                        "user_id": 59083337,
+                        "text": "درود دو ایکس لارج",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "19 آبان 1404",
+                        "files": [],
+                        "sender": "سعید محمودی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Adaptable_Riga_66570",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "سعید محمودی",
+                            "followings_count": 1,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Adaptable_Riga_66570/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 10924292,
+                        "user_id": 59083337,
+                        "text": "دو ایکس لارج",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "12 آبان 1404",
+                        "files": [],
+                        "sender": "سعید محمودی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Adaptable_Riga_66570",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "سعید محمودی",
+                            "followings_count": 1,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Adaptable_Riga_66570/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    }
+                ]
+            },
+            {
+                "id": 2612050,
+                "status": "accepted",
+                "text": "میشه لطفاً جدول اندازه دور کمر و قد و... را برای سایزهای مختلف M,L,XL, 1,2 مشخص کنید؟",
+                "answer_count": 4,
+                "sender": "مظاهر علی پور",
+                "created_at": "22 آبان 1400",
+                "answers": [
+                    {
+                        "id": 1472133,
+                        "user_id": null,
+                        "text": "سلام و عرض ادب، طبق تصویر آخر که مربوط به سایز بندی می باشد، از بین سایز های 1 و 2 انتخاب فرمایید",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "26 آبان 1400",
+                        "files": [],
+                        "sender": "پوشاک یاس آبی",
+                        "type": "seller",
+                        "marketplace_seller_id": 589407,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": []
+                    },
+                    {
+                        "id": 11009800,
+                        "user_id": 59083337,
+                        "text": "دو ایکس لارج قدش ۱۸۰ باقیش زیر این برا بچه ها خوب",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "19 آبان 1404",
+                        "files": [],
+                        "sender": "سعید محمودی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Adaptable_Riga_66570",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "سعید محمودی",
+                            "followings_count": 1,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Adaptable_Riga_66570/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 10924324,
+                        "user_id": 59083337,
+                        "text": "درود دور کمر مهم نیس کش میاد فقط رو قد توجه داشته باشین کوتاه در نیاد اگ بلند قدی دو ایکس بخر ",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "12 آبان 1404",
+                        "files": [],
+                        "sender": "سعید محمودی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Adaptable_Riga_66570",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "سعید محمودی",
+                            "followings_count": 1,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Adaptable_Riga_66570/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 1472531,
+                        "user_id": 570069,
+                        "text": "سایز ۱ و ۲ توسط تولید کننده اصلی تولید شده و بقیه سایز ها محصول متفاوت ارسال می کنند ",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "27 آبان 1400",
+                        "files": [],
+                        "sender": "مهدی نخودیان",
+                        "type": "user",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Gracious_Prague_51936",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "مهدی نخودیان",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Gracious_Prague_51936/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    }
+                ]
+            }
+        ],
+        "pager": {
+            "current_page": 3,
+            "total_pages": 4,
+            "total_items": 18
+        }
+    },
+    {
+        "questions": [
+            {
+                "id": 7140778,
+                "status": "accepted",
+                "text": "چرا در سایز بندی از xl و xxl چیزی نگفته؟ این دوتا اندازه قدشون چند هست؟",
+                "answer_count": 3,
+                "sender": "عبدالمجید بلوچی نژاد",
+                "created_at": "19 آذر 1403",
+                "answers": [
+                    {
+                        "id": 11009780,
+                        "user_id": 59083337,
+                        "text": "درود اینا برا بچه هاس زیر ۱۶۰",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "19 آبان 1404",
+                        "files": [],
+                        "sender": "سعید محمودی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Adaptable_Riga_66570",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "سعید محمودی",
+                            "followings_count": 1,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Adaptable_Riga_66570/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 10924288,
+                        "user_id": 59083337,
+                        "text": "درود اینا برا زیر ۱۶۰ . دو ایکس لارج تا ۱۸۰ خوب چون بقیش کوتاه در میاد",
+                        "reactions": {
+                            "likes": 1,
+                            "dislikes": 0
+                        },
+                        "created_at": "12 آبان 1404",
+                        "files": [],
+                        "sender": "سعید محمودی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Adaptable_Riga_66570",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "سعید محمودی",
+                            "followings_count": 1,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Adaptable_Riga_66570/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    },
+                    {
+                        "id": 6399175,
+                        "user_id": 2809652,
+                        "text": "سایز xl برای قد ۱۷۰ مناسب است",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "19 آذر 1403",
+                        "files": [],
+                        "sender": "هاشم نظامی",
+                        "type": "buyer",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": {
+                            "username": "Compassionate_Dumplings_95065",
+                            "bio": null,
+                            "photo": "https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+                            "name": "هاشم نظامی",
+                            "followings_count": 0,
+                            "followers_count": 0,
+                            "share_url": "https://www.digikala.com/magnet/users/Compassionate_Dumplings_95065/",
+                            "is_blocked": false
+                        },
+                        "contribution_badge": []
+                    }
+                ]
+            },
+            {
+                "id": 5341701,
+                "status": "accepted",
+                "text": "تصویر سایز بندی فقط زده سایز ۱ و ۲ ‌که اصلا توی موجودی ها نیست ",
+                "answer_count": 1,
+                "sender": "فاطمه مولائی",
+                "created_at": "17 مرداد 1402",
+                "answers": [
+                    {
+                        "id": 4066392,
+                        "user_id": 16262931,
+                        "text": "سلام وقت بخیر\r\nL تا سایز 44 و XL تا سایز 50 مناسب می باشد\r\nباتشکر\r\nپخش پارتاک",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "21 اسفند 1402",
+                        "files": [],
+                        "sender": "طیبه قجاوند",
+                        "type": "user",
+                        "marketplace_seller_id": null,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": [],
+                        "contribution_badge": []
+                    }
+                ]
+            },
+            {
+                "id": 4553328,
+                "status": "accepted",
+                "text": "سلام وخسته نباشید!\nظاهرا سایز بزرگتر از xl هم موجود شده؛ طبق سایزهای جدید کدام سایز بزرگ است؟",
+                "answer_count": 1,
+                "sender": "امیرحسین رستمی",
+                "created_at": "1 بهمن 1401",
+                "answers": [
+                    {
+                        "id": 2885536,
+                        "user_id": null,
+                        "text": "52 و 54 که تولیدی خود ما هست",
+                        "reactions": {
+                            "likes": 0,
+                            "dislikes": 0
+                        },
+                        "created_at": "1 بهمن 1401",
+                        "files": [],
+                        "sender": "شاپ پیشگام",
+                        "type": "seller",
+                        "marketplace_seller_id": 246573,
+                        "user_reaction": null,
+                        "has_qa_badge": false,
+                        "social_profile": []
+                    }
+                ]
+            }
+        ],
+        "pager": {
+            "current_page": 4,
+            "total_pages": 4,
+            "total_items": 18
+        }
+    }
+]
