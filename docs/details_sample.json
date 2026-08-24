@@ -1,0 +1,819 @@
+{
+    "status": 200,
+    "data": {
+        "product": {
+            "id": 6757334,
+            "title_fa": "شلوار مردانه مدل گرم کد 5",
+            "title_en": "",
+            "url": {
+                "base": null,
+                "uri": "/product/dkp-6757334/شلوار-مردانه-مدل-گرم-کد-5"
+            },
+            "status": "out_of_stock",
+            "has_quick_view": false,
+            "data_layer": {
+                "brand": "متفرقه",
+                "category": "[AP,لباس راحتی و خواب مردانه]",
+                "metric6": 807,
+                "dimension2": 0,
+                "dimension6": 0,
+                "dimension7": "none",
+                "dimension9": 3.9,
+                "dimension11": 0,
+                "dimension20": "out_of_stock",
+                "item_category2": "مد و پوشاک",
+                "item_category3": "مردانه",
+                "item_category4": "لباس مردانه",
+                "item_category5": "لباس راحتی مردانه"
+            },
+            "product_type": "product",
+            "test_title_fa": "شلوار راحتی مردانه مدل گرم با جنس الیاف نخی و پشم و تنخور دم پا کش و طرح ساده",
+            "test_title_en": "",
+            "digiplus": {
+                "services": [
+                    "۴ ارسال رایگان دیجیکالا",
+                    "۲ ارسال سوپرمارکت",
+                    "۴ ارسال رایگان ۴۵ دقیقه‌ای",
+                    "پشتیبانی اختصاصی"
+                ],
+                "service_list": [
+                    {
+                        "title": "۴ ارسال رایگان دیجیکالا"
+                    },
+                    {
+                        "title": "۲ ارسال سوپرمارکت"
+                    },
+                    {
+                        "title": "۴ ارسال رایگان ۴۵ دقیقه‌ای"
+                    },
+                    {
+                        "title": "پشتیبانی اختصاصی"
+                    }
+                ],
+                "services_summary": [
+                    "ارسال رایگان"
+                ],
+                "is_jet_eligible": false,
+                "cash_back": 0,
+                "is_general_location_jet_eligible": false,
+                "fast_shipping_text": null
+            },
+            "images": {
+                "main": {
+                    "storage_ids": [],
+                    "url": [
+                        "https://dkstatics-public.digikala.com/digikala-products/a246320768ff844243f425491e00ba5c4d05d10e_1765114493.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+                    ],
+                    "thumbnail_url": null,
+                    "temporary_id": null,
+                    "webp_url": [
+                        "https://dkstatics-public.digikala.com/digikala-products/a246320768ff844243f425491e00ba5c4d05d10e_1765114493.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+                    ]
+                },
+                "list": [
+                    {
+                        "storage_ids": [],
+                        "url": [
+                            "https://dkstatics-public.digikala.com/digikala-products/1e55fbd2ef7ad39b6ac705de2309b1581d0c7c59_1634282143.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+                        ],
+                        "thumbnail_url": null,
+                        "temporary_id": null,
+                        "webp_url": [
+                            "https://dkstatics-public.digikala.com/digikala-products/1e55fbd2ef7ad39b6ac705de2309b1581d0c7c59_1634282143.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+                        ]
+                    },
+                    {
+                        "storage_ids": [],
+                        "url": [
+                            "https://dkstatics-public.digikala.com/digikala-products/ff6df177ace37aa1916b3ad8ba624e22f125e2ec_1634282182.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+                        ],
+                        "thumbnail_url": null,
+                        "temporary_id": null,
+                        "webp_url": [
+                            "https://dkstatics-public.digikala.com/digikala-products/ff6df177ace37aa1916b3ad8ba624e22f125e2ec_1634282182.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+                        ]
+                    },
+                    {
+                        "storage_ids": [],
+                        "url": [
+                            "https://dkstatics-public.digikala.com/digikala-products/b40b892f056811bc5a5438571c060eea39cfd16a_1634282224.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+                        ],
+                        "thumbnail_url": null,
+                        "temporary_id": null,
+                        "webp_url": [
+                            "https://dkstatics-public.digikala.com/digikala-products/b40b892f056811bc5a5438571c060eea39cfd16a_1634282224.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+                        ]
+                    },
+                    {
+                        "storage_ids": [],
+                        "url": [
+                            "https://dkstatics-public.digikala.com/digikala-products/1f3416c688acb8849381e76bb4101fcad401f161_1634282256.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+                        ],
+                        "thumbnail_url": null,
+                        "temporary_id": null,
+                        "webp_url": [
+                            "https://dkstatics-public.digikala.com/digikala-products/1f3416c688acb8849381e76bb4101fcad401f161_1634282256.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+                        ]
+                    },
+                    {
+                        "storage_ids": [],
+                        "url": [
+                            "https://dkstatics-public.digikala.com/digikala-products/e4d6f0565ea6ff018a50e2c5bcb6c7857facf2d5_1634282292.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+                        ],
+                        "thumbnail_url": null,
+                        "temporary_id": null,
+                        "webp_url": [
+                            "https://dkstatics-public.digikala.com/digikala-products/e4d6f0565ea6ff018a50e2c5bcb6c7857facf2d5_1634282292.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+                        ]
+                    },
+                    {
+                        "storage_ids": [],
+                        "url": [
+                            "https://dkstatics-public.digikala.com/digikala-products/aa5dbc285a4995ef3aecbd07a52eebcbe2228195_1634282317.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+                        ],
+                        "thumbnail_url": null,
+                        "temporary_id": null,
+                        "webp_url": [
+                            "https://dkstatics-public.digikala.com/digikala-products/aa5dbc285a4995ef3aecbd07a52eebcbe2228195_1634282317.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+                        ]
+                    },
+                    {
+                        "storage_ids": [],
+                        "url": [
+                            "https://dkstatics-public.digikala.com/digikala-products/2bb3ac5df26c00f499e74515150bc446ca34af2a_1634282324.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+                        ],
+                        "thumbnail_url": null,
+                        "temporary_id": null,
+                        "webp_url": [
+                            "https://dkstatics-public.digikala.com/digikala-products/2bb3ac5df26c00f499e74515150bc446ca34af2a_1634282324.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+                        ]
+                    }
+                ]
+            },
+            "rating": {
+                "rate": 76.48,
+                "count": 807
+            },
+            "gallery_variant": "vertical",
+            "colors": [],
+            "has_price_chart": true,
+            "properties": {
+                "is_fast_shipping": false,
+                "is_ship_by_seller": false,
+                "free_shipping_badge": false,
+                "is_multi_warehouse": false,
+                "is_fake": false,
+                "has_gift": false,
+                "min_price_in_last_month": 2300000,
+                "is_non_inventory": false,
+                "is_jet_eligible": false,
+                "is_medical_supplement": false,
+                "is_ad": false,
+                "ad": [],
+                "has_printed_price": false
+            },
+            "badges": [],
+            "has_true_to_size": true,
+            "product_badges": [],
+            "variants_images": {
+                "main": {
+                    "variant_id": null,
+                    "variant_ids": [],
+                    "storage_ids": [],
+                    "url": [
+                        "https://dkstatics-public.digikala.com/digikala-products/a246320768ff844243f425491e00ba5c4d05d10e_1765114493.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+                    ],
+                    "thumbnail_url": null,
+                    "temporary_id": null,
+                    "webp_url": [
+                        "https://dkstatics-public.digikala.com/digikala-products/a246320768ff844243f425491e00ba5c4d05d10e_1765114493.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+                    ]
+                },
+                "list": [
+                    {
+                        "variant_id": null,
+                        "variant_ids": [],
+                        "storage_ids": [],
+                        "url": [
+                            "https://dkstatics-public.digikala.com/digikala-products/1e55fbd2ef7ad39b6ac705de2309b1581d0c7c59_1634282143.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+                        ],
+                        "thumbnail_url": null,
+                        "temporary_id": null,
+                        "webp_url": [
+                            "https://dkstatics-public.digikala.com/digikala-products/1e55fbd2ef7ad39b6ac705de2309b1581d0c7c59_1634282143.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+                        ]
+                    },
+                    {
+                        "variant_id": null,
+                        "variant_ids": [],
+                        "storage_ids": [],
+                        "url": [
+                            "https://dkstatics-public.digikala.com/digikala-products/ff6df177ace37aa1916b3ad8ba624e22f125e2ec_1634282182.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+                        ],
+                        "thumbnail_url": null,
+                        "temporary_id": null,
+                        "webp_url": [
+                            "https://dkstatics-public.digikala.com/digikala-products/ff6df177ace37aa1916b3ad8ba624e22f125e2ec_1634282182.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+                        ]
+                    },
+                    {
+                        "variant_id": null,
+                        "variant_ids": [],
+                        "storage_ids": [],
+                        "url": [
+                            "https://dkstatics-public.digikala.com/digikala-products/b40b892f056811bc5a5438571c060eea39cfd16a_1634282224.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+                        ],
+                        "thumbnail_url": null,
+                        "temporary_id": null,
+                        "webp_url": [
+                            "https://dkstatics-public.digikala.com/digikala-products/b40b892f056811bc5a5438571c060eea39cfd16a_1634282224.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+                        ]
+                    },
+                    {
+                        "variant_id": null,
+                        "variant_ids": [],
+                        "storage_ids": [],
+                        "url": [
+                            "https://dkstatics-public.digikala.com/digikala-products/1f3416c688acb8849381e76bb4101fcad401f161_1634282256.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+                        ],
+                        "thumbnail_url": null,
+                        "temporary_id": null,
+                        "webp_url": [
+                            "https://dkstatics-public.digikala.com/digikala-products/1f3416c688acb8849381e76bb4101fcad401f161_1634282256.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+                        ]
+                    },
+                    {
+                        "variant_id": null,
+                        "variant_ids": [],
+                        "storage_ids": [],
+                        "url": [
+                            "https://dkstatics-public.digikala.com/digikala-products/e4d6f0565ea6ff018a50e2c5bcb6c7857facf2d5_1634282292.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+                        ],
+                        "thumbnail_url": null,
+                        "temporary_id": null,
+                        "webp_url": [
+                            "https://dkstatics-public.digikala.com/digikala-products/e4d6f0565ea6ff018a50e2c5bcb6c7857facf2d5_1634282292.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+                        ]
+                    },
+                    {
+                        "variant_id": null,
+                        "variant_ids": [],
+                        "storage_ids": [],
+                        "url": [
+                            "https://dkstatics-public.digikala.com/digikala-products/aa5dbc285a4995ef3aecbd07a52eebcbe2228195_1634282317.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+                        ],
+                        "thumbnail_url": null,
+                        "temporary_id": null,
+                        "webp_url": [
+                            "https://dkstatics-public.digikala.com/digikala-products/aa5dbc285a4995ef3aecbd07a52eebcbe2228195_1634282317.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+                        ]
+                    },
+                    {
+                        "variant_id": null,
+                        "variant_ids": [],
+                        "storage_ids": [],
+                        "url": [
+                            "https://dkstatics-public.digikala.com/digikala-products/2bb3ac5df26c00f499e74515150bc446ca34af2a_1634282324.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+                        ],
+                        "thumbnail_url": null,
+                        "temporary_id": null,
+                        "webp_url": [
+                            "https://dkstatics-public.digikala.com/digikala-products/2bb3ac5df26c00f499e74515150bc446ca34af2a_1634282324.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+                        ]
+                    }
+                ]
+            },
+            "variants": [],
+            "videos": [],
+            "category": {
+                "id": 9445,
+                "title_fa": "شلوار راحتی مردانه",
+                "title_en": "MEN Homewear Bottom",
+                "code": "men-homewear-bottom",
+                "content_description": "",
+                "content_box": "",
+                "return_reason_alert": ""
+            },
+            "brand": {
+                "id": 719,
+                "code": "miscellaneous",
+                "title_fa": "متفرقه",
+                "title_en": "Miscellaneous",
+                "url": {
+                    "base": null,
+                    "uri": "/brand/miscellaneous/"
+                },
+                "visibility": true,
+                "logo": {
+                    "storage_ids": [],
+                    "url": [
+                        "https://dkstatics-public.digikala.com/digikala-brands/d37a7e939b804659cfc1e6d88092a1b8ea8132d4_1603699076.png?x-oss-process=image/resize,m_lfit,h_120,w_120/quality,q_80"
+                    ],
+                    "thumbnail_url": null,
+                    "temporary_id": null,
+                    "webp_url": null
+                },
+                "is_premium": false,
+                "is_miscellaneous": false,
+                "is_name_similar": false
+            },
+            "review": {
+                "attributes": [
+                    {
+                        "title": "جنس",
+                        "values": [
+                            "الیاف نخی",
+                            "پشم"
+                        ]
+                    },
+                    {
+                        "title": "تنخور لباس",
+                        "values": [
+                            "دم پا کش"
+                        ]
+                    }
+                ]
+            },
+            "pros_and_cons": {
+                "advantages": [],
+                "disadvantages": []
+            },
+            "suggestion": {
+                "count": 180,
+                "percentage": 71
+            },
+            "default_variant": [],
+            "second_default_variant": [],
+            "questions_count": 18,
+            "comments_count": 498,
+            "comments_overview": {
+                "id": 121491,
+                "overview": "این شلوار مردانه نرم و گرم است که به خوبی برای فصول سرد و زیر شلوار مناسب است و با طراحی و جنس مناسب رضایت کاربران را جلب کرده است. خیلی از کاربران اندازه و سایز آن را مناسب و راحت می‌دانند و از کارایی خوبی در گرمایش و راحتی استفاده می‌کنند. همچنین، کیفیت ساخت و قیمت مناسب از دیگر مزایای ذکر شده است.\nبرخی مشکلاتی مانند کوتاهی قد بعضی سایزها، بو نامطبوع، و دوخت ضعیف در برخی نمونه‌ها دیده می‌شود که باعث نارضایتی عده‌ای شده است. همچنین برخی مراجعین از نرمی بیش از حد و بی‌کیفیت بودن جنس در برخی موارد انتقاد کرده‌اند.\nدر کل، این محصول برای استفاده روزمره و زیر لباس در زمستان مناسب و اقتصادی است و اکثر کاربران از آن رضایت دارند، اگرچه در برخی موارد نیاز به انتخاب سایز بزرگتر و توجه به کیفیت دارد.",
+                "advantages": [
+                    "گرمی و نرمی بالا",
+                    "قیمت مناسب و اقتصادی",
+                    "راحتی در استفاده"
+                ],
+                "disadvantages": [
+                    "نقص داشـتـن در کیفیت دوخت",
+                    "بوی نامطبوع در برخی موارد",
+                    "کوتاهی بعضی سایزها"
+                ]
+            },
+            "breadcrumb": [
+                {
+                    "category_id": null,
+                    "title": "دیجی‌کالا",
+                    "url": {
+                        "base": null,
+                        "uri": "/"
+                    }
+                },
+                {
+                    "category_id": 8749,
+                    "title": "مد و پوشاک",
+                    "url": {
+                        "base": null,
+                        "uri": "/main/apparel/"
+                    }
+                },
+                {
+                    "category_id": 8752,
+                    "title": "مردانه",
+                    "url": {
+                        "base": null,
+                        "uri": "/search/category-mens-apparel/"
+                    }
+                },
+                {
+                    "category_id": 9435,
+                    "title": "لباس مردانه",
+                    "url": {
+                        "base": null,
+                        "uri": "/search/category-men-clothing/"
+                    }
+                },
+                {
+                    "category_id": 9442,
+                    "title": "لباس راحتی مردانه",
+                    "url": {
+                        "base": null,
+                        "uri": "/search/category-men-homewear/"
+                    }
+                },
+                {
+                    "category_id": 9445,
+                    "title": "شلوار راحتی مردانه",
+                    "url": {
+                        "base": null,
+                        "uri": "/search/category-men-homewear-bottom/"
+                    }
+                },
+                {
+                    "category_id": null,
+                    "title": "شلوار مردانه مدل گرم کد 5",
+                    "url": {
+                        "base": null,
+                        "uri": "/product/dkp-6757334/%D8%B4%D9%84%D9%88%D8%A7%D8%B1-%D9%85%D8%B1%D8%AF%D8%A7%D9%86%D9%87-%D9%85%D8%AF%D9%84-%DA%AF%D8%B1%D9%85-%DA%A9%D8%AF-5"
+                    }
+                }
+            ],
+            "has_size_guide": false,
+            "specifications": [
+                {
+                    "title": "مشخصات",
+                    "attributes": [
+                        {
+                            "title": "جنس",
+                            "values": [
+                                "الیاف نخی ",
+                                "پشم "
+                            ]
+                        },
+                        {
+                            "title": "تنخور لباس",
+                            "values": [
+                                "دم پا کش "
+                            ]
+                        },
+                        {
+                            "title": "طرح",
+                            "values": [
+                                "ساده "
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "expert_reviews": {
+                "attributes": [],
+                "description": "",
+                "short_review": "",
+                "admin_rates": [],
+                "review_sections": [],
+                "technical_properties": {
+                    "advantages": [],
+                    "disadvantages": []
+                }
+            },
+            "meta": {
+                "brand_category_url": {
+                    "base": null,
+                    "uri": "/search/category-men-homewear-bottom/miscellaneous/"
+                }
+            },
+            "last_comments": [
+                {
+                    "id": 88404885,
+                    "title": null,
+                    "body": "جنسش خوبه من دوبار خرید کردم ",
+                    "created_at": "19 تیر 1405",
+                    "rate": 5,
+                    "reactions": {
+                        "likes": 0,
+                        "dislikes": 0
+                    },
+                    "files": [],
+                    "is_buyer": true,
+                    "user_name": "کاربر دیجی‌کالا",
+                    "is_anonymous": true,
+                    "purchased_item": [],
+                    "advantages": [],
+                    "disadvantages": [],
+                    "relative_date": "19 تیر 1405"
+                },
+                {
+                    "id": 87510456,
+                    "title": null,
+                    "body": "سایز لارج برای من با قد ۱۸۰  وزن ۸۵ قد پای ۱۰۰ودور کمر ۱۰۰ جذب بود اما تنگ نبود البته قبلا پوشیدم و میدونم طی زمان آزادتر میشه .هم لارج خریدم هم فری سایز اما لارجرو بیشتر دوست داشتم اسم فروشگاهشم پوشاک یاس آبی بود",
+                    "created_at": "9 خرداد 1405",
+                    "rate": 5,
+                    "reactions": {
+                        "likes": 0,
+                        "dislikes": 0
+                    },
+                    "files": [],
+                    "is_buyer": true,
+                    "user_name": "کاربر دیجی‌کالا",
+                    "is_anonymous": true,
+                    "purchased_item": [],
+                    "advantages": [],
+                    "disadvantages": [],
+                    "true_to_size_rate": "fit",
+                    "relative_date": "9 خرداد 1405"
+                },
+                {
+                    "id": 87510340,
+                    "title": null,
+                    "body": "با وزن ۸۵ قد ۱۸۰ دور کمر ۱۰۰ وقد پای ۱۰۰،سایز فری سایز بهم خورد فاق هم برام آزاد بود و همچنین سایز لارج هم خورد برام جذبتر بود ",
+                    "created_at": "9 خرداد 1405",
+                    "rate": 5,
+                    "reactions": {
+                        "likes": 0,
+                        "dislikes": 0
+                    },
+                    "files": [],
+                    "is_buyer": true,
+                    "user_name": "کاربر دیجی‌کالا",
+                    "is_anonymous": true,
+                    "purchased_item": [],
+                    "advantages": [],
+                    "disadvantages": [],
+                    "true_to_size_rate": "fit",
+                    "relative_date": "9 خرداد 1405"
+                },
+                {
+                    "id": 86988964,
+                    "title": null,
+                    "body": "با وجود اینکه XXL  رو سفارش دادم ولی خیلی کوچیکه",
+                    "created_at": "23 اردیبهشت 1405",
+                    "rate": 1,
+                    "reactions": {
+                        "likes": 0,
+                        "dislikes": 0
+                    },
+                    "files": [],
+                    "is_buyer": true,
+                    "user_name": "کاربر دیجی‌کالا",
+                    "is_anonymous": true,
+                    "purchased_item": [],
+                    "advantages": [],
+                    "disadvantages": [],
+                    "true_to_size_rate": "tooSmall",
+                    "relative_date": "23 اردیبهشت 1405"
+                }
+            ],
+            "last_questions": [
+                {
+                    "id": 9033291,
+                    "status": "accepted",
+                    "text": "فاقش کوتاه نیست؟!",
+                    "answer_count": 7,
+                    "sender": "امیر قولنجی زیمدشتی",
+                    "created_at": "13 بهمن 1404"
+                },
+                {
+                    "id": 8958184,
+                    "status": "accepted",
+                    "text": "سلام برای سایز ۵۴ چه سایزی خوبه",
+                    "answer_count": 5,
+                    "sender": "حسین شعبانی",
+                    "created_at": "2 بهمن 1404"
+                },
+                {
+                    "id": 8918432,
+                    "status": "accepted",
+                    "text": "فیری سایز بزرگتره یا XXL? برای قد ۱۷۸ و وزن ۸۰ چطوره؟ ۱۸ ساله هستم",
+                    "answer_count": 6,
+                    "sender": "یوسف نوریان",
+                    "created_at": "28 دی 1404"
+                }
+            ],
+            "tags": [],
+            "digify_touchpoint": "",
+            "show_type": "large",
+            "cars_reservable": false,
+            "has_offline_shop_stock": false,
+            "has_style_try_on": true,
+            "st_cmp_tacker": {
+                "neo": "q4gWjzqGqXP2eqJJeh0AiOT2zjk3AS2PEolEv29HPvWyURPh89ZaumQXmHyYGuvQgvIywS0SkG5vvAzP4mJN5JXFJyOBW9lMlsPw3C8BEqnY3Grk4MeYKY9f7avHO0IkB86FOj46T5UAjfy6HDDaXsRceGBbIU0HwqjW58hlk2Rq6BDOnXSoSbsJHYAhg4Yqi6EGF4iFgy9zrRuhzGdni6g8",
+                "cx": "eyJjaXBoZXJ0ZXh0Ijoia3lya3dWT01XV1FCRndBSWFqY2o0M2t0TTl2eVJNc2h2ZU9CeTdpKzJSSEJoUDFRbjBWWDVycnhIVThpWGJxSEQ5ekVweHVjdkN3cnpoV3cxVlFZeFd2R2l4dWNVZFwva0IyOEVud0ZOUTFETkJMK3VrQm50RG",
+                "dx": "hlanY1elZaZHlLRFBcL0dxTHpEd1RIMGxvUW4yYlF1T2l6UVwvclYyaGVxd05zcUZ6ekhZNks1a1lyd3RrNFRNTFFnZmUyTGtPZGZkT3NsVDRJd2tucFgrWnNrdzdKWHBCXC80ZDU5XC92Sk9qVGMrUEM5XC96M1daWkZpOXhCNGU2aThR",
+                "data-fx": "VEpaQSs1Z01Ua2JUOThcL3l1anV2b1B3NUs4SXhFb05lMGw2VlF2Q3lJcmxwN0VRU3RkXC84XC9CckhMdlh2YjRnbjc2bUVKSDFKanpIaExzeERCMzkrRnlBMTl5YlA1R2Nnb1E1OEcyajh6RDdpVDlTUG9FUXZrYkM5WFwvOEQyRGE3WW",
+                "zero": "pZb0x0bXJHd29EaHQyTnZjQzBDWlNGZ1hjS3Q2Zk50UG4ySG5iNzVoZVBMdk94dHJlRUVJK05KUHZlQkRacXRPd0hIQXlPbmgiLCJpdiI6ImE5MGMxNjU1MGUxN2E5MWNkODFhZmI3NmZhYTFlZGVjIiwiaXRlcmF0aW9ucyI6OTk5fQ=="
+            }
+        },
+        "data_layer": {
+            "event": "eec.productDetail",
+            "ecommerce": {
+                "detail": {
+                    "actionField": {
+                        "list": "category-شلوار راحتی مردانه"
+                    },
+                    "products": [
+                        {
+                            "brand": "متفرقه",
+                            "category": "[AP,لباس راحتی و خواب مردانه]",
+                            "metric6": 807,
+                            "dimension2": 0,
+                            "dimension6": 0,
+                            "dimension7": "none",
+                            "dimension9": 3.9,
+                            "dimension11": 0,
+                            "dimension20": "out_of_stock",
+                            "item_category2": "مد و پوشاک",
+                            "item_category3": "مردانه",
+                            "item_category4": "لباس مردانه",
+                            "item_category5": "لباس راحتی مردانه",
+                            "name": "شلوار مردانه مدل گرم کد 5",
+                            "id": 6757334,
+                            "price": null,
+                            "variant_id": null,
+                            "metric8": 0,
+                            "dimension3": "marketplace",
+                            "dimension10": null,
+                            "dimension15": 0,
+                            "metric15": 0,
+                            "metric11": 498,
+                            "metric12": 180
+                        }
+                    ]
+                }
+            }
+        },
+        "seo": {
+            "title": "قیمت و خرید شلوار مردانه مدل گرم کد 5",
+            "description": "خرید اینترنتی شلوار مردانه مدل گرم کد 5 به همراه مقایسه، بررسی مشخصات و لیست قیمت امروز در فروشگاه اینترنتی دیجی‌کالا",
+            "twitter_card": {
+                "title": "شلوار مردانه مدل گرم کد 5",
+                "image": "https://dkstatics-public.digikala.com/digikala-products/a246320768ff844243f425491e00ba5c4d05d10e_1765114493.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60",
+                "price": 0,
+                "description": "خرید اینترنتی شلوار مردانه مدل گرم کد 5 به همراه مقایسه، بررسی مشخصات و لیست قیمت امروز در فروشگاه اینترنتی دیجی‌کالا"
+            },
+            "open_graph": {
+                "title": "شلوار مردانه مدل گرم کد 5",
+                "url": "https://www.digikala.com/product/dkp-6757334/شلوار-مردانه-مدل-گرم-کد-5",
+                "image": "https://dkstatics-public.digikala.com/digikala-products/a246320768ff844243f425491e00ba5c4d05d10e_1765114493.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60",
+                "availability": "out of stock",
+                "type": "product",
+                "site": "دیجی‌کالا",
+                "price": 0,
+                "description": null
+            },
+            "header": {
+                "title": "شلوار مردانه مدل گرم کد 5",
+                "description": "خرید اینترنتی شلوار مردانه مدل گرم کد 5 به همراه مقایسه، بررسی مشخصات و لیست قیمت امروز در فروشگاه اینترنتی دیجی‌کالا",
+                "canonical_url": "https://www.digikala.com/product/dkp-6757334/%D8%B4%D9%84%D9%88%D8%A7%D8%B1-%D9%85%D8%B1%D8%AF%D8%A7%D9%86%D9%87-%D9%85%D8%AF%D9%84-%DA%AF%D8%B1%D9%85-%DA%A9%D8%AF-5"
+            },
+            "markup_schema": [
+                {
+                    "@type": "Product",
+                    "@context": "https://www.schema.org",
+                    "name": "شلوار مردانه مدل گرم کد 5",
+                    "alternateName": "",
+                    "image": [
+                        "https://dkstatics-public.digikala.com/digikala-products/1e55fbd2ef7ad39b6ac705de2309b1581d0c7c59_1634282143.jpg?x-oss-process=image/resize,h_1600/quality,q_80",
+                        "https://dkstatics-public.digikala.com/digikala-products/ff6df177ace37aa1916b3ad8ba624e22f125e2ec_1634282182.jpg?x-oss-process=image/resize,h_1600/quality,q_80",
+                        "https://dkstatics-public.digikala.com/digikala-products/b40b892f056811bc5a5438571c060eea39cfd16a_1634282224.jpg?x-oss-process=image/resize,h_1600/quality,q_80",
+                        "https://dkstatics-public.digikala.com/digikala-products/1f3416c688acb8849381e76bb4101fcad401f161_1634282256.jpg?x-oss-process=image/resize,h_1600/quality,q_80",
+                        "https://dkstatics-public.digikala.com/digikala-products/e4d6f0565ea6ff018a50e2c5bcb6c7857facf2d5_1634282292.jpg?x-oss-process=image/resize,h_1600/quality,q_80",
+                        "https://dkstatics-public.digikala.com/digikala-products/aa5dbc285a4995ef3aecbd07a52eebcbe2228195_1634282317.jpg?x-oss-process=image/resize,h_1600/quality,q_80",
+                        "https://dkstatics-public.digikala.com/digikala-products/2bb3ac5df26c00f499e74515150bc446ca34af2a_1634282324.jpg?x-oss-process=image/resize,h_1600/quality,q_80"
+                    ],
+                    "description": "خرید اینترنتی شلوار مردانه مدل گرم کد 5 به همراه مقایسه، بررسی مشخصات و لیست قیمت امروز در فروشگاه اینترنتی دیجی‌کالا",
+                    "mpn": 6757334,
+                    "sku": 6757334,
+                    "category": "https://www.digikala.com/search/category-men-homewear-bottom/",
+                    "brand": {
+                        "@type": "Brand",
+                        "name": "متفرقه",
+                        "url": "https://www.digikala.com/brand/miscellaneous/",
+                        "@id": "https://www.digikala.com/brand/miscellaneous/#brand"
+                    },
+                    "aggregateRating": {
+                        "@type": "AggregateRating",
+                        "ratingValue": 3.82,
+                        "reviewCount": 807
+                    },
+                    "offers": {
+                        "@type": "Offer",
+                        "priceCurrency": "IRR",
+                        "price": 0,
+                        "itemCondition": "https://schema.org/NewCondition",
+                        "availability": "https://schema.org/OutOfStock"
+                    },
+                    "review": {
+                        "@type": "Review",
+                        "reviewRating": {
+                            "@type": "Rating",
+                            "bestRating": 5,
+                            "ratingValue": 5
+                        },
+                        "author": {
+                            "@type": "Person",
+                            "name": "کاربر دیجی‌کالا"
+                        },
+                        "datePublished": "2026-07-10",
+                        "reviewBody": "جنسش خوبه من دوبار خرید کردم ",
+                        "name": ""
+                    }
+                },
+                [
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "فروشگاه اینترنتی دیجی‌کالا",
+                                "item": {
+                                    "@type": "Corporation",
+                                    "@id": "https://www.digikala.com/#corporation"
+                                }
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "مد و پوشاک",
+                                "item": "https://www.digikala.com/main/apparel/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 3,
+                                "name": "مردانه",
+                                "item": "https://www.digikala.com/search/category-mens-apparel/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 4,
+                                "name": "لباس مردانه",
+                                "item": "https://www.digikala.com/search/category-men-clothing/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 5,
+                                "name": "لباس راحتی مردانه",
+                                "item": "https://www.digikala.com/search/category-men-homewear/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 6,
+                                "name": "شلوار راحتی مردانه",
+                                "item": "https://www.digikala.com/search/category-men-homewear-bottom/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 7,
+                                "name": "شلوار مردانه مدل گرم کد 5"
+                            }
+                        ]
+                    },
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "متفرقه",
+                                "item": {
+                                    "@type": "Brand",
+                                    "@id": "https://www.digikala.com/brand/miscellaneous/#brand"
+                                }
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "شلوار راحتی مردانه متفرقه",
+                                "item": "https://www.digikala.com/search/category-men-homewear-bottom/miscellaneous/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 3,
+                                "name": "شلوار مردانه مدل گرم کد 5"
+                            }
+                        ]
+                    }
+                ]
+            ]
+        },
+        "intrack": {
+            "eventName": "product_detail_pageview",
+            "eventData": {
+                "currency": "IRR",
+                "deviceType": "desktop",
+                "name": "شلوار مردانه مدل گرم کد 5",
+                "productId": 6757334,
+                "productImageUrl": [
+                    "https://dkstatics-public.digikala.com/digikala-products/a246320768ff844243f425491e00ba5c4d05d10e_1765114493.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+                ],
+                "quantity": null,
+                "leafCategory": "شلوار راحتی مردانه",
+                "unitPrice": null,
+                "url": "/product/dkp-6757334/شلوار-مردانه-مدل-گرم-کد-5",
+                "supplyCategory": "AP",
+                "categoryLevel1": "مد و پوشاک",
+                "categoryLevel2": "مردانه",
+                "categoryLevel3": "لباس مردانه",
+                "categoryLevel4": "لباس راحتی مردانه",
+                "categoryLevel5": "شلوار راحتی مردانه"
+            },
+            "userId": null
+        },
+        "landing_touchpoint": [],
+        "dynamic_touch_points": [],
+        "promotion_banner": {
+            "product_promotion": null,
+            "dkjet_promotion": null
+        },
+        "bigdata_tracker_data": {
+            "page_name": "product",
+            "page_info": {
+                "product_id": 6757334
+            }
+        },
+        "dynamic_pdp_carousel": [],
+        "dk_service": []
+    }
+}
