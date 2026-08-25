@@ -15,6 +15,7 @@
   - Product metadata (JSON)
   - All reachable pages of product reviews (comments)
   - All reachable pages of product questions and answers
+- **Canonical dataset** – extracts the key fields from the crawled raw data (details, comments, Q&As) into a structured per-product JSON record under `data/processed/products/`.
 
 - **Resumable checkpoints** – if interrupted, the crawler resumes from the last processed category and page.
 - **Live dashboard** – a  real‑time view of progress (categories, pages, products, errors) using `rich`.
@@ -149,6 +150,10 @@ digisearch/
 │   │                   ├── details.json
 │   │                   ├── comments.json
 │   │                   └── questions.json
+│   ├── processed/
+│   │   ├── product_list.json        # index of all crawled products (file paths + category)
+│   │   └── products/
+│   │       └── <product_id>.json    # structured product record (selected key fields)
 │   └── checkpoints/
 │       └── checkpoint.csv          # resume point (category id + page)
 ├── logs/
@@ -161,6 +166,8 @@ digisearch/
 - `details.json` – full product information.
 - `comments.json` – all user reviews for that product.
 - `questions.json` – all customer Q&A entries.
+- `product_list.json` – index of all crawled products with their raw file paths and category.
+- `products/<product_id>.json` – structured record with the selected key fields from details, comments, and Q&As.
 
 ---
 
@@ -201,6 +208,13 @@ digisearch --output "all_categories.csv"
 ```
 ---
 
+## 📚 Data Inspection
+
+- [docs/data_inspection.md](docs/data_inspection.md) – field-by-field inspection of the raw crawl output.
+- Raw payload samples: [details](docs/details_sample.json), [comments](docs/comments_sample.json), and [questions](docs/questions_sample.json).
+
+---
+
 ## 🧰 Development
 
 ### Running the pipeline in parts
@@ -216,6 +230,14 @@ python get_categories.py --filters "men" --output "men.csv"
 ```
 python crawl.py --output "men.csv"
 ```
+#### 3. Build the canonical dataset
+```
+python src/digisearch/processing/list_products.py   # scans raw data → data/processed/product_list.json
+python src/digisearch/processing/canonicalize.py    # builds structured records → data/processed/products/
+```
+
+> **Note**: These are standalone scripts (not yet exposed via the CLI); run them from the project root.
+
 ### Logging
 
 - Pipeline logs (stage start/end, arguments) → `logs/pipeline.log`
@@ -232,8 +254,8 @@ python crawl.py --output "men.csv"
 
 ### Phase 2: Data Cleaning and Dataset Preparation
 - [x]  2.1 Data inspection
-- [x]  2.2 Data cleaning and normalization
-- [x]  2.3 Canonical dataset
+- [x]  2.2 Canonical dataset
+- [ ]  2.3 Data cleaning and normalization
 - [ ]  2.4 Search document construction
 - [ ]  2.5 Embedding generation
 - [ ]  2.6 Vector retrieval
