@@ -21,7 +21,7 @@ from rich.progress import (
     TaskID,
 )
 
-from digisearch.paths import PROJECT_ROOT
+from digisearch.paths import PROJECT_ROOT, DATA_DIR, RAW_DIR, LOG_DIR
 
 def find_all_keys(obj, target_key) -> list:
     results = []
@@ -40,15 +40,10 @@ def find_all_keys(obj, target_key) -> list:
     return results
 
 
-# BASE_DIR = Path(__file__).resolve().parent
-BASE_DIR = PROJECT_ROOT 
-DATA_DIR = BASE_DIR / "data"
-RAW_DIR = DATA_DIR / "raw"
 CATEGORY_DIR = RAW_DIR / "category"
 CHECKPOINT_DIR = DATA_DIR / "checkpoints"
-LOG_DIR = BASE_DIR / "logs"
 
-for directory in (RAW_DIR, CATEGORY_DIR, CHECKPOINT_DIR, LOG_DIR):
+for directory in (CATEGORY_DIR, CHECKPOINT_DIR):
     directory.mkdir(parents=True, exist_ok=True)
 
 
