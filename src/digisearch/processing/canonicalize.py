@@ -1,5 +1,5 @@
 import json
-from digisearch.paths import PROCESSED_DIR, PROCESSED_PRODUCTS_DIR, PROJECT_ROOT
+from digisearch.paths import CANONICAL_DIR, CANONICAL_PRODUCTS_DIR, PROJECT_ROOT
 
 
 def extract_questions_data(file_path: str):
@@ -203,7 +203,7 @@ def extract_comments_data(file_path: str):
     pass
 
 
-with open(PROCESSED_DIR / "product_list.json", "r") as file:
+with open(CANONICAL_DIR / "product_list.json", "r") as file:
     f = file.read()
 
 
@@ -225,7 +225,7 @@ for p in json.loads(f):
         details.update(questions.items())
 
         
-        with open(PROCESSED_PRODUCTS_DIR / f'{product_id}.json', 'w', encoding='utf-8') as file:
+        with open(CANONICAL_PRODUCTS_DIR / f'{product_id}.json', 'w', encoding='utf-8') as file:
 
             file.write(json.dumps(details, indent=4, ensure_ascii=False))
     except:

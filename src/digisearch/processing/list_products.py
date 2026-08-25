@@ -1,6 +1,6 @@
 from os import walk
 import json
-from digisearch.paths import RAW_DIR, PROCESSED_DIR
+from digisearch.paths import RAW_DIR, CANONICAL_DIR
 
 
 products = []
@@ -41,5 +41,5 @@ for cw in catwalk:
                     except:
                         continue
 
-with open(PROCESSED_DIR / 'product_list.json', 'w', encoding='utf-8') as file:
+with open(CANONICAL_DIR / 'product_list.json', 'w', encoding='utf-8') as file:
     json.dump(products, file,  indent=4)

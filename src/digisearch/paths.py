@@ -12,9 +12,9 @@ PROJECT_ROOT = find_project_root()
 DATA_DIR = PROJECT_ROOT / "data"
 RAW_DIR = DATA_DIR / "raw"
 LOG_DIR = DATA_DIR / "logs"
-PROCESSED_DIR = DATA_DIR / "processed"
-PROCESSED_PRODUCTS_DIR = PROCESSED_DIR / "products"
+CANONICAL_DIR = DATA_DIR / "canonical"
+CANONICAL_PRODUCTS_DIR = CANONICAL_DIR / "products"
 
 
-for directory in (DATA_DIR, LOG_DIR, PROCESSED_DIR, PROCESSED_PRODUCTS_DIR):
+for directory in (DATA_DIR, LOG_DIR, CANONICAL_DIR, CANONICAL_PRODUCTS_DIR):
     directory.mkdir(parents=True, exist_ok=True)
