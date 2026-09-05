@@ -69,16 +69,16 @@ def extract_details_data(file_path: str):
 
     product_variants = []
     try:
-        variants = product.get("variants")
+        variants = product.get("variants", {})
         for v in variants:
-            theme = v.get("theme")
-            variant_title = theme[0].get("value").get("title")
-            variant_code = theme[0].get("value").get("code")
-            variant_hex_code = theme[0].get("value").get("hex_code")
-            variant_nature = theme[0].get("value").get("nature")
-            variant_label = theme[0].get("label")
-            variant_size = v.get("size").get("title")
-            variant_price = v.get("price").get("selling_price")
+            themes = v.get("themes", {})
+            variant_title = themes[0].get("value", {}).get("title")
+            variant_code = themes[0].get("value", {}).get("code")
+            variant_hex_code = themes[0].get("value", {}).get("hex_code")
+            variant_nature = themes[0].get("value", {}).get("nature")
+            variant_label = themes[0].get("label", {})
+            variant_size = v.get("size", {}).get("title")
+            variant_price = v.get("price", {}).get("selling_price")
             var = {
                 "variant_title": variant_title,
                 "variant_code": variant_code,
