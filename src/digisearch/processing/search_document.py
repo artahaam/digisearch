@@ -104,18 +104,20 @@ def normalize_fa_doc(document: dict):
     return text
 
 
-with open(CANONICAL_DIR / "product_list.json", "r") as file:
-    f = file.read()
+if __name__ == "__main__":
 
-for p in json.loads(f):
+    with open(CANONICAL_DIR / "product_list.json", "r") as file:
+        f = file.read()
 
-    try:
-        product_id = p['product'].get('id')
-        product_canonical_path = CANONICAL_DIR / "products" / f"{product_id}.json"
-        doc = generate_fa_doc(str(product_canonical_path))
-        text = normalize_fa_doc(doc)
-    except:
-        continue
+    for p in json.loads(f):
 
-    with open(SEARCH_DOCUMENTS_PRODUCT_DIR / f'{product_id}.txt', 'w', encoding='utf-8') as file:
-        file.write('\n\n'.join(text))
+        try:
+            product_id = p['product'].get('id')
+            product_canonical_path = CANONICAL_DIR / "products" / f"{product_id}.json"
+            doc = generate_fa_doc(str(product_canonical_path))
+            text = normalize_fa_doc(doc)
+        except:
+            continue
+
+        with open(SEARCH_DOCUMENTS_PRODUCT_DIR / f'{product_id}.txt', 'w', encoding='utf-8') as file:
+            file.write('\n\n'.join(text))
