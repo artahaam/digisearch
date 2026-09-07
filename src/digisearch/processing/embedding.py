@@ -5,13 +5,14 @@ from FlagEmbedding import BGEM3FlagModel
 
 from digisearch.paths import BGE_EMBEDDINGS_DIR, SEARCH_DOCUMENTS_PRODUCT_DIR
 
-MODEL_NAME = "BAAI/bge-m3"
 
-model = BGEM3FlagModel(
-    MODEL_NAME,
-    use_fp16=True,
-)
+def get_model(model_name):
+    return BGEM3FlagModel(
+        model_name,
+        use_fp16=True,
+    )
 
+model = get_model("BAAI/bge-m3")
 
 def load_documents():
     documents = []
