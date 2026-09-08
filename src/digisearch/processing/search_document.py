@@ -1,7 +1,25 @@
 import json
 import re
 from hazm import Normalizer
-from digisearch.paths import CANONICAL_DIR, SEARCH_DOCUMENTS_DIR, SEARCH_DOCUMENTS_PRODUCT_DIR
+from digisearch.paths import CANONICAL_DIR, SEARCH_DOCUMENTS_DIR, SEARCH_DOCUMENTS_PRODUCT_DIR, LOG_DIR
+
+import logging
+
+
+logger = logging.getLogger('search_documents')
+logger.setLevel(logging.DEBUG)
+
+file_handler = logging.FileHandler(LOG_DIR / 'process.log')
+file_handler.setLevel(logging.DEBUG)
+
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+file_handler.setFormatter(formatter)
+
+logger.addHandler(file_handler)
+
+logger.info("search_documents construction started")
+
+
 
 normalizer = Normalizer(persian_numbers=False, persian_style=False)
 
@@ -108,7 +126,8 @@ if __name__ == "__main__":
 
     with open(CANONICAL_DIR / "product_list.json", "r") as file:
         f = file.read()
-
+    logger.info("product_list.json read.")
+    cntr = 0
     for p in json.loads(f):
 
         try:
@@ -121,3 +140,6 @@ if __name__ == "__main__":
 
         with open(SEARCH_DOCUMENTS_PRODUCT_DIR / f'{product_id}.txt', 'w', encoding='utf-8') as file:
             file.write('\n\n'.join(text))
+            cntr += 1
+
+    logger.info(f"{cntr} documents created at {SEARCH_DOCUMENTS_PRODUCT_DIR}")

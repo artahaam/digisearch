@@ -1,7 +1,22 @@
 from os import walk
 import json
-from digisearch.paths import RAW_DIR, CANONICAL_DIR
+import logging
+from digisearch.paths import RAW_DIR, CANONICAL_DIR, LOG_DIR
 
+
+
+logger = logging.getLogger('list_products')
+logger.setLevel(logging.DEBUG)
+
+file_handler = logging.FileHandler(LOG_DIR / 'process.log')
+file_handler.setLevel(logging.DEBUG)
+
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+file_handler.setFormatter(formatter)
+
+logger.addHandler(file_handler)
+
+logger.info("Listing products started.")
 
 products = []
 category = ''
@@ -41,5 +56,9 @@ for cw in catwalk:
                     except:
                         continue
 
+
+
 with open(CANONICAL_DIR / 'product_list.json', 'w', encoding='utf-8') as file:
     json.dump(products, file,  indent=4)
+
+logger.info(f"{len(products)} products listed at {CANONICAL_DIR / 'product_list.json'}")

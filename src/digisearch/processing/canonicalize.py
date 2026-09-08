@@ -1,5 +1,21 @@
 import json
-from digisearch.paths import CANONICAL_DIR, CANONICAL_PRODUCTS_DIR, PROJECT_ROOT
+from digisearch.paths import CANONICAL_DIR, CANONICAL_PRODUCTS_DIR, PROJECT_ROOT, LOG_DIR
+import logging
+
+
+logger = logging.getLogger('canonicalize')
+logger.setLevel(logging.DEBUG)
+
+file_handler = logging.FileHandler(LOG_DIR / 'process.log')
+file_handler.setLevel(logging.DEBUG)
+
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+file_handler.setFormatter(formatter)
+
+logger.addHandler(file_handler)
+
+logger.info("Canonicalization started")
+
 
 
 def extract_questions_data(file_path: str):
@@ -231,5 +247,6 @@ for p in json.loads(f):
     except:
         continue
     
+logger.info(f"Canonicalization finished.")
 
 

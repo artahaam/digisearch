@@ -3,8 +3,22 @@ import json
 
 from FlagEmbedding import BGEM3FlagModel
 
-from digisearch.paths import BGE_EMBEDDINGS_DIR, SEARCH_DOCUMENTS_PRODUCT_DIR
+from digisearch.paths import BGE_EMBEDDINGS_DIR, SEARCH_DOCUMENTS_PRODUCT_DIR, LOG_DIR
+import logging
 
+
+logger = logging.getLogger('ebmedding')
+logger.setLevel(logging.DEBUG)
+
+file_handler = logging.FileHandler(LOG_DIR / 'process.log')
+file_handler.setLevel(logging.DEBUG)
+
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+file_handler.setFormatter(formatter)
+
+logger.addHandler(file_handler)
+
+logger.info("embedding started")
 
 def get_model(model_name):
     return BGEM3FlagModel(
@@ -13,6 +27,7 @@ def get_model(model_name):
     )
 
 model = get_model("BAAI/bge-m3")
+logger.info(f"{str(model)}")
 
 def load_documents():
     documents = []
@@ -59,5 +74,10 @@ def save_embeddings(documents, embeddings):
 if __name__ == "__main__":
 
     documents = load_documents()
+    logger.info(f"{len(documents)} documents loaded.")
     embeddings = generate_embeddings(documents)
+    logger.info(f"{len(embeddings)} embeddings generated.")
+
     save_embeddings(documents, embeddings)
+    logger.info("embeddings saved.")
+
