@@ -1,11 +1,10 @@
 import json
 from pathlib import Path
-
+import argparse
 import numpy as np
 
 from digisearch.processing.embedding import model
 from digisearch.paths import BGE_EMBEDDINGS_DIR
-
 
 
 def load_embeddings():
@@ -46,9 +45,27 @@ def search(query, top_k=10):
     return scores[:top_k]
 
 
+
+
 if __name__ == "__main__":
 
-    results = search("جوراب ورزشی نخی مردانه")
+    parser = argparse.ArgumentParser(description="Retrieval")
+    parser.add_argument(
+        'query',
+        type=str,
+        help='Retrieval Query, e.g. "تی‌شرت نخی مناسب ورزش"'
+    )
+    parser.add_argument(
+        "--topk",
+        type=int,
+        default=10,
+        help='Retrieve top-k related products'
+        )
+    args = parser.parse_args()
+    query = args.query
+    top_k = args.topk
+
+    results = search(query, top_k)
     for result in results:
         print(result)
 
