@@ -27,11 +27,18 @@ def main():
         default="categories.csv",
         help='Output CSV file name, e.g. "clothes_categories.csv"'
     )
+    parser.add_argument(
+        '--id',
+        type=str,
+        required=False,
+        default="",
+        help='Comma-separated list of category-IDs to keep."'
+    )
     args = parser.parse_args()
 
     filters = [f.strip().lower() for f in args.filters.split(',') if args.filters]
     ignores = [i.strip().lower() for i in args.ignore.split(',') if args.ignore]
-
+    ids = [i.strip().lower() for i in args.id.split(',') if args.id]
     
     output_file_name = args.output
 
@@ -61,6 +68,7 @@ def main():
 
         for cat in categories:
 
+
             category = cat["category"] 
             parent_id = cat.get("parent_id", 0)
             category_id = category["id"]
@@ -69,28 +77,30 @@ def main():
             code = category["code"]
             codes = code.split('-')
 
-            ignore_flag = False
-
-            if ignores:
-                for ignore in ignores:
-                    if ignore.lower() in codes:
-                        ignore_flag = True
-                        break
+            if ids:
+                if str(category_id) in ids:
+                    writer.writerow([category_id, title_fa, title_en, code, parent_id])
             else:
-                pass
+                ignore_flag = False
+                if ignores:
+                    for ignore in ignores:
+                        if ignore.lower() in codes:
+                            ignore_flag = True
+                            break
+                else:
+                    pass
 
-            if ignore_flag:
-                continue
+                if ignore_flag:
+                    continue
 
-            elif filters:
-                for filter in filters:
-                    if filter.lower() in codes:
-                        writer.writerow([category_id, title_fa, title_en, code, parent_id])
-                    else:
-                        continue
-
-            else:
-                writer.writerow([category_id, title_fa, title_en, code, parent_id])
+                elif filters:
+                    for filter in filters:
+                        if filter.lower() in codes:
+                            writer.writerow([category_id, title_fa, title_en, code, parent_id])
+                        else:
+                            continue
+                else:
+                    writer.writerow([category_id, title_fa, title_en, code, parent_id])
 
 
 if __name__ == "__main__":

@@ -161,6 +161,7 @@ def run_ingestion_pipeline(args):
         f"--filters={args.filters}",
         f"--ignore={args.ignore}",
         f"--output={args.output}",
+        f"--id={args.id}",
     ]
 
     crawler_args = [
@@ -235,6 +236,13 @@ def main():
         default="categories.csv",
         help="Output CSV file name.",
     )
+    ingest_parser.add_argument(
+        "--id",
+        type=str,
+        default="",
+        help="Comma-seperated category-IDs to keep.",
+    )
+
 
     # -------------------------
     # process
