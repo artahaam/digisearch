@@ -6,7 +6,7 @@ import logging
 
 from digisearch.processing.embedding import model
 from digisearch.paths import BGE_EMBEDDINGS_DIR, LOG_DIR
-from digisearch.processing.qdrant_client import get_client
+from digisearch.qdrant.qdrant_init import get_client
 
 logger = logging.getLogger('retrieval')
 logger.setLevel(logging.DEBUG)

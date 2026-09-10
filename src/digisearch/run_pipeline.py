@@ -49,7 +49,7 @@ EMBEDDING_SCRIPT = (
 )
 
 RETRIEVAL_SCRIPT = (
-    PROJECT_ROOT / "src" / "digisearch" / "processing" / "retrieval.py"
+    PROJECT_ROOT / "src" / "digisearch" / "qdrant" / "qdrant_retrieval.py"
 )
 
 

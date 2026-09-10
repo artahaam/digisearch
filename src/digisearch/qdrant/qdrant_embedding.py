@@ -1,12 +1,12 @@
 from qdrant_client import QdrantClient
 from qdrant_client.models import Distance, VectorParams
 from qdrant_client.models import PointStruct
-from digisearch.processing.retrieval import load_embeddings
+from digisearch.qdrant.qdrant_retrieval import load_embeddings
 import logging
 
 from digisearch.paths import LOG_DIR
 from digisearch.processing.embedding import model
-from digisearch.processing.qdrant_client import get_client
+from digisearch.qdrant.qdrant_init import get_client
 
 logger = logging.getLogger('vecdb')
 logger.setLevel(logging.DEBUG)
