@@ -126,13 +126,20 @@ digisearch ingest \
 | ----------- | ------ | ---------------- | --------------------------------------------------------------------------------------------------- |
 | `--filters` | string | `""`             | Comma-separated keywords to **include**. Categories whose `code` contains any keyword are selected. |
 | `--ignore`  | string | `""`             | Comma-separated keywords to **exclude**. Categories whose `code` contains any keyword are skipped.  |
-| `--output`  | string | `categories.csv` | CSV file containing the filtered category list used by the crawler.                                 |
+| `--id` | string | `""` | Comma-separated category IDs to **select**. Only categories whose IDs match the provided values will be processed. |
+| `--output`  | string | `categories.csv` | CSV file containing the filtered category list used by the crawler.                                  |
 
 For example:
 
 ```bash
-digisearch ingest --filters "men,clothes" --output "men.csv"
+digisearch ingest --filters "men,clothes" --ignore "accessories" --output "men.csv"
 ```
+or
+
+```bash
+digisearch ingest --id "6825,9457,9460,9470" --output "clothes.csv"
+```
+
 
 To crawl all categories without filtering:
 
