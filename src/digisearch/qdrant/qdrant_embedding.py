@@ -1,5 +1,3 @@
-from qdrant_client import QdrantClient
-from qdrant_client.models import Distance, VectorParams
 from qdrant_client.models import PointStruct
 from digisearch.qdrant.qdrant_retrieval import load_embeddings
 import logging

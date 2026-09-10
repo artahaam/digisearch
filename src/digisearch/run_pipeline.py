@@ -48,7 +48,12 @@ EMBEDDING_SCRIPT = (
     PROJECT_ROOT / "src" / "digisearch" / "processing" / "embedding.py"
 )
 
-RETRIEVAL_SCRIPT = (
+QDRANT_EMBEDDING_SCRIPT = (
+    PROJECT_ROOT / "src" / "digisearch" / "qdrant" / "qdrant_embedding.py"
+)
+
+
+QDRANT_RETRIEVAL_SCRIPT = (
     PROJECT_ROOT / "src" / "digisearch" / "qdrant" / "qdrant_retrieval.py"
 )
 
@@ -103,7 +108,7 @@ def run_retrieve_pipeline(args):
     ]
 
     steps = [
-        (RETRIEVAL_SCRIPT, "Retrieve Products"),
+        (QDRANT_RETRIEVAL_SCRIPT, "Retrieve Products"),
     ]
 
     for script, name in steps:
@@ -129,6 +134,7 @@ def run_process_pipeline():
         (CANONICALIZE_SCRIPT, "Canonicalize Products"),
         (SEARCH_DOCUMENT_SCRIPT, "Build Search Documents"),
         (EMBEDDING_SCRIPT, "Generate Embeddings"),
+        (QDRANT_EMBEDDING_SCRIPT, "Qdrant Embedding")
     ]
 
     for script, name in steps:
