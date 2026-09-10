@@ -101,7 +101,7 @@ def run_step(script_path: Path, step_name: str, args: list[str] | None = None) -
 
 def run_retrieve_pipeline(args):
 
-    logger.info("=== Starting Product Retrieval Pipeline ===")
+    logger.info("=== Starting Qdrant Retrieval Pipeline ===")
 
     get_retrieve_args = [
         f"query={args.query}",
