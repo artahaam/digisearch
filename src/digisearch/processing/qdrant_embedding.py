@@ -6,6 +6,7 @@ import logging
 
 from digisearch.paths import LOG_DIR
 from digisearch.processing.embedding import model
+from digisearch.processing.qdrant_client import get_client
 
 logger = logging.getLogger('vecdb')
 logger.setLevel(logging.DEBUG)
@@ -18,15 +19,6 @@ file_handler.setFormatter(formatter)
 
 logger.addHandler(file_handler)
 
-
-
-client = QdrantClient(url="http://localhost:6333")
-
-if not client.collection_exists:
-    client.create_collection(
-        collection_name="test_collection",
-        vectors_config=VectorParams(size=1024, distance=Distance.DOT),
-    )
 
 logger.info("Qdrant create_collection succeeded")
 
@@ -49,6 +41,7 @@ for embedding in embeddings:
 
 logger.info(f'{len(embeddings)} PointStructs created')
 
+client = get_client()
 operation_info = client.upsert(
     collection_name="test_collection",
     wait=True,

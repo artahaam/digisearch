@@ -6,7 +6,7 @@ import logging
 
 from digisearch.processing.embedding import model
 from digisearch.paths import BGE_EMBEDDINGS_DIR, LOG_DIR
-
+from digisearch.processing.qdrant_client import get_client
 
 logger = logging.getLogger('retrieval')
 logger.setLevel(logging.DEBUG)
@@ -38,28 +38,22 @@ def load_embeddings():
 
 
 def search(query, top_k=10):
-    products = load_embeddings()
 
     query_vector = model.encode([query])["dense_vecs"][0]
 
     logger.info(f"Retrieval started with the query: {query}")
 
-    scores = []
+    client = get_client()
+    search_result = client.query_points(
+        collection_name="test_collection",
+        query=query_vector, # type: ignore
+        with_payload=True,
+        limit=top_k
+    ).points
 
-    for product in products:
-        score = query_vector @ product["vector"]
+    logger.info(f"Retrieval finished")
 
-        scores.append({
-            "product_id": product["product_id"],
-            "score": float(score),
-            "product_url" : f'https://www.digikala.com/product/{product['product_id']}/'
-        })
-
-    scores.sort(
-        key=lambda x: x["score"],
-        reverse=True,
-    )
-    return scores[:top_k]
+    return search_result[:top_k]
 
 
 
