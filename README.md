@@ -22,9 +22,10 @@
 
 ## 📦 Requirements
 
-- Python 3.9+
+- Python 3.12
+- Docker
 - Internet connection (to access Digikala APIs)
-- Disk space for the crawled data (expect several GB for large categories)
+- Disk space for the crawled data and vector database (expect several GB for large categories)
 
 Dependencies are listed in `pyproject.toml` and `requirements.txt` – they will be installed automatically when you install the package.
 
@@ -101,12 +102,31 @@ python run_pipeline.py --filters "men,clothes" --ignore "gold,silver" --output "
 | Run from | Project root directory |
 
 ---
+##  Qdrant Setup
+
+DigiSearch uses [Qdrant](https://qdrant.tech/) as its vector database.
+
+`Before you start, please make sure Docker is installed and running on your system.`
+
+
+1) First, download the latest Qdrant image from Dockerhub:
+
+```bash
+docker pull qdrant/qdrant
+```
+2) Then, run the service:
+```bash
+docker run -p 6333:6333 -p 6334:6334 \
+    -v "$(pwd)/qdrant_storage:/qdrant/storage:z" \
+    qdrant/qdrant
+```
+---
 ## 🛠 Usage
 
 The DigiSearch CLI provides three main commands:
 
 1. **Ingest** – discovers and filters Digikala categories, then crawls their products.
-2. **Process** – processes the crawled products, builds canonical records and search documents, and generates BGE-M3 embeddings.
+2. **Process** – processes the crawled products, builds canonical records and search documents, generates and stores BGE-M3 embeddings in Qdrant.
 3. **Search** – performs semantic search over the generated product embeddings.
 
 ### 1. Ingest products
@@ -280,6 +300,9 @@ digisearch/
 │       ├── crawler.log              # detailed crawler logs
 │       ├── pipeline.log             # overall pipeline logs
 │       └── process.log              # processing pipeline logs
+│
+├── qdrant_storage/                  # persistent Qdrant database storage
+│
 ├── <output>.csv                     # filtered category list (e.g., men.csv)
 └── ...
 ```
@@ -398,20 +421,20 @@ python src/digisearch/processing/retrieval.py               # retrieve related p
 - [x] 1.2 Product Details, Reviews and Q&As extraction.
 - [x] 1.3 Resumable checkpoints.
 
-### Phase 2: Data Cleaning and Dataset Preparation
+### Phase 2: Data Cleaning and Database Preparation (✅)
 - [x] 2.1 Data inspection
 - [x] 2.2 Canonical dataset
 - [x] 2.3 Data cleaning and normalization
 - [x] 2.4 Search document construction
 - [x] 2.5 Embedding generation
 - [x] 2.6 Vector retrieval
-- [ ] 2.7 Vector Database
+- [x] 2.7 Vector Database
 
-<!-- ### Phase 3: Semantic Search (🚧)
-- [ ] 3.1 Semantic product search API
-- [ ] 3.2 Vector search integration
-- [ ] 3.3 Search UI/CLI -->
+### Phase 3: WebUI
 
+- To be planned ...
+
+---
 ## 📄 License
 
 MIT – see [LICENSE](LICENSE) file.
