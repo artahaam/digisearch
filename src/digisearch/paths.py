@@ -12,6 +12,7 @@ PROJECT_ROOT = find_project_root()
 DATA_DIR = PROJECT_ROOT / "data"
 RAW_DIR = DATA_DIR / "raw"
 LOG_DIR = DATA_DIR / "logs"
+CHECKPOINTS_DIR = DATA_DIR / "checkpoints"
 CANONICAL_DIR = DATA_DIR / "canonical"
 CANONICAL_PRODUCTS_DIR = CANONICAL_DIR / "products"
 SEARCH_DOCUMENTS_DIR = DATA_DIR / "search_documents"
@@ -19,5 +20,14 @@ SEARCH_DOCUMENTS_PRODUCT_DIR = SEARCH_DOCUMENTS_DIR / "products"
 BGE_EMBEDDINGS_DIR = DATA_DIR / "embeddings" / "bge-m3"
 
 
-for directory in (DATA_DIR, LOG_DIR, CANONICAL_DIR, CANONICAL_PRODUCTS_DIR,SEARCH_DOCUMENTS_DIR, SEARCH_DOCUMENTS_PRODUCT_DIR, BGE_EMBEDDINGS_DIR):
+for directory in (DATA_DIR,
+                 LOG_DIR,
+                 CANONICAL_DIR,
+                 CANONICAL_PRODUCTS_DIR,
+                 SEARCH_DOCUMENTS_DIR,
+                 SEARCH_DOCUMENTS_PRODUCT_DIR,
+                 BGE_EMBEDDINGS_DIR, 
+                 CHECKPOINTS_DIR,
+                 
+                 ):
     directory.mkdir(parents=True, exist_ok=True)

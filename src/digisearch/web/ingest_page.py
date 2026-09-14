@@ -125,7 +125,7 @@ def crawl_one_category(cat_id: str, cat_title: str, state: CrawlerState,
     state.pages_total = approximate_page_numbers
     state.log(f"category {cat_id}: ~{approximate_page_numbers} pages, {total_slots} slots")
 
-    category_dir = CATEGORY_DIR / cat_id
+    category_dir = CATEGORY_DIR / f"{cat_id}"
     page_dir = category_dir / "page"
     product_dir = category_dir / "product"
     for d in (category_dir, page_dir, product_dir):

@@ -116,6 +116,17 @@ def render_dashboard(state: CrawlerState, progress: Progress) -> Panel:
         border_style="bold magenta",
     )
 
+def details_exists(cat_id, product_id):
+    f = RAW_DIR / "category" / f"{cat_id}" / "product" / f"{product_id}" /  "details.json"
+    return f.exists()
+
+def comments_exists(cat_id, product_id):
+    f = RAW_DIR / "category" / f"{cat_id}" / "product" / f"{product_id}" /  "comments.json"
+    return f.exists()
+
+def questions_exists(cat_id, product_id):
+    f = RAW_DIR / "category" / f"{cat_id}" / "product" / f"{product_id}" /  "questions.json"
+    return f.exists()
 
 def main() -> None:
 
@@ -325,11 +336,14 @@ def main() -> None:
 
                         try:
                             product_id = item["id"]
+                            if details_exists(cat_id, product_id):
+                                continue
+
                         except KeyError:
                             state.skipped += 1
                             logger.info(f"skipping item without id: {item}")
                             continue
-
+                        
                         product_url = f"https://api.digikala.com/v2/product/{product_id}/"
 
                         try:
@@ -353,6 +367,9 @@ def main() -> None:
 
 
                         # comments storage 
+                        if comments_exists(cat_id, product_id):
+                            continue
+                        
                         comments_page_url = f"https://api.digikala.com/v1/rate-review/products/{product_id}/"
                         comments_page_json = requests.get(comments_page_url).json()
                         try:
@@ -376,6 +393,11 @@ def main() -> None:
 
 
                         # questions storage 
+
+                        if questions_exists(cat_id, product_id):
+                            continue
+
+
                         question_page_url = f"https://api.digikala.com/v1/product/{product_id}/carousel-questions/"
                         question_page_json = requests.get(question_page_url).json()
                         try:
