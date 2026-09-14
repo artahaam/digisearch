@@ -41,11 +41,19 @@ def count_documents() -> int:
     return sum(1 for _ in SEARCH_DOCUMENTS_PRODUCT_DIR.glob("*.txt"))
 
 
+def embedding_exists(product_id):
+    f = BGE_EMBEDDINGS_DIR / f"{product_id}.json"
+    return f.exists()
+
 def load_documents():
     documents = []
 
     for path in SEARCH_DOCUMENTS_PRODUCT_DIR.glob("*.txt"):
         product_id = path.stem
+
+        if embedding_exists(product_id):
+            continue
+
         try:
             text = path.read_text(encoding="utf-8")
         except OSError as e:

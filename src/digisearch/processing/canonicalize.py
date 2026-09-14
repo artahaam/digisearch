@@ -14,6 +14,11 @@ if not logger.handlers:
     logger.addHandler(file_handler)
 
 
+def canonical_exists(product_id):
+    f = CANONICAL_PRODUCTS_DIR / f"{product_id}.json"
+    return f.exists()
+
+
 def extract_questions_data(file_path: str):
     with open(file_path, "r", encoding='utf-8') as file:
         f = file.read()
@@ -233,6 +238,10 @@ def run_canonicalization(progress_callback=None) -> dict:
         product_id = None
         try:
             product_id = p['product'].get('id')
+
+            if canonical_exists(product_id):
+                continue
+
             questions_path = p['product'].get('questions_path')
             details_path = p['product'].get('details_path')
 

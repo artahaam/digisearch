@@ -124,6 +124,12 @@ def normalize_fa_doc(document: dict):
     return text
 
 
+def search_document_exists(product_id):
+    f = SEARCH_DOCUMENTS_DIR / f"{product_id}.txt"
+    return f.exists()
+
+
+
 def build_search_documents(progress_callback=None) -> dict:
 
     product_list_path = CANONICAL_DIR / "product_list.json"
@@ -146,6 +152,10 @@ def build_search_documents(progress_callback=None) -> dict:
         product_id = None
         try:
             product_id = p['product'].get('id')
+
+            if search_document_exists(product_id):
+                continue
+
             product_canonical_path = CANONICAL_DIR / "products" / f"{product_id}.json"
             doc = generate_fa_doc(str(product_canonical_path))
             text = normalize_fa_doc(doc)
