@@ -61,4 +61,4 @@ def render_header():
     # between two equal empty columns -- the standard Streamlit idiom.
     _, center, _ = st.columns([1, 2, 1])
     with center:
-        st.image(logo, width=580)
+        st.image(logo, width=480)

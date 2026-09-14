@@ -15,8 +15,9 @@
 * **Data processing** – build canonical product records and search documents.
 * **Semantic search** – BGE-M3 embeddings for natural-language product retrieval.
 * **Resumable crawling** – continue from the last saved checkpoint.
-* **Live monitoring** – real-time crawling progress with `rich`.
+* **Live monitoring** – real-time crawling progress with `rich` (CLI) or Streamlit (Web UI).
 * **CLI interface** – run ingestion, processing, and search through `digisearch`.
+* **Web UI** – a Streamlit app for ingesting, processing, and searching interactively, sharing the same data and Qdrant instance as the CLI.
 
 ---
 
@@ -55,11 +56,6 @@ source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install .
 ```
 
-<!-- then run:
-```bash
-digisearch --filters "men,clothes" --ignore "gold,silver" --output "men.csv"
-``` -->
-
 ### Option 2 – Manual (without installation)
 
 #### clone over HTTPS
@@ -80,10 +76,6 @@ python -m venv .venv
 source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
-<!-- then run
-```bash
-python run_pipeline.py --filters "men,clothes" --ignore "gold,silver" --output "men.csv""
-``` -->
 
 > **⚠️ Important:** Do **not** run the scripts directly from a terminal outside the project root, and do **not** create the virtual environment elsewhere.
 > The `paths.py` module locates the project root by walking up from its own location until it finds `pyproject.toml`. If you run scripts from the wrong
@@ -262,6 +254,35 @@ digisearch search "کلاه نارنجی که روش گلدوزی کاکتوس �
 
 ---
 
+## 🖥 Web UI
+
+DigiSearch also ships a Streamlit web app that wraps the same ingest → process → search pipeline in an interactive UI. It reads and writes the exact same `data/` directory and the same Qdrant instance as the CLI (see `paths.py`), so the two are fully interchangeable — crawl with the CLI and process with the web UI, or vice versa, and both see the same data.
+
+### Launching
+
+The web UI needs two packages not currently listed in `requirements.txt`:
+
+```bash
+pip install streamlit pillow
+```
+
+Then run:
+
+```bash
+streamlit run src/digisearch/web/streamlit_app.py
+```
+
+This opens the app at `http://localhost:8501` with three pages in the sidebar:
+
+| Page | Purpose |
+|------|---------|
+| **Ingest** | Search/filter all Digikala categories by title or code, select any number of them via a multiselect, and crawl them with a live progress bar, page/product counters, and a rolling event log. Writes to the same `data/raw/` and `data/checkpoints/checkpoint.csv` the CLI's `digisearch ingest` uses, so crawls are resumable from either interface. |
+| **Process** | Runs the same five stages as `digisearch process` (List Products → Canonicalize → Build Search Documents → Generate Embeddings → Upload to Qdrant), individually or all at once, each with its own progress bar and log. Also shows a live dataset overview (category/product/document/embedding/Qdrant-point counts) and a per-category crawl breakdown table (products found, pages saved, last checkpointed page and date). |
+| **Search** | Semantic search over the generated embeddings, rendering a product card (image, price, brand, link) for each result. |
+
+---
+
+
 ## 📂 Output structure
 
 After a successful run, your project directory will contain:
@@ -297,9 +318,11 @@ digisearch/
 │   │   └── checkpoint.csv           # crawler resume point
 │   │
 │   └── logs/
-│       ├── crawler.log              # detailed crawler logs
+│       ├── crawler.log              # detailed crawler logs (CLI + web Ingest page)
 │       ├── pipeline.log             # overall pipeline logs
-│       └── process.log              # processing pipeline logs
+│       ├── process.log              # processing pipeline logs (list/canonicalize/search-doc/embedding)
+│       ├── vecdb.log                # Qdrant upsert logs
+│       └── search.log               # retrieval/search logs
 │
 ├── qdrant_storage/                  # persistent Qdrant database storage
 │
@@ -345,19 +368,6 @@ No data is duplicated; checkpoints are written after every page.
 
 ---
 
-<!-- ## 🧪 Example
-
-Fetch all categories containing `"clothes"` or `"men"`, but ignore those with `"gold"` or `"accessories"`, and name the output `my_categories.csv`:
-
-```
-digisearch --filters "clothes,men" --ignore "gold,accessories" --output "my_categories.csv"
-```
-To crawl **all** categories (no filtering):
-
-```
-digisearch --output "all_categories.csv"
-```
---- -->
 
 ## docs
 
@@ -379,39 +389,13 @@ digisearch --output "all_categories.csv"
 - Retrieval is done by finding the highest dot-product of the query-vector and the product embeddings.
 
 
-<!-- ### Running manlually
-
-If you want to run stages manually:
-
-#### 1. Generate the filtered category list
-```
-python get_categories.py --filters "men" --output "men.csv"
-```
-####  2. Crawl the categories (uses the CSV as input)
-```
-python crawl.py --output "men.csv"
-```
-#### 3. Build the canonical dataset
-```
-python src/digisearch/processing/list_products.py           # scans raw data → data/canonical/product_list.json
-python src/digisearch/processing/canonicalize.py            # builds structured records → data/canonical/products
-```
-#### 4. Generate search documents and embeddings
-```
-python src/digisearch/processing/search_documents.py        # builds search docs → data/search_documents
-python src/digisearch/processing/embedding.py               # generates BGE embeddings
-```
-#### 5. Search and Retrieve products
-```
-python src/digisearch/processing/retrieval.py               # retrieve related products
-```
-
---- -->
 ## Logging
 
 - Pipeline logs (stage start/end, arguments) → `logs/pipeline.log`
-- Detailed crawler logs (per‑page, per‑product) → `logs/crawler.log`
-- Process logs (canonical, embeddings, retrieval) → `logs/process.log` 
+- Detailed crawler logs (per‑page, per‑product; shared by the CLI and the web Ingest page) → `logs/crawler.log`
+- Process logs (canonical, search documents, embeddings) → `logs/process.log`
+- Qdrant upsert logs → `logs/vecdb.log`
+- Search/retrieval logs → `logs/search.log`
 ---
 
 ## Roadmap
@@ -430,9 +414,11 @@ python src/digisearch/processing/retrieval.py               # retrieve related p
 - [x] 2.6 Vector retrieval
 - [x] 2.7 Vector Database
 
-### Phase 3: WebUI
-
-- To be planned ...
+### Phase 3: WebUI (✅)
+- [x] 3.1 Ingest page – category search/filter, multiselect, and crawling with live progress
+- [x] 3.2 Process page – all five pipeline stages with live progress, dataset overview, and per-category breakdown
+- [x] 3.3 Search page – semantic search UI with product cards
+- [x] 3.4 Shared theming, branding, and logging across pages and the CLI
 
 ---
 ## 📄 License
@@ -453,3 +439,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 **Author**: artahaam  
 **Email**: alireza.thm03@gmail.com  
 **GitHub**: [@artaham](https://github.com/artahaam)
+**Telegram**:[@alireza_tahami](http://t.me/alireza_tahami)

@@ -17,9 +17,10 @@ st.set_page_config(
 search_page = st.Page("search_page.py", title="Search",)
 ingest_page = st.Page("ingest_page.py", title="Ingest",)
 process_page = st.Page("process_page.py", title="Process")
+readme_page = st.Page("readme_page.py", title="README")
 
 # Set up navigation
-pg = st.navigation([ingest_page, process_page, search_page])
+pg = st.navigation([ingest_page, process_page, search_page, readme_page])
 
 # Run the selected page
 
