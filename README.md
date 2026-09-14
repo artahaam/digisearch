@@ -41,7 +41,7 @@ Dependencies are listed in `pyproject.toml` and `requirements.txt` – they will
 ```bash
 git clone https://github.com/artahaam/digisearch.git
 cd digisearch
-python -m venv .venv
+python3.12 -m venv .venv
 source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install .
 ```
@@ -51,7 +51,7 @@ or
 ```bash
 git clone git@github.com:artahaam/digisearch.git
 cd digisearch
-python -m venv .venv
+python3.12 -m venv .venv
 source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install .
 ```
@@ -62,7 +62,7 @@ pip install .
 ```bash
 git clone https://github.com/artahaam/digisearch.git
 cd digisearch
-python -m venv .venv
+python3.12 -m venv .venv
 source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
@@ -72,7 +72,7 @@ or
 ```bash
 git clone git@github.com:artahaam/digisearch.git
 cd digisearch
-python -m venv .venv
+python3.12 -m venv .venv
 source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
