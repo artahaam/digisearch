@@ -1,21 +1,17 @@
 import json
-from digisearch.paths import CANONICAL_DIR, CANONICAL_PRODUCTS_DIR, PROJECT_ROOT, LOG_DIR
 import logging
+from digisearch.paths import CANONICAL_DIR, CANONICAL_PRODUCTS_DIR, PROJECT_ROOT, LOG_DIR
 
 
 logger = logging.getLogger('canonicalize')
 logger.setLevel(logging.DEBUG)
 
-file_handler = logging.FileHandler(LOG_DIR / 'process.log')
-file_handler.setLevel(logging.DEBUG)
-
-formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-file_handler.setFormatter(formatter)
-
-logger.addHandler(file_handler)
-
-logger.info("Canonicalization started")
-
+if not logger.handlers:
+    file_handler = logging.FileHandler(LOG_DIR / 'process.log')
+    file_handler.setLevel(logging.DEBUG)
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    file_handler.setFormatter(formatter)
+    logger.addHandler(file_handler)
 
 
 def extract_questions_data(file_path: str):
@@ -36,14 +32,13 @@ def extract_questions_data(file_path: str):
 
                 questions.append({'question': question,
                                     'answers': answers})
-    except:
+    except Exception:
         pass
 
     questions = {
-        'questions':questions
+        'questions': questions
     }
     return questions
-
 
 
 def extract_details_data(file_path: str):
@@ -57,7 +52,10 @@ def extract_details_data(file_path: str):
     product_id = product.get("id")
     product_title_fa = product.get("title_fa")
     product_title_en = product.get("title_en")
-    product_uri = product.get("url").get("uri")
+    try:
+        product_uri = product.get("url").get("uri")
+    except AttributeError:
+        product_uri = ""
     product_url = "www.digikala.com" + product_uri
     product_test_title_fa = product.get("test_title_fa")
     product_test_title_en = product.get("test_title_en")
@@ -65,23 +63,22 @@ def extract_details_data(file_path: str):
     product_images = []
     try:
         product_images = data.get("seo").get("markup_schema")[0].get("image")
-    except:
+    except Exception:
         pass
 
 
     try:
         product_rating_rate = product.get("rating").get("rate")
         product_rating_count = product.get("rating").get("count")
-    except:
+    except Exception:
         product_rating_rate, product_rating_count = 0, 0
 
 
     try:
         product_price = product.get("default_variant", {}).get("price", {}).get("selling_price")
-    except Exception as e:
+    except Exception:
         product_price = 0
-        pass
-    
+
 
     product_variants = []
     try:
@@ -105,24 +102,24 @@ def extract_details_data(file_path: str):
                 "variant_price": variant_price,
             }
             product_variants.append(var)
-    except:
+    except Exception:
         pass
 
     product_description = ""
     try:
         product_description = product.get("review", {}).get("description")
-    except:
+    except Exception:
         pass
-    
+
     product_attributes = []
     try:
         attributes = product.get("review", {}).get("attributes")
         for attr in attributes:
             title = attr.get("title")
             values = attr.get("values")
-            attribute = {title:values}
+            attribute = {title: values}
             product_attributes.append(attribute)
-    except:
+    except Exception:
         pass
 
     product_specifications = []
@@ -134,12 +131,10 @@ def extract_details_data(file_path: str):
             for attr in attributes:
                 title = attr.get("title")
                 values = attr.get("values")
-                attribute = {title:values}
+                attribute = {title: values}
                 product_specifications.append(attribute)
-    except:
+    except Exception:
         pass
-    
-
 
 
     data_layer = product.get("data_layer", {})
@@ -155,8 +150,8 @@ def extract_details_data(file_path: str):
     brand_code = brand.get("code")
     brand_title_fa = brand.get("title_fa")
     brand_title_en = brand.get("title_en")
-    _brand_url = brand.get("url", {})
-    brand_uri = _brand_url.get("uri", {})
+    _brand_url = brand.get("url", {}) or {}
+    brand_uri = _brand_url.get("uri", "") or ""
     brand_url = "www.digikala.com" + brand_uri
 
     try:
@@ -178,10 +173,8 @@ def extract_details_data(file_path: str):
     comments_disadvantages = _comments_overview.get("disadvantages")
 
 
-
-
     details = {
-        'product_id' : product_id,
+        'product_id': product_id,
         'product_url': product_url,
         'product_price': product_price,
         'product_category': product_category,
@@ -190,8 +183,8 @@ def extract_details_data(file_path: str):
         'product_rating_count': product_rating_count,
         'product_title_fa': product_title_fa,
         'product_title_en': product_title_en,
-        'product_test_title_fa':product_test_title_fa,
-        'product_test_title_en':product_test_title_en,
+        'product_test_title_fa': product_test_title_fa,
+        'product_test_title_en': product_test_title_en,
         'product_description': product_description,
         'product_attributes': product_attributes,
         'product_specifications': product_specifications,
@@ -219,34 +212,51 @@ def extract_comments_data(file_path: str):
     pass
 
 
-with open(CANONICAL_DIR / "product_list.json", "r") as file:
-    f = file.read()
+def run_canonicalization(progress_callback=None) -> dict:
+
+    product_list_path = CANONICAL_DIR / "product_list.json"
+    if not product_list_path.exists():
+        logger.error(f"{product_list_path} not found. Run the 'List Products' stage first.")
+        raise FileNotFoundError(
+            f"{product_list_path} not found. Run the 'List Products' stage first."
+        )
+
+    with open(product_list_path, "r", encoding="utf-8") as file:
+        f = file.read()
+
+    entries = json.loads(f)
+    total = len(entries)
+    success = 0
+    failed = 0
+
+    for i, p in enumerate(entries):
+        product_id = None
+        try:
+            product_id = p['product'].get('id')
+            questions_path = p['product'].get('questions_path')
+            details_path = p['product'].get('details_path')
+
+            details = extract_details_data(details_path)
+            questions = extract_questions_data(questions_path)
+
+            details.update(questions.items())
+
+            with open(CANONICAL_PRODUCTS_DIR / f'{product_id}.json', 'w', encoding='utf-8') as file:
+                file.write(json.dumps(details, indent=4, ensure_ascii=False))
+
+            success += 1
+            error = None
+        except Exception as e:
+            failed += 1
+            error = str(e)
+            logger.warning(f"Failed to canonicalize product {product_id}: {e}")
+
+        if progress_callback:
+            progress_callback(i + 1, total, product_id, error)
+
+    logger.info(f"Canonicalization finished. {success} succeeded, {failed} failed out of {total}.")
+    return {"total": total, "success": success, "failed": failed}
 
 
-
-for p in json.loads(f):
-
-    try:
-        product_id = p['product'].get('id')
-        questions_path = p['product'].get('questions_path')
-        details_path = p['product'].get('details_path')
-        comments_path = p['product'].get('comments_path')
-        category = p['product'].get('category')
-
-
-
-        details = extract_details_data(details_path)
-        questions = extract_questions_data(questions_path)
-
-        details.update(questions.items())
-
-        
-        with open(CANONICAL_PRODUCTS_DIR / f'{product_id}.json', 'w', encoding='utf-8') as file:
-
-            file.write(json.dumps(details, indent=4, ensure_ascii=False))
-    except:
-        continue
-    
-logger.info(f"Canonicalization finished.")
-
-
+if __name__ == "__main__":
+    run_canonicalization()

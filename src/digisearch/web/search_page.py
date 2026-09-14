@@ -1,22 +1,14 @@
 import time
 import random
-import base64
 
 import streamlit as st
 import pandas as pd
 import numpy as np
 import json
 
-from digisearch.paths import PROJECT_ROOT, CANONICAL_PRODUCTS_DIR
+from digisearch.paths import CANONICAL_PRODUCTS_DIR
 from digisearch.qdrant.qdrant_retrieval import search
-
-_LOGO_PATH = PROJECT_ROOT / "images" / "digisearch_transparent.png"
-
-st.set_page_config(
-    page_title="DigiSearch",
-    page_icon=str(_LOGO_PATH) if _LOGO_PATH.exists() else None,
-    layout="wide",
-)
+from digisearch.qdrant.qdrant_init import QdrantUnavailableError
 
 # --------------------------------------------------------------------------
 # Global styling
@@ -33,13 +25,8 @@ LOADING_MESSAGES = [
 
 @st.cache_resource
 def load_model():
-    from digisearch.processing.embedding import model
-
-
-@st.cache_data
-def web_search(query, topk):
-    results = search(query, topk)
-    return results
+    from digisearch.processing.embedding import get_model
+    return get_model() # type: ignore
 
 
 @st.cache_data
@@ -55,15 +42,6 @@ def get_canonical(product_id):
 
 
 @st.cache_data
-def get_logo_b64(path):
-    try:
-        return base64.b64encode(path.read_bytes()).decode()
-    except Exception as e:
-        print(e)
-        return None
-
-
-@st.cache_data
 def card(product_id):
     data = get_canonical(product_id)
 
@@ -75,6 +53,10 @@ def card(product_id):
         """
 
     product_url = data["product_url"]
+
+    if not product_url.startswith(("http://", "https://")):
+        product_url = "https://" + product_url.lstrip("/")
+    
     product_price = data["product_price"]
     product_image = data["product_images"][0]
     product_title_fa = data["product_title_fa"]
@@ -105,17 +87,6 @@ def card(product_id):
     """
     return html
 
-logo_b64 = get_logo_b64(_LOGO_PATH)
-if logo_b64:
-    st.markdown(
-        f"""
-        <div class="ds-hero">
-            <img src="data:image/png;base64,{logo_b64}" alt="DigiSearch logo">
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
 
 with st.container():
     load_model()
@@ -123,10 +94,17 @@ with st.container():
     topk = st.slider("top-k", 1, 20, 10)
 
     if prompt:
-        with st.spinner(random.choice(LOADING_MESSAGES)):
-            start = time.time()
-            results = search(prompt, topk)
-            elapsed = time.time() - start
+        try:
+            with st.spinner(random.choice(LOADING_MESSAGES)):
+                start = time.time()
+                results = search(prompt, topk)
+                elapsed = time.time() - start
+        except QdrantUnavailableError as e:
+            st.error(str(e))
+            st.stop()
+        except Exception as e:
+            st.error(f"Search failed: {e}")
+            st.stop()
 
         results = [res.model_dump() for res in results]
 

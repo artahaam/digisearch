@@ -1,5 +1,18 @@
 import streamlit as st
 
+from digisearch.web.branding import LOGO_PATH, render_header
+
+# set_page_config must be called exactly once, before any other Streamlit
+# command, and only in the entrypoint. Calling it again inside individual
+# page files (as search_page.py/process_page.py used to) is what caused the
+# layout/title/icon to flicker between pages — each page script runs inside
+# this same script run via pg.run(), not as a separate process.
+st.set_page_config(
+    page_title="DigiSearch",
+    page_icon=str(LOGO_PATH) if LOGO_PATH.exists() else None,
+    layout="wide",
+)
+
 # Define the pages
 search_page = st.Page("search_page.py", title="Search",)
 ingest_page = st.Page("ingest_page.py", title="Ingest",)
@@ -288,9 +301,96 @@ st.markdown(
         color: var(--ds-crimson);
         margin-top: 3px;
     }
+
+    .stat-tile {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        padding: 12px 16px;
+        border: 1px solid #ddd;
+        border-radius: 14px;
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(64, 17, 26, 0.06);
+        text-align: center;
+        height: 100%;
+    }
+
+    .stat-tile .stat-value {
+        font-size: 22px;
+        font-weight: 800;
+        color: var(--ds-pink);
+    }
+
+    .stat-tile .stat-label {
+        font-size: 12px;
+        color: var(--ds-maroon);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+    }
+
+    .stat-tile.stat-offline .stat-value {
+        color: #aaa;
+    }
+
+    .stage-card {
+        padding: 14px 16px;
+        border: 1px solid #ddd;
+        border-left: 4px solid var(--ds-maroon);
+        border-radius: 10px;
+        background: #fff;
+        margin-bottom: 10px;
+    }
+
+    .stage-card.stage-done {
+        border-left-color: #3aa76d;
+    }
+
+    .stage-card.stage-error {
+        border-left-color: var(--ds-pink);
+    }
+
+    .stage-card h4 {
+        margin: 0 0 4px 0;
+        font-size: 15px;
+        color: var(--ds-darkest);
+    }
+
+    .stage-card p {
+        margin: 0;
+        font-size: 12px;
+        color: #666;
+    }
+
+    .ds-header {
+        width: 100%;
+        border-radius: 14px;
+        overflow: hidden;
+        margin-bottom: 24px;
+        box-shadow: 0 2px 8px rgba(64, 17, 26, 0.06);
+    }
+
+    .ds-header-img {
+        display: block;
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .ds-header-title {
+        display: block;
+        padding: 16px 0;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 800;
+        color: var(--ds-darkest);
+    }
     </style>
     """,
     unsafe_allow_html=True,
 )
+
+render_header()
 
 pg.run()
