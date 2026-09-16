@@ -1,8 +1,8 @@
 import logging
-
+import json
 from qdrant_client.models import PointStruct
 
-from digisearch.paths import LOG_DIR
+from digisearch.paths import LOG_DIR, CANONICAL_PRODUCTS_DIR
 from digisearch.qdrant.qdrant_retrieval import load_embeddings
 from digisearch.qdrant.qdrant_init import get_client, COLLECTION_NAME, QdrantUnavailableError
 
@@ -25,6 +25,22 @@ def _chunked(seq, size):
         yield seq[i:i + size]
 
 
+def get_canonical_payload(product_id):
+    canonical_path = CANONICAL_PRODUCTS_DIR / f"{product_id}.json"
+    # data = json.dumps(canonical_path.read_text(), ensure_ascii=False)
+    data = json.loads(canonical_path.read_text())
+
+    payload = {
+        'url': f'https://www.digikala.com/product/{product_id}/',
+        'product_categories' : data.get("product_categories", ""),
+        'product_price' : data.get("product_price", 0),
+        'brand_title_fa': data.get("brand_title_fa", ""),
+        'brand_title_en': data.get("brand_title_en", ""),
+    }
+
+    return payload
+
+
 def upsert_embeddings(batch_size: int = DEFAULT_UPSERT_BATCH_SIZE, progress_callback=None) -> dict:
 
     embeddings = load_embeddings()
@@ -44,14 +60,16 @@ def upsert_embeddings(batch_size: int = DEFAULT_UPSERT_BATCH_SIZE, progress_call
     for batch in _chunked(embeddings, max(1, batch_size)):
         points = []
         for embedding in batch:
+
             product_id = embedding['product_id']
             vector = embedding['vector']
+            payload = get_canonical_payload(product_id)
             try:
                 points.append(
                     PointStruct(
                         id=int(product_id),
                         vector=vector,
-                        payload={'url': f'https://www.digikala.com/product/{product_id}/'},
+                        payload=payload,
                     )
                 )
             except (TypeError, ValueError) as e:
