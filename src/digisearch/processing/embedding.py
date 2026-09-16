@@ -1,4 +1,5 @@
 from pathlib import Path
+import gc
 import json
 import logging
 from functools import lru_cache
@@ -45,27 +46,29 @@ def embedding_exists(product_id):
     f = BGE_EMBEDDINGS_DIR / f"{product_id}.json"
     return f.exists()
 
+def iter_pending_paths():
+    for path in SEARCH_DOCUMENTS_PRODUCT_DIR.glob("*.txt"):
+        if not embedding_exists(path.stem):
+            yield path
+
+
 def load_documents():
     documents = []
-
-    for path in SEARCH_DOCUMENTS_PRODUCT_DIR.glob("*.txt"):
-        product_id = path.stem
-
-        if embedding_exists(product_id):
-            continue
-
-        try:
-            text = path.read_text(encoding="utf-8")
-        except OSError as e:
-            logger.warning(f"Could not read search document {path}: {e}")
-            continue
-
-        documents.append({
-            "product_id": product_id,
-            "text": text,
-        })
-
+    for path in iter_pending_paths():
+        doc = load_document(path)
+        if doc is not None:
+            documents.append(doc)
     return documents
+
+
+def load_document(path: Path):
+    product_id = path.stem
+    try:
+        text = path.read_text(encoding="utf-8")
+    except OSError as e:
+        logger.warning(f"Could not read search document {path}: {e}")
+        return None
+    return {"product_id": product_id, "text": text}
 
 
 def _chunked(seq, size):
@@ -73,19 +76,35 @@ def _chunked(seq, size):
         yield seq[i:i + size]
 
 
-def generate_embeddings_batched(
-    documents,
+def _chunked_paths(paths, size):
+    batch = []
+    for p in paths:
+        batch.append(p)
+        if len(batch) == size:
+            yield batch
+            batch = []
+    if batch:
+        yield batch
+
+
+def generate_and_save_embeddings(
+    paths,
+    total: int,
     batch_size: int = DEFAULT_BATCH_SIZE,
     max_length: int = DEFAULT_MAX_LENGTH,
     progress_callback=None,
 ):
-    
-    model = get_model()
-    total = len(documents)
-    done = 0
-    results = []
 
-    for batch in _chunked(documents, max(1, batch_size)):
+    model = get_model()
+    done = 0
+    saved = 0
+
+    for path_batch in _chunked_paths(paths, max(1, batch_size)):
+        # Read text for just this batch, not all documents up front.
+        batch = [d for d in (load_document(p) for p in path_batch) if d is not None]
+        if not batch:
+            continue
+
         texts = [doc["text"] for doc in batch]
         try:
             encoded = model.encode(texts, batch_size=len(texts), max_length=max_length)
@@ -97,14 +116,23 @@ def generate_embeddings_batched(
                 progress_callback(done, total, error=str(e))
             continue
 
-        for doc, vector in zip(batch, vectors):
-            results.append((doc, vector))
+        saved += save_embeddings(zip(batch, vectors))
 
         done += len(batch)
         if progress_callback:
             progress_callback(done, total, error=None)
 
-    return results
+        # Explicitly drop references and reclaim memory before the next batch.
+        del batch, texts, encoded, vectors
+        gc.collect()
+        try:
+            import torch
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
+        except ImportError:
+            pass
+
+    return saved
 
 
 def save_embeddings(doc_vector_pairs):
@@ -130,23 +158,20 @@ def save_embeddings(doc_vector_pairs):
 
 def run(batch_size: int = DEFAULT_BATCH_SIZE, progress_callback=None) -> dict:
 
-    documents = load_documents()
-    total = len(documents)
-    logger.info(f"{total} documents loaded.")
+    paths = list(iter_pending_paths())
+    total = len(paths)
+    logger.info(f"{total} documents pending.")
 
     if total == 0:
         logger.info("No search documents found; nothing to embed.")
         return {"total": 0, "saved": 0, "failed": 0}
 
-    pairs = generate_embeddings_batched(
-        documents, batch_size=batch_size, progress_callback=progress_callback
+    saved = generate_and_save_embeddings(
+        paths, total=total, batch_size=batch_size, progress_callback=progress_callback
     )
-    logger.info(f"{len(pairs)} embeddings generated.")
-
-    saved = save_embeddings(pairs)
     logger.info(f"{saved} embeddings saved.")
 
-    return {"total": total, "saved": saved, "failed": total - len(pairs)}
+    return {"total": total, "saved": saved, "failed": total - saved}
 
 
 if __name__ == "__main__":
