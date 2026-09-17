@@ -36,6 +36,7 @@ def get_canonical_payload(product_id):
         'product_price' : data.get("product_price", 0),
         'brand_title_fa': data.get("brand_title_fa", ""),
         'brand_title_en': data.get("brand_title_en", ""),
+        'product_description': data.get("product_description", ""),
     }
 
     return payload
