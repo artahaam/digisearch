@@ -19,7 +19,6 @@ CATEGORY_DIR = RAW_DIR / "category"
 
 
 def count_categories() -> int:
-    """Cheap count of crawled categories, useful as a progress denominator."""
     if not CATEGORY_DIR.exists():
         return 0
     return sum(1 for p in CATEGORY_DIR.iterdir() if p.is_dir())
@@ -68,8 +67,12 @@ def build_product_list(progress_callback=None) -> dict:
         if progress_callback:
             progress_callback(i + 1, total_categories, category)
 
-    with open(CANONICAL_DIR / "product_list.json", "w", encoding="utf-8") as file:
-        json.dump(products, file, indent=4)
+    try:
+        with open(CANONICAL_DIR / "product_list.json", "x", encoding="utf-8") as file:
+            json.dump(products, file, indent=4)
+    except FileExistsError:
+        with open(CANONICAL_DIR / "product_list.json", "w", encoding="utf-8") as file:
+            json.dump(products, file, indent=4)
 
     logger.info(f"{len(products)} products listed at {CANONICAL_DIR / 'product_list.json'}")
 

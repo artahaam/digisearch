@@ -18,7 +18,6 @@ _normalizer = None
 
 
 def get_normalizer():
-    """Lazily import/instantiate hazm's Normalizer so importing this module stays cheap."""
     global _normalizer
     if _normalizer is None:
         from hazm import Normalizer
@@ -35,6 +34,7 @@ def translate():
     fa["product_title_en"] = "عنوان انگلیسی"
     fa["product_specifications"] = "مشخصات محصول"
     fa["product_attributes"] = "ویژ‌گی‌های محصول"
+    fa["product_description"] = "توضیحات محصول"
 
     fa["product_variants"] = "انواع"
     fa["variant_title"] = "نوع"
@@ -69,9 +69,9 @@ def flatten(value):
         if isinstance(value[0], dict):
             for _value in value:
                 for k, v in _value.items():
-                    if k in fa:
+                    if k in fa and k != 'variant_price':
                         k = fa[k]
-                    if k != 'variant_price':
+                        
                         if isinstance(v, list):
                             out.extend([f'\n {k}: ', ', '.join(v), ])
                         else:
@@ -83,9 +83,8 @@ def flatten(value):
         if isinstance(value[0], dict):
             for _value in value:
                 for k, v in _value.items():
-                    if k in fa:
+                    if k in fa and k != 'variant_price':
                         k = fa[k]
-                    if k != 'variant_price':
                         out.extend([f'{k}: {v}'])
 
     elif isinstance(value, str):
@@ -161,7 +160,7 @@ def build_search_documents(progress_callback=None) -> dict:
             text = normalize_fa_doc(doc)
 
             with open(SEARCH_DOCUMENTS_PRODUCT_DIR / f'{product_id}.txt', 'w', encoding='utf-8') as file:
-                file.write('\n\n'.join(text))
+                file.write('\n'.join(text))
 
             success += 1
             error = None
