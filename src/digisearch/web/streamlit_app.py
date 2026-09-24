@@ -17,10 +17,12 @@ st.set_page_config(
 search_page = st.Page("search_page.py", title="Search",)
 ingest_page = st.Page("ingest_page.py", title="Ingest",)
 process_page = st.Page("process_page.py", title="Process")
+chat_page = st.Page("chat_page.py", title="Chat")
 readme_page = st.Page("readme_page.py", title="README")
 
+
 # Set up navigation
-pg = st.navigation([ingest_page, process_page, search_page, readme_page])
+pg = st.navigation([ingest_page, process_page, search_page, chat_page, readme_page])
 
 # Run the selected page
 
@@ -386,6 +388,62 @@ st.markdown(
         font-size: 22px;
         font-weight: 800;
         color: var(--ds-darkest);
+    }
+
+    .rag-answer {
+        direction: rtl;
+        text-align: right;
+        background: #ffffff;
+        border: 1px solid #e9e9e9;
+        border-radius: 14px;
+        padding: 20px 24px;
+        margin: 20px 0;
+        line-height: 2;
+        font-family: IRANYekan, "Vazirmatn", sans-serif;
+        color: #252525;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    }
+
+    .rag-answer-title {
+        font-size: 15px;
+        font-weight: 600;
+        color: #ea3d56;
+        margin-bottom: 10px;
+    }
+
+    .rag-answer-content {
+        font-size: 15px;
+        white-space: pre-wrap;
+    }
+
+    .rag-answer-ref {
+        display: inline-block;
+        background: #fff0f2;
+        color: #ea3d56;
+        border-radius: 6px;
+        padding: 1px 7px;
+        font-weight: 600;
+        direction: ltr;
+    }
+
+        [data-testid="stChatMessage"] {
+        direction: rtl;
+    }
+
+    /* Hidden marker divs (added right before each message's content)
+       let us tell user vs. assistant bubbles apart and flip them. */
+    [data-testid="stChatMessage"]:has(.msg-marker-user) {
+        flex-direction: row-reverse;
+        text-align: right;
+    }
+
+    [data-testid="stChatMessage"]:has(.msg-marker-assistant) {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .msg-marker-user, .msg-marker-assistant {
+        display: none;
     }
     </style>
     """,
