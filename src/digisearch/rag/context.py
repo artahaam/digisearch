@@ -20,16 +20,13 @@ def build_context(results: list[ScoredPoint]):
     for i, product in enumerate(results):
         product_id = product.id
         search_doc = get_search_document(product_id).strip()
-        code = i
-        context = f"[{code}]\n{search_doc}"
+
+        context = f"[{product_id}]\n{search_doc}"
         contexts.append(context)
         references[str(i)] = product_id
     seperator = "\n---\n"
 
     return seperator.join(contexts), references
-
-
-
 
 
 
