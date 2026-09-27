@@ -2,28 +2,24 @@ import streamlit as st
 
 from digisearch.web.branding import LOGO_PATH, render_header
 
-# set_page_config must be called exactly once, before any other Streamlit
-# command, and only in the entrypoint. Calling it again inside individual
-# page files (as search_page.py/process_page.py used to) is what caused the
-# layout/title/icon to flicker between pages — each page script runs inside
-# this same script run via pg.run(), not as a separate process.
+
 st.set_page_config(
     page_title="DigiSearch",
     page_icon=str(LOGO_PATH) if LOGO_PATH.exists() else None,
     layout="wide",
 )
 
-# Define the pages
+
 search_page = st.Page("search_page.py", title="Search",)
 ingest_page = st.Page("ingest_page.py", title="Ingest",)
 process_page = st.Page("process_page.py", title="Process")
 chat_page = st.Page("chat_page.py", title="Chat")
 readme_page = st.Page("readme_page.py", title="README")
 
-# Set up navigation
+
 pg = st.navigation([ingest_page, process_page, search_page, chat_page, readme_page])
 
-# Run the selected page
+
 
 st.markdown(
     """
@@ -387,6 +383,128 @@ st.markdown(
         font-size: 22px;
         font-weight: 800;
         color: var(--ds-darkest);
+    }
+
+    /* Chat page styling — bubbles are st.container(key=...) elements, which
+       Streamlit marks with a `st-key-<key>` class. We match on a shared
+       prefix substring so one rule covers every message of a given role,
+       regardless of that message's unique key suffix. */
+    [class*="st-key-chat_shell_"] {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    [class*="st-key-bubble_"] {
+        max-width: 80%;
+        margin: 0 0 16px 0;
+        padding: 14px 18px;
+        border-radius: 16px;
+        line-height: 1.85;
+        font-size: 14.5px;
+        box-shadow: 0 2px 6px rgba(64, 17, 26, 0.05);
+    }
+
+    [class*="st-key-bubble_"],
+    [class*="st-key-bubble_"] * {
+        font-family: 'Vazirmatn', Tahoma, sans-serif !important;
+        direction: rtl !important;
+        text-align: right !important;
+    }
+
+    [class*="st-key-bubble_"] p {
+        margin: 0 0 8px 0;
+    }
+
+    [class*="st-key-bubble_"] p:last-child {
+        margin-bottom: 0;
+    }
+
+    [class*="st-key-bubble_"] ul,
+    [class*="st-key-bubble_"] ol {
+        padding-right: 22px;
+        padding-left: 0;
+        margin: 8px 0;
+    }
+
+    [class*="st-key-bubble_"] ol > li {
+        margin-bottom: 12px;
+    }
+
+    [class*="st-key-bubble_"] li {
+        margin-bottom: 5px;
+    }
+
+    [class*="st-key-bubble_"] a {
+        font-weight: 600;
+        text-decoration: none;
+        border-bottom: 1px solid currentColor;
+    }
+
+    [class*="st-key-bubble_"] code {
+        padding: 2px 6px;
+        border-radius: 4px;
+        direction: ltr !important;
+        display: inline-block;
+    }
+
+    .chat-role-label {
+        font-weight: 700;
+        font-size: 12px;
+        margin-bottom: 8px;
+        opacity: 0.8;
+    }
+
+    /* Assistant: left side, light card */
+    [class*="st-key-bubble_assistant_"] {
+        background: #f8f9fa;
+        border: 1px solid #e9ecef;
+        color: #212529;
+        margin-right: auto;
+        margin-left: 0;
+        border-bottom-left-radius: 4px;
+    }
+    [class*="st-key-bubble_assistant_"] strong { color: var(--ds-maroon); }
+    [class*="st-key-bubble_assistant_"] a { color: var(--ds-crimson); }
+    [class*="st-key-bubble_assistant_"] code { background-color: #eef0f2; }
+    [class*="st-key-bubble_assistant_"] .chat-role-label { color: var(--ds-crimson); }
+
+    /* User: right side, solid accent */
+    [class*="st-key-bubble_user_"] {
+        background: var(--ds-maroon);
+        color: #fff;
+        margin-left: auto;
+        margin-right: 0;
+        border-bottom-right-radius: 4px;
+    }
+    [class*="st-key-bubble_user_"] strong { color: #ffe3ea; }
+    [class*="st-key-bubble_user_"] a { color: #ffe3ea; }
+    [class*="st-key-bubble_user_"] code { background-color: rgba(255,255,255,0.15); }
+    [class*="st-key-bubble_user_"] .chat-role-label { color: #ffe3ea; }
+
+    /* Chat input styling */
+    [data-testid="stChatInput"] {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    [data-testid="stChatInput"] > div {
+        background-color: white;
+        border-radius: 24px;
+        border: 1px solid #dee2e6;
+    }
+
+    [data-testid="stChatInput"] textarea {
+        font-family: 'Vazirmatn', sans-serif;
+        font-size: 14px;
+        direction: rtl;
+        text-align: right;
+    }
+
+    /* Sidebar button font styling */
+    .stButton > button {
+        font-family: 'Vazirmatn', sans-serif !important;
+        font-size: 14px !important;
+        font-weight: 500 !important;
     }
     </style>
     """,

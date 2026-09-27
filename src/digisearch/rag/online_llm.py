@@ -49,11 +49,11 @@ def get_prompt(query, retrieval_context, history):
     return messages
 
 
-def get_rag_response(query, top_k):
+def get_rag_response(query, top_k, history=None):
 
     results = search(query, top_k)
     retrieval_context, references = build_context(results)
-    messages = get_prompt(query, retrieval_context, None)
+    messages = get_prompt(query, retrieval_context, history)
     output = run("@cf/qwen/qwen3-30b-a3b-fp8", messages)
     raw_response = output["result"]["response"]
     return resolve_product_links(raw_response, get_url)

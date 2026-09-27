@@ -256,7 +256,11 @@ def get_url(product_id):
     try:
         file_path = CANONICAL_PRODUCTS_DIR / f"{product_id}.json"
         data = json.loads(file_path.read_text())
-        return data.get("product_url")
+        url = data.get("product_url")
+        
+        if url and not url.startswith(("http://", "https://")):
+            url = f"https://{url}"
+        return url
     except Exception:
         return None
 
@@ -280,4 +284,3 @@ def resolve_product_links(response_text: str, get_url) -> str:
         return match.group(0) if target in inserted_urls else text
  
     return _ANY_MARKDOWN_LINK_RE.sub(_strip_untrusted, resolved)
- 
