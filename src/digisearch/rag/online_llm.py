@@ -1,6 +1,5 @@
 import os
 import requests
-import json
 from dotenv import load_dotenv
 from openai import OpenAI
 
@@ -24,7 +23,7 @@ def run(model, inputs):
     return response.json()
 
 
-def get_prompt(query, retrieval_context, history:dict = {}):
+def get_prompt(query, retrieval_context, history):
     messages = [
         {"role": "system", "content": SYSTEM_PROMPT},
         {"role": "user", "content": ONE_SHOT_USER},
@@ -50,13 +49,11 @@ def get_prompt(query, retrieval_context, history:dict = {}):
     return messages
 
 
-
 def get_rag_response(query, top_k):
 
     results = search(query, top_k)
     retrieval_context, references = build_context(results)
-    messages = get_prompt(query, retrieval_context)
+    messages = get_prompt(query, retrieval_context, None)
     output = run("@cf/qwen/qwen3-30b-a3b-fp8", messages)
     raw_response = output["result"]["response"]
-
     return resolve_product_links(raw_response, get_url)
