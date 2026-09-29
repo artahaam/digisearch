@@ -12,6 +12,8 @@ dir.txt
 *.csv
 qdrant_storage
 
+/api/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
