@@ -1,5 +1,5 @@
 from typing import Literal
-from pydantic import BaseModel, Field, ConfigDict
+from pydantic import BaseModel, Field, ConfigDict, field_validator
 
 
 class StrictModel(BaseModel):
@@ -17,6 +17,18 @@ class Product(BaseModel):
     image: str | None = None
     url: str | None = None
 
+
+class SearchRequest(StrictModel):
+    query: str = Field(..., min_length=1, max_length=300, description="Natural-language query, Persian / English")
+    top_k: int = Field(10, ge=1, le=20)
+
+    @field_validator("query")
+    @classmethod
+    def _not_blank(cls, v: str) -> str:
+        v = v.strip()
+        if not v:
+            raise ValueError("query could not be empty")
+        return v
 
 class SearchResponse(BaseModel):
     query: str

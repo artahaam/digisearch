@@ -1,23 +1,19 @@
 from time import perf_counter
 
-from fastapi import APIRouter, Query
+from fastapi import APIRouter
 
 from digisearch.api import services
-from digisearch.api.schemas import SearchResponse
+from digisearch.api.schemas import SearchResponse, SearchRequest
 
 router = APIRouter(tags=["search"])
 
-
-@router.get("/search", response_model=SearchResponse)
-def search(
-    q: str = Query(..., min_length=1, max_length=300, description="Natural-language query"),
-    top_k: int = Query(10, ge=1, le=20),
-):
+@router.post("/search", response_model=SearchResponse)
+def search(body: SearchRequest):
     start = perf_counter()
-    results = services.search_products(q.strip(), top_k)
+    results = services.search_products(body.query, body.top_k)
     return SearchResponse(
-        query=q,
+        query=body.query,
         count=len(results),
         took_ms=int((perf_counter() - start) * 1000),
-        results=results, #type: ignore
+        results=results,  # type: ignore
     )
