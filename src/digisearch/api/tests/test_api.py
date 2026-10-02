@@ -135,10 +135,11 @@ class TestNoneExistantProduct:
 
 # Threshold should be imported from somewhere, not hardcoded, update later
 class TestScoresOverThreshold:
-    def test_scores_under_threshold(self) -> None:
-        response = client.post("/api/v1/search", json={"query": "کلاه نارنجی", "top_k": 5})
+    def test_scores_ge_threshold(self) -> None:
+        threshold = 0.5
+        response = client.post("/api/v1/search", json={"query": "کلاه نارنجی", "threshold":threshold, "top_k": 5})
         assert response.status_code == 200
         body = response.json()
         assert set(body) == {"query", "count", "took_ms", "results"}
         for res in body["results"]:
-            assert res["score"] >= 0.5 # Threshold
+            assert res["score"] >= threshold
