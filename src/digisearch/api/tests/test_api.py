@@ -52,6 +52,9 @@ class TestValidation:
     def test_top_k_above_range_is_422(self) -> None:
         assert client.post("/api/v1/search", json={"query": "کلاه", "top_k": 999}).status_code == 422
 
+    def test_threshold_out_of_range_is_422(self) -> None:
+        assert client.post("/api/v1/search", json={"query": "کلاه", "threshold": 1.1, "top_k": 5}).status_code == 422
+
     def test_empty_chat_message_is_422(self) -> None:
         assert client.post("/api/v1/chat", json={"message": ""}).status_code == 422
 
@@ -67,7 +70,6 @@ class TestValidation:
 
     def test_oversized_chat_message_is_422(self) -> None:
         assert client.post("/api/v1/chat", json={"message": "x" * 5000}).status_code == 422
-
 
 
 class TestKnownGaps:
