@@ -143,3 +143,12 @@ class TestScoresOverThreshold:
         assert set(body) == {"query", "count", "took_ms", "results"}
         for res in body["results"]:
             assert res["score"] >= threshold
+
+    def test_default_threshold(self) -> None:
+        from digisearch.qdrant.qdrant_init import DEFAULT_THRESHOLD
+        response = client.post("/api/v1/search", json={"query": "کلاه نارنجی", "top_k": 5})
+        assert response.status_code == 200
+        body = response.json()
+        assert set(body) == {"query", "count", "took_ms", "results"}
+        for res in body["results"]:
+            assert res["score"] >= DEFAULT_THRESHOLD

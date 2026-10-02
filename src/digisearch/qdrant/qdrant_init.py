@@ -5,7 +5,7 @@ from qdrant_client.models import Distance, VectorParams
 QDRANT_URL = "http://localhost:6333"
 COLLECTION_NAME = "test_collection"
 VECTOR_SIZE = 1024
-
+DEFAULT_THRESHOLD = 0.4
 
 class QdrantUnavailableError(RuntimeError):
     pass
