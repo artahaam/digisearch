@@ -120,3 +120,23 @@ class TestAgainstQdrant:
             },
         )
         assert response.status_code == 200
+
+
+class TestNoneExistantProduct:
+    def test_returns_no_results(self) -> None:
+        response = client.post("/api/v1/search", json={"query": "کتاب کمیک بتمن", "top_k": 5})
+        assert response.status_code == 200
+        body = response.json()
+        assert set(body) == {"query", "count", "took_ms", "results"}
+        assert len(body["results"]) == 0
+
+
+# Threshold should be imported from somewhere, not hardcoded, update later
+class TestScoresOverThreshold:
+    def test_scores_under_threshold(self) -> None:
+        response = client.post("/api/v1/search", json={"query": "کلاه نارنجی", "top_k": 5})
+        assert response.status_code == 200
+        body = response.json()
+        assert set(body) == {"query", "count", "took_ms", "results"}
+        for res in body["results"]:
+            assert res["score"] >= 0.5 # Threshold
