@@ -51,9 +51,9 @@ def to_product(point) -> dict:
     }
 
 
-def search_products(query: str, top_k: int) -> list[dict]:
+def search_products(query: str, threshold: float|int=0.4,  top_k: int=10) -> list[dict]:
     try:
-        points = qdrant_search(query, top_k)
+        points = qdrant_search(query, threshold, top_k)
     except QdrantUnavailableError as e:
         raise UpstreamError(str(e)) from e
     return [to_product(p) for p in points]

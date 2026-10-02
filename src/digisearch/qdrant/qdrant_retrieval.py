@@ -38,7 +38,7 @@ def load_embeddings():
     return products
 
 
-def search(query, top_k=10):
+def search(query, threshold:float|int=0.4, top_k=10):
 
     model = get_model()
     query_vector = model.encode([query])["dense_vecs"][0]
@@ -57,6 +57,7 @@ def search(query, top_k=10):
             query=query_vector,  # type: ignore
             with_payload=True,
             limit=top_k,
+            score_threshold=threshold,
         ).points
     except QdrantUnavailableError:
         raise

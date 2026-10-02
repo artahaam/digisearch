@@ -10,7 +10,7 @@ router = APIRouter(tags=["search"])
 @router.post("/search", response_model=SearchResponse)
 def search(body: SearchRequest):
     start = perf_counter()
-    results = services.search_products(body.query, body.top_k)
+    results = services.search_products(body.query, body.threshold, body.top_k)
     return SearchResponse(
         query=body.query,
         count=len(results),

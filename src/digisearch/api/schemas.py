@@ -20,6 +20,7 @@ class Product(BaseModel):
 
 class SearchRequest(StrictModel):
     query: str = Field(..., min_length=1, max_length=300, description="Natural-language query, Persian / English")
+    threshold: int|float = Field(0.4, ge=0.0, le=1.0)
     top_k: int = Field(10, ge=1, le=20)
 
     @field_validator("query")
