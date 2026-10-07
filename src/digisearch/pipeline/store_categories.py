@@ -1,10 +1,9 @@
 from pymongo import UpdateOne
 
 from digisearch.database.client import get_client
-from digisearch.ingest.categories import fetch_categories_dict
 
 client = get_client()
-categories = client["digisearch"]["categories"]
+db_categories = client["digisearch"]["categories"]
 
 def store_categories(categories_dict: dict):
     if not categories_dict:
@@ -15,4 +14,4 @@ def store_categories(categories_dict: dict):
         for cat in categories_dict.values()
     ]
     
-    result = categories.bulk_write(ops, ordered=False)
+    result = db_categories.bulk_write(ops, ordered=False)
