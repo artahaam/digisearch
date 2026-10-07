@@ -38,8 +38,13 @@ def fetch_categories_dict(timeout: int = 20) -> dict:
 
     categories_dict = {}
     for cat in _categories:
-        category = cat["category"]
-        category_id = category["id"]
+        category_id = cat["category"]["id"]
+        if "parent_id" in cat:
+            parent_id = cat["parent_id"]
+        else:
+            parent_id = 0
+        category = {**cat["category"], "parent_id": parent_id}
         if category_id not in categories_dict:
-            categories_dict[category_id] = cat
+            categories_dict[category_id] = category
+
     return categories_dict
