@@ -68,32 +68,3 @@ def search(query, threshold:float|int=0.4, top_k=10):
     logger.info("Retrieval finished")
 
     return search_result[:top_k]
-
-
-if __name__ == "__main__":
-
-    parser = argparse.ArgumentParser(description="Retrieval")
-    parser.add_argument(
-        'query',
-        type=str,
-        help='Retrieval Query, e.g. "تی‌شرت نخی مناسب ورزش"'
-    )
-    parser.add_argument(
-        "--topk",
-        type=int,
-        default=10,
-        help='Retrieve top-k related products'
-        )
-    args = parser.parse_args()
-    query = args.query
-    top_k = args.topk
-
-    try:
-        results = search(query, top_k)
-    except QdrantUnavailableError as e:
-        logger.error(str(e))
-        raise SystemExit(str(e))
-
-    logger.info(f"{top_k} products retrieved")
-    for result in results:
-        print(result)
