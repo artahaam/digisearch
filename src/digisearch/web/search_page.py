@@ -25,7 +25,7 @@ LOADING_MESSAGES = [
 
 @st.cache_resource
 def load_model():
-    from digisearch.processing.embedding import get_model
+    from digisearch.process.embedding import get_model
     return get_model() # type: ignore
 
 

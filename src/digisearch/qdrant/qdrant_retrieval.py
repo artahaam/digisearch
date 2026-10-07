@@ -4,7 +4,7 @@ import argparse
 import numpy as np
 import logging
 
-from digisearch.processing.embedding import get_model
+from digisearch.process.embedding import get_model
 from digisearch.paths import BGE_EMBEDDINGS_DIR, LOG_DIR
 from digisearch.qdrant.qdrant_init import get_client, COLLECTION_NAME, QdrantUnavailableError
 

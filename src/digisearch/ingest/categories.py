@@ -1,9 +1,3 @@
-"""Shared Digikala category dictionary fetch.
-
-Kept separate from ingest_page.py (which is a full Streamlit script with
-its own top-level UI code) so any page can import just the fetch function
-without triggering that script's side effects.
-"""
 import requests
 
 
@@ -36,17 +30,11 @@ _HEADERS = {
 
 
 def fetch_categories_dict(timeout: int = 20) -> dict:
-    """Fetch the full Digikala category tree, keyed by category id.
-
-    Raises requests.exceptions.RequestException on network failure, and
-    (IndexError, KeyError, TypeError) if the response shape is unexpected —
-    callers should handle both and degrade gracefully rather than crash.
-    """
     response = requests.get(CATEGORY_TREE_URL, headers=_HEADERS, timeout=timeout)
     response.raise_for_status()
 
-    category_dict = response.json()["data"][5]
-    _categories = category_dict["data"]["data"]
+    _cats = response.json()["data"][5]
+    _categories = _cats["data"]["data"]
 
     categories_dict = {}
     for cat in _categories:

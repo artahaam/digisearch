@@ -14,7 +14,7 @@ from digisearch.paths import (
     BGE_EMBEDDINGS_DIR,
     LOG_DIR,
 )
-from digisearch.processing import list_products, canonicalize, search_document, embedding
+from digisearch.process import list_products, canonicalize, search_document, embedding
 from digisearch.qdrant import qdrant_embedding
 from digisearch.qdrant.qdrant_init import get_collection_count, QdrantUnavailableError
 from digisearch.categories import fetch_categories_dict

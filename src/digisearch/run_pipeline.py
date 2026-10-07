@@ -4,7 +4,7 @@ import logging
 from pathlib import Path
 import argparse
 
-from digisearch.paths import LOG_DIR, PROJECT_ROOT
+from digisearch.ingest.paths import LOG_DIR, PROJECT_ROOT
 
 
 logger = logging.getLogger("pipeline")
