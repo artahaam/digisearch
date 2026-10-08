@@ -12,12 +12,12 @@ def ping():
 
 def setup_categories():
     coll = get_db()["categories"]
-    coll.create_index("id", unique=True)
+    coll.create_index("category_id", unique=True)
 
 
 def setup_products():
     coll = get_db()["products"]
-    coll.create_index("id", unique=True)
+    coll.create_index("product_id", unique=True)
 
 
 def setup():
