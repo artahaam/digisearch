@@ -10,7 +10,7 @@ def store_categories(categories_dict: dict):
         return
 
     ops = [
-        UpdateOne({"id": cat["id"]}, {"$set": cat}, upsert=True)
+        UpdateOne({"category_id": cat["id"]}, {"$set": cat}, upsert=True)
         for cat in categories_dict.values()
     ]
     
