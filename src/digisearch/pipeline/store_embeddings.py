@@ -2,13 +2,10 @@ import gc
 import numpy as np
 from qdrant_client.models import PointStruct
 from functools import lru_cache
-from digisearch.database.client import get_db_client
-from digisearch.qdrant.qdrant_init import get_qdrant_client, COLLECTION_NAME, QdrantUnavailableError
+from digisearch.database.client import get_db
+from digisearch.qdrant.qdrant_init import get_qdrant_client, QDRANT_COLLECTION, QdrantUnavailableError
 from digisearch.services.document import generate_document
-
-DEFAULT_BATCH_SIZE = 8
-DEFAULT_MAX_LENGTH = 1024
-MODEL_NAME = "BAAI/bge-m3"
+from digisearch.config import DEFAULT_BATCH_SIZE, DEFAULT_MAX_LENGTH, MODEL_NAME 
 
 
 @lru_cache(maxsize=1)
@@ -24,7 +21,7 @@ def get_embedding_model(model_name: str = MODEL_NAME):
 
 
 def get_product(product_id: int) -> dict:
-    product = get_db_client()["digisearch"]["products"].find_one({"product_id": product_id})
+    product = get_db()["products"].find_one({"product_id": product_id})
     if product is None:
         raise ValueError(f"product {product_id} not found")
     return product
@@ -43,13 +40,13 @@ def build_payload(product: dict) -> dict:
     }
 
 
-def generate_and_save_embedding(product_id: int, max_length: int = DEFAULT_MAX_LENGTH) -> None:
+def generate_and_save_embedding(product_id: int, max_length: int = int(DEFAULT_MAX_LENGTH)) -> None:
     product = get_product(product_id)
     document = generate_document(product)
     vector = get_embedding_model().encode([document], max_length=max_length)["dense_vecs"][0].tolist() #type: ignore
 
     get_qdrant_client().upsert(
-        collection_name=COLLECTION_NAME,
+        collection_name=QDRANT_COLLECTION,
         wait=True,
         points=[
             PointStruct(

@@ -2,11 +2,7 @@ from functools import lru_cache
 from qdrant_client import QdrantClient
 from qdrant_client.models import Distance, VectorParams, PayloadSchemaType
 
-
-QDRANT_URL = "http://localhost:6333"
-COLLECTION_NAME = "digisearch"
-VECTOR_SIZE = 1024
-DEFAULT_THRESHOLD = 0.4
+from digisearch.config import QDRANT_URL, QDRANT_COLLECTION, VECTOR_SIZE
 
 class QdrantUnavailableError(RuntimeError):
     pass
@@ -17,22 +13,22 @@ def get_qdrant_client() -> QdrantClient:
     try:
         client = QdrantClient(url=QDRANT_URL, timeout=10)
 
-        if not client.collection_exists(COLLECTION_NAME):
+        if not client.collection_exists(QDRANT_COLLECTION):
             client.create_collection(
-                collection_name=COLLECTION_NAME,
-                vectors_config=VectorParams(size=VECTOR_SIZE, distance=Distance.COSINE),
+                collection_name=QDRANT_COLLECTION,
+                vectors_config=VectorParams(size=VECTOR_SIZE, distance=Distance.COSINE), #type: ignore
             )
             for field, schema in (("price", PayloadSchemaType.FLOAT),
                                   ("brand_fa", PayloadSchemaType.KEYWORD),
                                   ("brand_en", PayloadSchemaType.KEYWORD),
                                   ("categories", PayloadSchemaType.KEYWORD)):
-                client.create_payload_index(COLLECTION_NAME, field_name=field, field_schema=schema)
+                client.create_payload_index(QDRANT_COLLECTION, field_name=field, field_schema=schema)
 
         else:
-            vectors = client.get_collection(COLLECTION_NAME).config.params.vectors
+            vectors = client.get_collection(QDRANT_COLLECTION).config.params.vectors
 
             if isinstance(vectors, VectorParams) and vectors.size != VECTOR_SIZE:
-                raise ValueError(f"'{COLLECTION_NAME}' has size {vectors.size}, expected {VECTOR_SIZE}")
+                raise ValueError(f"'{QDRANT_COLLECTION}' has size {vectors.size}, expected {VECTOR_SIZE}")
 
         return client
 
@@ -46,7 +42,7 @@ def get_qdrant_client() -> QdrantClient:
 def get_collection_count() -> int | None:
     try:
         client = get_qdrant_client()
-        info = client.get_collection(COLLECTION_NAME)
+        info = client.get_collection(QDRANT_COLLECTION)
         return info.points_count
     except QdrantUnavailableError:
         return None

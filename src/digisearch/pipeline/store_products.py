@@ -1,9 +1,6 @@
 import requests
 from digisearch.services.canonicalize import extract_questions_data, extract_details_data
-
-from digisearch.database.client import get_db_client
-
-client = get_db_client()
+from digisearch.database.client import get_db
 
 
 def find_all_keys(obj, target_key) -> list:
@@ -25,9 +22,9 @@ def find_all_keys(obj, target_key) -> list:
 
 
 def store(filters: list[int] = []) -> None:
-
-    db_categories = client["digisearch"]["categories"]
-    db_products = client["digisearch"]["products"]
+    db = get_db()
+    db_categories = db["categories"]
+    db_products = db["products"]
 
     query = {}
     if filters:

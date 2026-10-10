@@ -1,8 +1,5 @@
-import os
 from pymongo import MongoClient
-
-MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017")
-DB_NAME = os.getenv("MONGO_DB", "digisearch")
+from digisearch.config import MONGO_DB, MONGO_URI
 
 _client: MongoClient | None = None
 
@@ -13,4 +10,4 @@ def get_db_client() -> MongoClient:
     return _client
 
 def get_db():
-    return get_db_client()[DB_NAME]
+    return get_db_client()[MONGO_DB]
