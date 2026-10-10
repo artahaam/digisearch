@@ -2,3 +2,5 @@ hazm==0.12.0
 qdrant-client==1.19.0
 requests==2.34.2
 FlagEmbedding==1.4.2
+pymongo==4.18.2
+numpy==2.5.3
