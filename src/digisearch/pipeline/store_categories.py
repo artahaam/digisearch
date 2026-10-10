@@ -1,8 +1,8 @@
 from pymongo import UpdateOne
 
-from digisearch.database.client import get_client
+from digisearch.database.client import get_db_client
 
-client = get_client()
+client = get_db_client()
 db_categories = client["digisearch"]["categories"]
 
 def store_categories(categories_dict: dict):

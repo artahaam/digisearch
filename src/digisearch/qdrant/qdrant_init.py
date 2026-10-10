@@ -13,7 +13,7 @@ class QdrantUnavailableError(RuntimeError):
 
 
 @lru_cache(maxsize=1)
-def get_client() -> QdrantClient:
+def get_qdrant_client() -> QdrantClient:
     try:
         client = QdrantClient(url=QDRANT_URL, timeout=10)
 
@@ -45,7 +45,7 @@ def get_client() -> QdrantClient:
 
 def get_collection_count() -> int | None:
     try:
-        client = get_client()
+        client = get_qdrant_client()
         info = client.get_collection(COLLECTION_NAME)
         return info.points_count
     except QdrantUnavailableError:

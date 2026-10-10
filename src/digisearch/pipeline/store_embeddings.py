@@ -3,8 +3,8 @@ import numpy as np
 from qdrant_client.models import PointStruct
 from functools import lru_cache
 from digisearch.database.client import get_client as get_mongo_client
-from digisearch.qdrant.qdrant_init import get_client as get_qdrant_client, COLLECTION_NAME, QdrantUnavailableError
-from digisearch.pipeline.document import generate_document
+from digisearch.qdrant.qdrant_init import get_qdrant_client, COLLECTION_NAME, QdrantUnavailableError
+from digisearch.services.document import generate_document
 
 DEFAULT_BATCH_SIZE = 8
 DEFAULT_MAX_LENGTH = 1024

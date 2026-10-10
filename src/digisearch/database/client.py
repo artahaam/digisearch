@@ -6,11 +6,11 @@ DB_NAME = os.getenv("MONGO_DB", "digisearch")
 
 _client: MongoClient | None = None
 
-def get_client() -> MongoClient:
+def get_db_client() -> MongoClient:
     global _client
     if _client is None:
         _client = MongoClient(MONGO_URI)
     return _client
 
 def get_db():
-    return get_client()[DB_NAME]
+    return get_db_client()[DB_NAME]

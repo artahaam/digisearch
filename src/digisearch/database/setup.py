@@ -1,11 +1,11 @@
 from pymongo.errors import ServerSelectionTimeoutError
 
-from digisearch.database.client import get_client, get_db
+from digisearch.database.client import get_db_client, get_db
 
 
 def ping():
     try:
-        get_client().admin.command("ping")
+        get_db_client().admin.command("ping")
     except ServerSelectionTimeoutError as e:
         raise SystemExit(f"Cannot reach MongoDB: {e}")
 

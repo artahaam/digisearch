@@ -1,9 +1,9 @@
 import requests
 from digisearch.pipeline.canonicalize import extract_questions_data, extract_details_data
 
-from digisearch.database.client import get_client
+from digisearch.database.client import get_db_client
 
-client = get_client()
+client = get_db_client()
 
 
 def find_all_keys(obj, target_key) -> list:

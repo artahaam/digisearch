@@ -6,7 +6,7 @@ import logging
 
 from digisearch.services.embedding import get_model
 from digisearch.paths import BGE_EMBEDDINGS_DIR, LOG_DIR
-from digisearch.qdrant.qdrant_init import get_client, COLLECTION_NAME, QdrantUnavailableError
+from digisearch.qdrant.qdrant_init import get_qdrant_client, COLLECTION_NAME, QdrantUnavailableError
 
 logger = logging.getLogger('retrieval')
 logger.setLevel(logging.DEBUG)
@@ -45,7 +45,7 @@ def search(query, threshold:float|int=0.4, top_k=10):
 
     logger.info(f"Retrieval started with the query: {query}")
 
-    client = get_client()  
+    client = get_qdrant_client()  
 
     try:
         if not client.collection_exists(COLLECTION_NAME):
