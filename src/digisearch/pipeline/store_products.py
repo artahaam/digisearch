@@ -1,5 +1,5 @@
 import requests
-from digisearch.pipeline.canonicalize import extract_questions_data, extract_details_data
+from digisearch.services.canonicalize import extract_questions_data, extract_details_data
 
 from digisearch.database.client import get_db_client
 

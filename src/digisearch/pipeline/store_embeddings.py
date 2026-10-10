@@ -2,7 +2,7 @@ import gc
 import numpy as np
 from qdrant_client.models import PointStruct
 from functools import lru_cache
-from digisearch.database.client import get_client as get_mongo_client
+from digisearch.database.client import get_db_client
 from digisearch.qdrant.qdrant_init import get_qdrant_client, COLLECTION_NAME, QdrantUnavailableError
 from digisearch.services.document import generate_document
 
@@ -24,7 +24,7 @@ def get_embedding_model(model_name: str = MODEL_NAME):
 
 
 def get_product(product_id: int) -> dict:
-    product = get_mongo_client()["digisearch"]["products"].find_one({"product_id": product_id})
+    product = get_db_client()["digisearch"]["products"].find_one({"product_id": product_id})
     if product is None:
         raise ValueError(f"product {product_id} not found")
     return product
