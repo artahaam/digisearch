@@ -17,7 +17,7 @@ logger = logging.getLogger("api")
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    from digisearch.process.embedding import get_model
+    from digisearch.services.embedding import get_model
 
     logger.info("Loading embedding model...")
     get_model()
