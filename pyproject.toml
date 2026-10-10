@@ -18,13 +18,6 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
 ]
-dependencies = [
-    "requests>=2.34,<3",
-    "rich>=15,<16",
-]
-
-[project.scripts]
-digisearch = "digisearch.run_pipeline:main"
 
 [tool.setuptools]
 package-dir = { "" = "src" }
