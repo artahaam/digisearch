@@ -1,32 +1,15 @@
-import json
-
-def extract_questions_data(f: str):
-    questions = []
-    try:
-        loads = json.loads(f)[:5]
-        for l in loads:
-            _questions = l.get("questions")
-            for _question in _questions:
-
-                question = _question.get("text")
-                answers = []
-
-                for ans in _question["answers"]:
-                    answers.append(ans["text"])
-
-                questions.append({'question': question,
-                                    'answers': answers})
-    except Exception:
-        pass
-
-    questions = {
-        'questions': questions
-    }
-    return questions
+def extract_questions_data(questions: list | None, limit: int | None = 5) -> dict:
+    out = []
+    for q in (questions or [])[:limit]:
+        text = q.get("text")
+        answers = [a["text"] for a in q.get("answers") or [] if a.get("text")]
+        if text:
+            out.append({"question": text, "answers": answers})
+    return {"questions": out}
 
 
-def extract_details_data(f: str):
-    data = f.get("data", {}) #type: ignore
+def extract_details_data(f: dict):
+    data = f.get("data", {}) 
 
     product = data.get("product", {})
     product_id = product.get("id")
