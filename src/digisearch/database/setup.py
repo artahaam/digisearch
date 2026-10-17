@@ -18,6 +18,7 @@ def setup_categories():
 def setup_products():
     coll = get_db()["products"]
     coll.create_index("product_id", unique=True)
+    coll.create_index("fetched_at")
 
 
 def setup():

@@ -1,10 +1,12 @@
 import logging
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from math import ceil
 
 from digisearch.database.client import get_db
 from digisearch.services.canonicalize import extract_details_data, extract_questions_data
 from digisearch.services.http_client import get_json
+from digisearch.config import REFETCH_AFTER_HOURS
+from digisearch.services.fingerprint import document_and_hash
 
 log = logging.getLogger(__name__)
 
@@ -66,30 +68,41 @@ def fetch_product(product_id: int) -> dict | None:
 
 
 def save_product(details: dict) -> None:
+    _, content_hash = document_and_hash(details)
     get_db()["products"].update_one(
         {"product_id": details["product_id"]},
-        {"$set": {**details, "fetched_at": datetime.now(timezone.utc)}},
+        {"$set": {**details, "content_hash": content_hash,
+                  "fetched_at": datetime.now(timezone.utc)}},
         upsert=True,
     )
 
 
-def store(filters: list[int] | None = None) -> dict:
+def store(filters: list[int] | None = None,
+          max_age_hours: float | None = REFETCH_AFTER_HOURS) -> dict:   
     db = get_db()
     query = {"id": {"$in": filters}} if filters else {}
     category_ids = [c["id"] for c in db["categories"].find(query, {"id": 1})]
 
-    stats = {"saved": 0, "failed": 0}
+    recent: set[int] = set()
+    if max_age_hours:
+        cutoff = datetime.now(timezone.utc) - timedelta(hours=max_age_hours)
+        recent = set(db["products"].distinct("product_id", {"fetched_at": {"$gte": cutoff}}))
+
+    stats = {"saved": 0, "failed": 0, "skipped": 0}
     for cat_id in category_ids:
         pages = fetch_category_pages(cat_id)
         log.info("category %s: %d pages", cat_id, pages)
         for page in range(1, pages + 1):
             for product_id in fetch_product_ids(cat_id, page):
+                if product_id in recent:
+                    stats["skipped"] += 1
+                    continue
                 details = fetch_product(product_id)
                 if details is None:
                     stats["failed"] += 1
                     log.warning("product %s failed, skipping", product_id)
                     continue
-                details.update({"category_id":cat_id})
+                details["category_id"] = cat_id
                 save_product(details)
                 stats["saved"] += 1
     log.info("done: %s", stats)

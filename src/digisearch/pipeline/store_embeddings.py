@@ -1,12 +1,23 @@
 import gc
 import numpy as np
+import logging
+from datetime import datetime, timezone
+from pymongo import UpdateOne
 from qdrant_client.models import PointStruct
+
 from functools import lru_cache
 from digisearch.database.client import get_db
 from digisearch.qdrant.qdrant_init import get_qdrant_client, QDRANT_COLLECTION, QdrantUnavailableError
-from digisearch.services.document import generate_document
-from digisearch.config import DEFAULT_BATCH_SIZE, DEFAULT_MAX_LENGTH, MODEL_NAME 
+from digisearch.config import DEFAULT_BATCH_SIZE, DEFAULT_MAX_LENGTH, MODEL_NAME
+from digisearch.services.fingerprint import document_and_hash
 
+
+log = logging.getLogger(__name__)
+
+PENDING = {"$or": [
+    {"embedded_hash": {"$exists": False}},
+    {"$expr": {"$ne": ["$content_hash", "$embedded_hash"]}},
+]}
 
 @lru_cache(maxsize=1)
 def get_embedding_model(model_name: str = MODEL_NAME):
@@ -18,6 +29,11 @@ def get_embedding_model(model_name: str = MODEL_NAME):
     except Exception:
         raise
     return model
+
+
+def _chunks(seq: list, n: int):
+    for i in range(0, len(seq), n):
+        yield seq[i:i + n]
 
 
 def get_product(product_id: int) -> dict:
@@ -40,18 +56,67 @@ def build_payload(product: dict) -> dict:
     }
 
 
-def generate_and_save_embedding(product_id: int, max_length: int = int(DEFAULT_MAX_LENGTH)) -> None:
-    product = get_product(product_id)
-    document = generate_document(product)
-    vector = get_embedding_model().encode([document], max_length=max_length)["dense_vecs"][0].tolist() #type: ignore
+def embed_products(products: list[dict], max_length: int, batch_size: int) -> int:
+
+    items = []
+    for p in products:
+        doc, h = document_and_hash(p)
+        if doc:
+            items.append((p, doc, h))
+    if not items:
+        return 0
+
+    vectors = get_embedding_model().encode(
+        [doc for _, doc, _ in items], batch_size=batch_size, max_length=max_length
+    )["dense_vecs"]
 
     get_qdrant_client().upsert(
         collection_name=QDRANT_COLLECTION,
         wait=True,
         points=[
-            PointStruct(
-            id=int(product_id),
-            vector=vector,
-            payload=build_payload(product))
+            PointStruct(id=int(p["product_id"]), vector=v.tolist(), payload=build_payload(p)) #type: ignore
+            for (p, _, _), v in zip(items, vectors)
         ],
     )
+
+    now = datetime.now(timezone.utc)
+    get_db()["products"].bulk_write(
+        [UpdateOne({"product_id": p["product_id"]},
+                   {"$set": {"content_hash": h, "embedded_hash": h, "embedded_at": now}})
+         for p, _, h in items],
+        ordered=False,
+    )
+    return len(items)
+
+
+def embed_pending(batch_size: int = int(DEFAULT_BATCH_SIZE),
+                  max_length: int = int(DEFAULT_MAX_LENGTH),
+                  limit: int | None = None,
+                  force: bool = False) -> dict:
+    products = get_db()["products"]
+    get_qdrant_client()                      
+
+    cursor = products.find({} if force else PENDING, {"product_id": 1})
+    if limit:
+        cursor = cursor.limit(limit)
+    ids = [d["product_id"] for d in cursor]
+    log.info("%d products to embed", len(ids))
+
+    stats = {"embedded": 0, "skipped": 0, "failed": 0}
+    for chunk in _chunks(ids, batch_size):
+        batch = list(products.find({"product_id": {"$in": chunk}}))
+        try:
+            n = embed_products(batch, max_length, batch_size)
+        except Exception:
+            log.exception("batch of %d failed; it stays pending", len(batch))
+            stats["failed"] += len(batch)
+            continue
+        stats["embedded"] += n
+        stats["skipped"] += len(batch) - n
+        log.info("progress: %s / %d", stats["embedded"], len(ids))
+    log.info("done: %s", stats)
+    return stats
+
+
+def generate_and_save_embedding(product_id: int, max_length: int = int(DEFAULT_MAX_LENGTH)) -> None:
+    embed_products([get_product(product_id)], max_length, batch_size=1)

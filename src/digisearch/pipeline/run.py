@@ -5,6 +5,7 @@ from digisearch.logging_config import setup_logging
 from digisearch.pipeline.store_categories import store_categories
 from digisearch.pipeline.store_products import store
 from digisearch.services.get_categories import fetch_categories_dict
+from digisearch.pipeline.store_embeddings import embed_pending
 
 log = logging.getLogger(__name__)
 
@@ -17,16 +18,24 @@ def refresh_categories() -> int:
 
 def main() -> None:
     p = argparse.ArgumentParser()
-    p.add_argument("stage", choices=["categories", "products"])
+
+    p.add_argument("stage", choices=["categories", "products", "embed"])
     p.add_argument("--category", type=int, nargs="*", help="limit products to these category ids")
+    p.add_argument("--max-age-hours", type=float, default=None, help="skip products fetched more recently (0 = refetch all)")
+    p.add_argument("--batch-size", type=int, default=8)
+    p.add_argument("--limit", type=int, default=None)
+    p.add_argument("--force", action="store_true", help="re-embed everything")
+
     args = p.parse_args()
 
     setup_logging()
     if args.stage == "categories":
         refresh_categories()
+    elif args.stage == "products":
+        kwargs = {} if args.max_age_hours is None else {"max_age_hours": args.max_age_hours}
+        store(args.category, **kwargs)
     else:
-        store(args.category)
-
+        embed_pending(batch_size=args.batch_size, limit=args.limit, force=args.force)
 
 if __name__ == "__main__":
     main()
