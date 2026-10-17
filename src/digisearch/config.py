@@ -7,7 +7,7 @@ QDRANT_COLLECTION = os.getenv("QDRANT_COLLECTION", "digisearch")
 
 # Qdrant
 QDRANT_URL = os.getenv("QDRANT_URL", "http://localhost:6333")
-VECTOR_SIZE = os.getenv("VECTOR_SIZE", 1024)
+VECTOR_SIZE = int(os.getenv("VECTOR_SIZE", 1024))
 
 # Configuration
 DEFAULT_THRESHOLD = float(os.getenv("DEFAULT_THRESHOLD", 0.4))
