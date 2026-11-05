@@ -38,3 +38,7 @@ volumes:
   qdrant_data:
     name: digisearch_qdrant
   hf_cache:
+
+networks:
+  default:
+    name: digisearch_net

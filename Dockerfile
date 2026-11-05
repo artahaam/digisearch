@@ -6,7 +6,9 @@ ENV PYTHONUNBUFFERED=1 \
 
 WORKDIR /app
 
-RUN pip install torch --index-url https://download.pytorch.org/whl/cpu  -i https://mirror-pypi.runflare.com/simple
+RUN pip install torch \
+      --extra-index-url https://download.pytorch.org/whl/cpu \
+      -i https://mirror-pypi.runflare.com/simple
 
 COPY requirements.txt .
 RUN pip install -r requirements.txt -i https://mirror-pypi.runflare.com/simple
