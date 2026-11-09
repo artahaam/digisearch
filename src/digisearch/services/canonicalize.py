@@ -5,7 +5,7 @@ def extract_questions_data(questions: list | None, limit: int | None = 5) -> dic
         answers = [a["text"] for a in q.get("answers") or [] if a.get("text")]
         if text:
             out.append({"question": text, "answers": answers})
-    return {"questions": out}
+    return {"questions": out}   
 
 
 def extract_details_data(f: dict):
