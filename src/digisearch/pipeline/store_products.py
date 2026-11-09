@@ -79,9 +79,10 @@ def save_product(details: dict) -> None:
 
 def store(filters: list[int] | None = None,
           max_age_hours: float | None = REFETCH_AFTER_HOURS) -> dict:   
+    filters = [int(i) for i in filters] if filters else None
     db = get_db()
-    query = {"id": {"$in": filters}} if filters else {}
-    category_ids = [c["id"] for c in db["categories"].find(query, {"id": 1})]
+    query = {"category_id": {"$in": filters}} if filters else {}
+    category_ids = [c["category_id"] for c in db["categories"].find(query, {"category_id": 1})]
 
     recent: set[int] = set()
     if max_age_hours:

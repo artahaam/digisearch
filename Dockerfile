@@ -10,7 +10,7 @@ RUN pip install torch \
       --extra-index-url https://download.pytorch.org/whl/cpu \
       -i https://mirror-pypi.runflare.com/simple
 
-COPY requirements.txt .
+COPY pyproject.toml README.md ./
 RUN pip install -r requirements.txt -i https://mirror-pypi.runflare.com/simple
 
 COPY pyproject.toml .

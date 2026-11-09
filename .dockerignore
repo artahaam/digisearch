@@ -6,3 +6,8 @@ __pycache__
 *.log
 airflow/logs
 airflow/.env
+build
+data
+docs
+qdrant_storage
+**/*.egg-info
