@@ -55,10 +55,10 @@ services:
 
 
   airflow_dag_tests:
-      image: ${AIRFLOW_IMAGE_NAME:-digisearch-airflow:3.3.2}
       build:
         context: .
         dockerfile: airflow/Dockerfile
+        target: test
       entrypoint: ["pytest"]
       command: ["/opt/digisearch/tests/dags", "-v"]
       volumes:
