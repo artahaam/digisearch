@@ -1,4 +1,4 @@
-FROM apache/airflow:3.3.2-python3.12
+FROM apache/airflow:3.3.2-python3.12 AS base
 
 ENV PIP_NO_CACHE_DIR=1 \
     PIP_DEFAULT_TIMEOUT=120 \
@@ -9,10 +9,9 @@ RUN mkdir -p /opt/digisearch && chown airflow:0 /opt/digisearch
 USER airflow
 WORKDIR /opt/digisearch
 
-# wheels/ is optional: pre-downloaded wheels (see README) avoid flaky downloads
-COPY wheels /tmp/wheels
 COPY requirements.txt .
-RUN pip install "apache-airflow==3.3.2" \
+RUN --mount=type=bind,source=wheels,target=/tmp/wheels \
+    pip install "apache-airflow==3.3.2" \
       --find-links /tmp/wheels \
       --extra-index-url https://download.pytorch.org/whl/cpu \
       -r requirements.txt \
@@ -21,3 +20,9 @@ RUN pip install "apache-airflow==3.3.2" \
 COPY --chown=airflow:0 pyproject.toml README.md ./
 COPY --chown=airflow:0 src ./src
 RUN pip install --no-deps . -i https://mirror-pypi.runflare.com/simple
+
+FROM base AS test
+RUN pip install pytest -i https://mirror-pypi.runflare.com/simple
+COPY --chown=airflow:0 tests ./tests
+ENTRYPOINT ["pytest"]
+CMD ["tests/dags", "-v"]

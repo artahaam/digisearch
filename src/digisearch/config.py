@@ -3,10 +3,10 @@ import os
 # MongoDB
 MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017")
 MONGO_DB = os.getenv("MONGO_DB", "digisearch")
-QDRANT_COLLECTION = os.getenv("QDRANT_COLLECTION", "digisearch")
 
 # Qdrant
 QDRANT_URL = os.getenv("QDRANT_URL", "http://localhost:6333")
+QDRANT_COLLECTION = os.getenv("QDRANT_COLLECTION", "digisearch")
 VECTOR_SIZE = int(os.getenv("VECTOR_SIZE", 1024))
 
 # Configuration
