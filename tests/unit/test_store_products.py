@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 from types import SimpleNamespace
 
 from digisearch.config import REFETCH_AFTER_HOURS
@@ -224,9 +224,9 @@ def test_save_product_upserts_by_product_id_with_hash_and_timestamp(monkeypatch)
     monkeypatch.setattr(sp, "get_db", lambda: db)
     details = {"product_id": 7, "product_title_en": "Phone", "category_id": 10}
 
-    before = datetime.now(timezone.utc)
+    before = datetime.now(UTC)
     sp.save_product(details)
-    after = datetime.now(timezone.utc)
+    after = datetime.now(UTC)
 
     (call,) = db.products.update_calls
     assert call["filter"] == {"product_id": 7}
@@ -316,9 +316,9 @@ def test_store_default_recency_window_uses_config(monkeypatch):
     db = FakeDb(category_ids=[10])
     install_crawl_fakes(monkeypatch, db, {})
 
-    before = datetime.now(timezone.utc)
+    before = datetime.now(UTC)
     sp.store()
-    after = datetime.now(timezone.utc)
+    after = datetime.now(UTC)
 
     ((key, query),) = db.products.distinct_calls
     cutoff = query["fetched_at"]["$gte"]
@@ -331,9 +331,9 @@ def test_store_custom_window_overrides_the_default(monkeypatch):
     db = FakeDb(category_ids=[10])
     install_crawl_fakes(monkeypatch, db, {})
 
-    before = datetime.now(timezone.utc)
+    before = datetime.now(UTC)
     sp.store(max_age_hours=2)
-    after = datetime.now(timezone.utc)
+    after = datetime.now(UTC)
 
     cutoff = db.products.distinct_calls[0][1]["fetched_at"]["$gte"]
     assert before - timedelta(hours=2) <= cutoff <= after - timedelta(hours=2)

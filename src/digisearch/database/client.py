@@ -1,4 +1,5 @@
 from pymongo import MongoClient
+
 from digisearch.config import MONGO_DB, MONGO_URI
 
 _client: MongoClient | None = None

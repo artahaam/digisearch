@@ -3,8 +3,8 @@ import pytest
 from digisearch import config
 from digisearch.database.client import get_db
 from digisearch.pipeline.store_embeddings import embed_pending
-from digisearch.services.fingerprint import document_and_hash
 from digisearch.pipeline.store_products import save_product
+from digisearch.services.fingerprint import document_and_hash
 
 pytestmark = pytest.mark.integration
 

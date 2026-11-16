@@ -1,20 +1,18 @@
 import os
+
 import requests
+from digisearch.qdrant.qdrant_retrieval import search
 from dotenv import load_dotenv
-from openai import OpenAI
 
 from digisearch.rag.context import *
-from digisearch.paths import CANONICAL_PRODUCTS_DIR
 from digisearch.rag.context import build_context
-from digisearch.qdrant.qdrant_retrieval import search
-import re
 
 load_dotenv()
 
 API_KEY = os.environ["CF_API_KEY"]
 ACCOUNT_ID = os.environ["CF_ACCOUNT_ID"]
 API_BASE_URL = f"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/ai/run/"
-headers = {"Authorization": "Bearer {}".format(API_KEY)}
+headers = {"Authorization": f"Bearer {API_KEY}"}
 
 
 def run(model, inputs):

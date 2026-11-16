@@ -1,16 +1,14 @@
-import gc
-import numpy as np
 import logging
-from datetime import datetime, timezone
+from datetime import UTC, datetime
+from functools import lru_cache
+
 from pymongo import UpdateOne
 from qdrant_client.models import PointStruct
 
-from functools import lru_cache
-from digisearch.database.client import get_db
-from digisearch.qdrant.qdrant_init import get_qdrant_client, QDRANT_COLLECTION, QdrantUnavailableError
 from digisearch.config import DEFAULT_BATCH_SIZE, DEFAULT_MAX_LENGTH, MODEL_NAME
+from digisearch.database.client import get_db
+from digisearch.qdrant.qdrant_init import QDRANT_COLLECTION, get_qdrant_client
 from digisearch.services.fingerprint import document_and_hash
-
 
 log = logging.getLogger(__name__)
 
@@ -79,7 +77,7 @@ def embed_products(products: list[dict], max_length: int, batch_size: int) -> in
         ],
     )
 
-    now = datetime.now(timezone.utc)
+    now = datetime.now(UTC)
     get_db()["products"].bulk_write(
         [UpdateOne({"product_id": p["product_id"]},
                    {"$set": {"content_hash": h, "embedded_hash": h, "embedded_at": now}})

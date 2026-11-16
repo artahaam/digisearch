@@ -1,5 +1,5 @@
 import time
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 
 import pytest
 
@@ -90,7 +90,7 @@ def test_products_older_than_the_window_are_refetched(monkeypatch):
     install_fake_api(monkeypatch, {10: [1, 2]})
     sp.store()
     get_db()["products"].update_many(
-        {}, {"$set": {"fetched_at": datetime.now(timezone.utc) - timedelta(hours=48)}}
+        {}, {"$set": {"fetched_at": datetime.now(UTC) - timedelta(hours=48)}}
     )
 
     assert sp.store() == {"saved": 2, "failed": 0, "skipped": 0}     # default window is 24 h

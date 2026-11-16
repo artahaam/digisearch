@@ -3,7 +3,7 @@ from time import perf_counter
 from fastapi import APIRouter
 
 from digisearch.api import services
-from digisearch.api.schemas import SearchResponse, SearchRequest
+from digisearch.api.schemas import SearchRequest, SearchResponse
 
 router = APIRouter(tags=["search"])
 

@@ -1,4 +1,7 @@
-from digisearch.services.canonicalize import extract_details_data, extract_questions_data
+from digisearch.services.canonicalize import (
+    extract_details_data,
+    extract_questions_data,
+)
 
 # --------------------------------------------------------------------------
 # extract_questions_data

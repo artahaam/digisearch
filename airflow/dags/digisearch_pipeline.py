@@ -3,7 +3,7 @@ import subprocess
 import sys
 from datetime import datetime, timedelta
 
-from airflow.sdk import DAG, get_current_context, task #type: ignore
+from airflow.sdk import DAG, get_current_context, task  #type: ignore
 
 log = logging.getLogger(__name__)
 

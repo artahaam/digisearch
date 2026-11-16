@@ -1,8 +1,8 @@
-import re
 import json
-from qdrant_client.models import ScoredPoint
+import re
 
-from digisearch.paths import SEARCH_DOCUMENTS_PRODUCT_DIR, CANONICAL_PRODUCTS_DIR
+from digisearch.paths import CANONICAL_PRODUCTS_DIR, SEARCH_DOCUMENTS_PRODUCT_DIR
+from qdrant_client.models import ScoredPoint
 
 
 def get_search_document(product_id):

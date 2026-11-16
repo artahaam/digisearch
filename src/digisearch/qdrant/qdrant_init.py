@@ -1,8 +1,10 @@
 from functools import lru_cache
-from qdrant_client import QdrantClient
-from qdrant_client.models import Distance, VectorParams, PayloadSchemaType
 
-from digisearch.config import QDRANT_URL, QDRANT_COLLECTION, VECTOR_SIZE
+from qdrant_client import QdrantClient
+from qdrant_client.models import Distance, PayloadSchemaType, VectorParams
+
+from digisearch.config import QDRANT_COLLECTION, QDRANT_URL, VECTOR_SIZE
+
 
 class QdrantUnavailableError(RuntimeError):
     pass

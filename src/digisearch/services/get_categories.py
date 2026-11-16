@@ -1,6 +1,5 @@
 import requests
 
-
 CATEGORY_TREE_URL = (
     "https://api.digikala.com/v1/dictionaries/"
     "?hashes%5B0%5D=854520e5da5b50175e401c36b8002ecc"

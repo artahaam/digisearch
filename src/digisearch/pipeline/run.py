@@ -1,12 +1,13 @@
 import argparse
 import logging
+
+from digisearch.database.setup import setup as setup_db
 from digisearch.logging_config import setup_logging
 from digisearch.pipeline.store_categories import store_categories
-from digisearch.pipeline.store_products import store
-from digisearch.services.get_categories import fetch_categories_dict
 from digisearch.pipeline.store_embeddings import embed_pending
+from digisearch.pipeline.store_products import store
 from digisearch.pipeline.sync_qdrant import prune_orphans
-from digisearch.database.setup import setup as setup_db
+from digisearch.services.get_categories import fetch_categories_dict
 
 log = logging.getLogger(__name__)
 

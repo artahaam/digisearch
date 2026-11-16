@@ -1,6 +1,6 @@
 from pymongo.errors import ServerSelectionTimeoutError
 
-from digisearch.database.client import get_db_client, get_db
+from digisearch.database.client import get_db, get_db_client
 
 
 def ping():

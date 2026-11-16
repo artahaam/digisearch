@@ -1,12 +1,15 @@
 import logging
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 from math import ceil
 
-from digisearch.database.client import get_db
-from digisearch.services.canonicalize import extract_details_data, extract_questions_data
-from digisearch.services.http_client import get_json
 from digisearch.config import REFETCH_AFTER_HOURS
+from digisearch.database.client import get_db
+from digisearch.services.canonicalize import (
+    extract_details_data,
+    extract_questions_data,
+)
 from digisearch.services.fingerprint import document_and_hash
+from digisearch.services.http_client import get_json
 
 log = logging.getLogger(__name__)
 
@@ -72,7 +75,7 @@ def save_product(details: dict) -> None:
     get_db()["products"].update_one(
         {"product_id": details["product_id"]},
         {"$set": {**details, "content_hash": content_hash,
-                  "fetched_at": datetime.now(timezone.utc)}},
+                  "fetched_at": datetime.now(UTC)}},
         upsert=True,
     )
 
@@ -86,7 +89,7 @@ def store(filters: list[int] | None = None,
 
     recent: set[int] = set()
     if max_age_hours:
-        cutoff = datetime.now(timezone.utc) - timedelta(hours=max_age_hours)
+        cutoff = datetime.now(UTC) - timedelta(hours=max_age_hours)
         recent = set(db["products"].distinct("product_id", {"fetched_at": {"$gte": cutoff}}))
 
     stats = {"saved": 0, "failed": 0, "skipped": 0}

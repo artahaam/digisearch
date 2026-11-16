@@ -1,11 +1,10 @@
+# Airflow's `dags/` folder isn't an installed package, so import the module from its path
+import importlib.util
 from pathlib import Path
 from types import SimpleNamespace
 
 import pytest
-from airflow.models import DagBag # type: ignore
-
-# Airflow's `dags/` folder isn't an installed package, so import the module from its path
-import importlib.util
+from airflow.models import DagBag  # type: ignore
 
 DAG_FILE = Path(__file__).resolve().parents[2] / "airflow" / "dags" / "digisearch_pipeline.py"
 spec = importlib.util.spec_from_file_location("digisearch_pipeline", DAG_FILE)

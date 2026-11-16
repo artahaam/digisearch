@@ -3,7 +3,11 @@ import logging
 from functools import lru_cache
 
 from digisearch.paths import CANONICAL_PRODUCTS_DIR
-from digisearch.qdrant.qdrant_init import QdrantUnavailableError, get_collection_count, DEFAULT_THRESHOLD
+from digisearch.qdrant.qdrant_init import (
+    DEFAULT_THRESHOLD,
+    QdrantUnavailableError,
+    get_collection_count,
+)
 from digisearch.qdrant.qdrant_retrieval import search as qdrant_search
 
 logger = logging.getLogger("api")
@@ -51,7 +55,7 @@ def to_product(point) -> dict:
     }
 
 
-def search_products(query: str, threshold: float|int=DEFAULT_THRESHOLD,  top_k: int=10) -> list[dict]:
+def search_products(query: str, threshold: float=DEFAULT_THRESHOLD,  top_k: int=10) -> list[dict]:
     try:
         points = qdrant_search(query, threshold, top_k)
     except QdrantUnavailableError as e:

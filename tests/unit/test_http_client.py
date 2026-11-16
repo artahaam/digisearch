@@ -1,4 +1,5 @@
 from types import SimpleNamespace
+
 import requests
 from requests.adapters import HTTPAdapter
 

@@ -2,9 +2,8 @@ import logging
 
 from qdrant_client.models import PointIdsList
 
-from digisearch.database.client import get_db
+from digisearch.database.client import get_db, get_db_client
 from digisearch.qdrant.qdrant_init import QDRANT_COLLECTION, get_qdrant_client
-from digisearch.database.client import get_db_client
 
 log = logging.getLogger(__name__)
 
