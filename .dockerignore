@@ -1,0 +1,13 @@
+.git
+.venv
+__pycache__
+*.pyc
+.env
+*.log
+airflow/logs
+airflow/.env
+build
+data
+docs
+qdrant_storage
+**/*.egg-info

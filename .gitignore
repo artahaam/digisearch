@@ -11,8 +11,19 @@ crawler.log
 dir.txt
 *.csv
 qdrant_storage
+airflow/logs/
+airflow/config/
+airflow/plugins/
+airflow/.env
+build/
+**/*.egg-info
 
 /api/
+
+wheels/*
+!wheels/.gitkeep
+
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -35,7 +46,7 @@ lib64/
 parts/
 sdist/
 var/
-wheels/
+
 share/python-wheels/
 *.egg-info/
 .installed.cfg

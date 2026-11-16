@@ -1,41 +1,50 @@
+from functools import lru_cache
+
 from qdrant_client import QdrantClient
-from qdrant_client.models import Distance, VectorParams
+from qdrant_client.models import Distance, PayloadSchemaType, VectorParams
 
-
-QDRANT_URL = "http://localhost:6333"
-COLLECTION_NAME = "test_collection"
-VECTOR_SIZE = 1024
+from digisearch.config import QDRANT_COLLECTION, QDRANT_URL, VECTOR_SIZE
 
 
 class QdrantUnavailableError(RuntimeError):
     pass
 
 
-def get_client() -> QdrantClient:
+@lru_cache(maxsize=1)
+def get_qdrant_client() -> QdrantClient:
     try:
         client = QdrantClient(url=QDRANT_URL, timeout=10)
 
-        if not client.collection_exists(COLLECTION_NAME):
+        if not client.collection_exists(QDRANT_COLLECTION):
             client.create_collection(
-                collection_name=COLLECTION_NAME,
-                vectors_config=VectorParams(size=VECTOR_SIZE, distance=Distance.DOT),
+                collection_name=QDRANT_COLLECTION,
+                vectors_config=VectorParams(size=VECTOR_SIZE, distance=Distance.COSINE), #type: ignore
             )
+            for field, schema in (("price", PayloadSchemaType.FLOAT),
+                                  ("brand_fa", PayloadSchemaType.KEYWORD),
+                                  ("brand_en", PayloadSchemaType.KEYWORD),
+                                  ("categories", PayloadSchemaType.KEYWORD)):
+                client.create_payload_index(QDRANT_COLLECTION, field_name=field, field_schema=schema)
+
+        else:
+            vectors = client.get_collection(QDRANT_COLLECTION).config.params.vectors
+
+            if isinstance(vectors, VectorParams) and vectors.size != VECTOR_SIZE:
+                raise ValueError(f"'{QDRANT_COLLECTION}' has size {vectors.size}, expected {VECTOR_SIZE}")
+
         return client
 
-    except Exception as e:
+    except ValueError:
+        raise
 
-        raise QdrantUnavailableError(
-            f"Could not reach Qdrant at {QDRANT_URL}. Make sure the Qdrant "
-            f"docker container is running:\n\n"
-            f'docker run -p 6333:6333 -p 6334:6334 -v "$(pwd)/qdrant_storage:/qdrant/storage:z" qdrant/qdrant'
-        ) from e
+    except Exception as e:
+        raise QdrantUnavailableError(f"Could not reach Qdrant at {QDRANT_URL}: {e}") from e
 
 
 def get_collection_count() -> int | None:
-
     try:
-        client = get_client()
-        info = client.get_collection(COLLECTION_NAME)
+        client = get_qdrant_client()
+        info = client.get_collection(QDRANT_COLLECTION)
         return info.points_count
     except QdrantUnavailableError:
         return None

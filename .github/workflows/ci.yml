@@ -1,0 +1,105 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# A newer push to the same branch/PR cancels the older, now pointless, run.
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PIP_INDEX_URL: https://pypi.org/simple
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install ruff
+      - run: ruff check .
+
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-buildx-action@v3
+
+      - name: Build test image (pipeline)
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          target: test
+          load: true
+          tags: digisearch-test
+          build-args: PIP_INDEX_URL=${{ env.PIP_INDEX_URL }}
+          cache-from: type=gha,scope=pipeline
+          cache-to: type=gha,mode=max,scope=pipeline
+
+      - name: Build test image (airflow)
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: airflow/Dockerfile
+          target: test
+          load: true
+          tags: digisearch-airflow-test
+          build-args: PIP_INDEX_URL=${{ env.PIP_INDEX_URL }}
+          cache-from: type=gha,scope=airflow
+          cache-to: type=gha,mode=max,scope=airflow
+
+      - name: Unit tests
+        run: docker compose -f docker-compose.test.yml run --rm unit_tests
+
+      - name: Integration tests (real MongoDB and Qdrant)
+        run: docker compose -f docker-compose.test.yml run --rm integration_tests
+
+      - name: Airflow DAG tests
+        run: docker compose -f docker-compose.test.yml run --rm airflow_dag_tests
+
+      - name: Service logs (on failure)
+        if: failure()
+        run: docker compose -f docker-compose.test.yml logs --no-color mongo_test qdrant_test
+
+      - name: Clean up
+        if: always()
+        run: docker compose -f docker-compose.test.yml down -v
+
+  # Proves that the images we actually ship still build (the layers are cached by now).
+  build-images:
+    needs: [lint, tests]
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-buildx-action@v3
+
+      - name: Build pipeline image (prod)
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          target: prod
+          push: false
+          build-args: PIP_INDEX_URL=${{ env.PIP_INDEX_URL }}
+          cache-from: type=gha,scope=pipeline
+
+      - name: Build Airflow image (prod)
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: airflow/Dockerfile
+          target: prod
+          push: false
+          build-args: PIP_INDEX_URL=${{ env.PIP_INDEX_URL }}
+          cache-from: type=gha,scope=airflow

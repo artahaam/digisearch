@@ -7,7 +7,7 @@ name = "digisearch"
 version = "0.1.0"
 description = "Digikala search and scraping pipeline"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 license = "MIT"
 authors = [{ name = "artahaam", email = "alireza.thm03@gmail.com" }]
 keywords = ["digikala", "scraping", "crawler", "search"]
@@ -15,19 +15,27 @@ classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
 ]
-dependencies = [
-    "requests>=2.34,<3",
-    "rich>=15,<16",
-]
-
-[project.scripts]
-digisearch = "digisearch.run_pipeline:main"
 
 [tool.setuptools]
 package-dir = { "" = "src" }
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+markers = [
+    "integration: needs a real MongoDB and Qdrant (deselect with -m 'not integration')",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = ["build", "wheels"]
+
+[tool.ruff.lint]
+select = ["E", "F"]
+ignore = ["E501"]

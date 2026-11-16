@@ -1,0 +1,51 @@
+services:
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    volumes:
+      - mongo_data:/data/db
+    ports:
+      - "127.0.0.1:27017:27017"
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping')"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  qdrant:
+    image: qdrant/qdrant
+    restart: unless-stopped
+    volumes:
+      - qdrant_data:/qdrant/storage
+    ports:
+      - "127.0.0.1:6333:6333"
+
+  pipeline:
+    build:
+      context: .
+      target: prod
+      args:
+        PIP_INDEX_URL: ${PIP_INDEX_URL:-https://pypi.org/simple}
+    profiles: ["tools"]
+    depends_on:
+      mongo:
+        condition: service_healthy
+      qdrant:
+        condition: service_started
+    environment:
+      MONGO_URI: mongodb://mongo:27017
+      QDRANT_URL: http://qdrant:6333
+    volumes:
+      - hf_cache:/models
+
+volumes:
+  mongo_data:
+    name: digisearch_mongo
+  qdrant_data:
+    name: digisearch_qdrant
+  hf_cache:
+    name: digisearch_hf_cache
+
+networks:
+  default:
+    name: digisearch_net
