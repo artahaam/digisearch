@@ -23,20 +23,24 @@ services:
     build:
       context: .
       target: test
+      args:
+        PIP_INDEX_URL: ${PIP_INDEX_URL:-https://pypi.org/simple}
     environment:
       MONGO_URI: mongodb://invalid.test:27017
       MONGO_DB: digisearch_unit_test
       QDRANT_URL: http://invalid.test:6333
+      PYTHONPATH: /app/src
     volumes:
       - ./src:/app/src:ro
       - ./tests:/app/tests:ro
     command: ["tests/unit", "-v"]
 
-
   integration_tests:
     build:
       context: .
       target: test
+      args:
+        PIP_INDEX_URL: ${PIP_INDEX_URL:-https://pypi.org/simple}
     depends_on:
       mongo_test:
         condition: service_healthy
@@ -47,25 +51,24 @@ services:
       MONGO_DB: digisearch_test
       QDRANT_URL: http://qdrant_test:6333
       QDRANT_COLLECTION: digisearch_test
+      PYTHONPATH: /app/src
+      REQUIRE_SERVICES: "1"
     volumes:
       - ./src:/app/src:ro
       - ./tests:/app/tests:ro
-      - hf_cache:/models
     command: ["tests/integration", "-v"]
 
-
   airflow_dag_tests:
-      build:
-        context: .
-        dockerfile: airflow/Dockerfile
-        target: test
-      entrypoint: ["pytest"]
-      command: ["/opt/digisearch/tests/dags", "-v"]
-      volumes:
-        - ./airflow/dags:/opt/digisearch/airflow/dags:ro
-        - ./tests/dags:/opt/digisearch/tests/dags:ro
-
-volumes:
-  hf_cache:
-    external: true
-    name: digisearch_hf_cache
+    build:
+      context: .
+      dockerfile: airflow/Dockerfile
+      target: test
+      args:
+        PIP_INDEX_URL: ${PIP_INDEX_URL:-https://pypi.org/simple}
+    environment:
+      PYTHONPATH: /opt/digisearch/src
+    entrypoint: ["pytest"]
+    command: ["/opt/digisearch/tests/dags", "-v"]
+    volumes:
+      - ./airflow/dags:/opt/digisearch/airflow/dags:ro
+      - ./tests/dags:/opt/digisearch/tests/dags:ro

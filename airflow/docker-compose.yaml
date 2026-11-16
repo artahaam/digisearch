@@ -51,8 +51,11 @@ x-airflow-common:
   # and uncomment the "build" line below, Then run `docker-compose build` to build the images.
   image: ${AIRFLOW_IMAGE_NAME:-digisearch-airflow:3.3.2}     
   build:
-    context: ..
-    dockerfile: airflow/Dockerfile
+      context: ..
+      dockerfile: airflow/Dockerfile
+      target: prod
+      args:
+        PIP_INDEX_URL: ${PIP_INDEX_URL:-https://pypi.org/simple}
   networks:
     - default
     - digisearch            

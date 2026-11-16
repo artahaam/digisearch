@@ -21,7 +21,11 @@ services:
       - "127.0.0.1:6333:6333"
 
   pipeline:
-    build: .
+    build:
+      context: .
+      target: prod
+      args:
+        PIP_INDEX_URL: ${PIP_INDEX_URL:-https://pypi.org/simple}
     profiles: ["tools"]
     depends_on:
       mongo:
